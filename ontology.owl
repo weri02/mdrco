@@ -1,0 +1,3593 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uoc.edu/knowledgeManagement/mdrco#"
+     xml:base="http://uoc.edu/knowledgeManagement/mdrco"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:mdrco="http://uoc.edu/knowledgeManagement/mdrco#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://uoc.edu/knowledgeManagement/mdrco#">
+        <owl:versionIRI rdf:resource="http://uoc.edu/knowledgeManagement/1.0.0/mdrco#"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-11</terms:created>
+        <terms:creator>Houari Bekkay Boumaza</terms:creator>
+        <terms:description xml:lang="en">This ontology models the European catalogue of high-risk medical devices and in vitro diagnostic devices under the regulatory framework of the MDR (EU 2017/745) and IVDR (EU 2017/746) regulations.</terms:description>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:title xml:lang="en">Medical Device Regulatory Catalogue Ontology</terms:title>
+        <vann:preferredNamespacePrefix>mdrco</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://uoc.edu/knowledgeManagement/mdrco#</vann:preferredNamespaceUri>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#addressesIncident -->
+
+
+    <owl:ObjectProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#addressesIncident">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction"/>
+        <rdfs:range rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Incident"/>
+        <rdfs:comment xml:lang="en">Relates a field safety corrective action to the incident that triggered it.</rdfs:comment>
+        <rdfs:label xml:lang="en">addresses incident</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#affectsCountry -->
+
+
+    <owl:ObjectProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#affectsCountry">
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction"/>
+        <rdfs:range rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Country"/>
+        <rdfs:comment xml:lang="en">Relates a field safety corrective action to a country where it applies.</rdfs:comment>
+        <rdfs:label xml:lang="en">affects country</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#hasRisk -->
+
+
+    <owl:ObjectProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#hasRisk">
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Incident"/>
+        <rdfs:range rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Risk"/>
+        <rdfs:comment xml:lang="en">Relates an incident to the identified risk according to IMDRF nomenclature.</rdfs:comment>
+        <rdfs:label xml:lang="en">has risk</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#hasRiskClass -->
+
+
+    <owl:ObjectProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#hasRiskClass">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Device"/>
+        <rdfs:range rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RiskClass"/>
+        <rdfs:comment xml:lang="en">Relates a medical device to its regulatory risk class.</rdfs:comment>
+        <rdfs:label xml:lang="en">has risk class</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#involvedDevice -->
+
+
+    <owl:ObjectProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#involvedDevice">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Incident"/>
+        <rdfs:range rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Device"/>
+        <rdfs:comment xml:lang="en">Relates an incident to the medical device involved.</rdfs:comment>
+        <rdfs:label xml:lang="en">involved device</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#manufacturedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#manufacturedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Device"/>
+        <rdfs:range rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <rdfs:comment xml:lang="en">Relates a medical device to its manufacturer.</rdfs:comment>
+        <rdfs:label xml:lang="en">manufactured by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#registeredIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#registeredIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <rdfs:range rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Country"/>
+        <rdfs:comment xml:lang="en">Relates a manufacturer to the country where it is registered.</rdfs:comment>
+        <rdfs:label xml:lang="en">registered in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#regulatedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#regulatedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Device"/>
+        <rdfs:range rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RegulatoryFramework"/>
+        <rdfs:comment xml:lang="en">Relates a medical device to its applicable regulatory framework.</rdfs:comment>
+        <rdfs:label xml:lang="en">regulated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#reportedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#reportedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Incident"/>
+        <rdfs:range rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <rdfs:comment xml:lang="en">Relates an incident to the manufacturer that reported it.</rdfs:comment>
+        <rdfs:label xml:lang="en">reported by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry -->
+
+
+    <owl:ObjectProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Incident"/>
+        <rdfs:range rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Country"/>
+        <rdfs:comment xml:lang="en">Relates an incident to the country where it was reported.</rdfs:comment>
+        <rdfs:label xml:lang="en">reported in country</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#supervisedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#supervisedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <rdfs:range rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#CompetentAuthority"/>
+        <rdfs:comment xml:lang="en">Relates a manufacturer to the competent authority that supervises it.</rdfs:comment>
+        <rdfs:label xml:lang="en">supervised by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#actionDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#actionDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">The date on which the corrective action was initiated.</rdfs:comment>
+        <rdfs:label xml:lang="en">action date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#authorizationNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#authorizationNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The regulatory authorization number issued to the manufacturer.</rdfs:comment>
+        <rdfs:label xml:lang="en">authorization number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#closureDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#closureDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">The date on which the corrective action was closed.</rdfs:comment>
+        <rdfs:label xml:lang="en">closure date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#contactEmail -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#contactEmail">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The regulatory contact email address of the manufacturer.</rdfs:comment>
+        <rdfs:label xml:lang="en">contact email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Indicates whether a corrective action was taken in response to the incident.</rdfs:comment>
+        <rdfs:label xml:lang="en">corrective action taken</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#countryName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#countryName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Country"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The name of the country.</rdfs:comment>
+        <rdfs:label xml:lang="en">country name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#description -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#description">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A textual description of the risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#deviceId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#deviceId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The unique identifier of the medical device.</rdfs:comment>
+        <rdfs:label xml:lang="en">device ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#deviceName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#deviceName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The commercial name of the medical device.</rdfs:comment>
+        <rdfs:label xml:lang="en">device name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#devicesAffected -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#devicesAffected">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The number or description of devices affected by the corrective action.</rdfs:comment>
+        <rdfs:label xml:lang="en">devices affected</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#eudamedFSCARef -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#eudamedFSCARef">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The EUDAMED reference number for the corrective action.</rdfs:comment>
+        <rdfs:label xml:lang="en">EUDAMED FSCA reference</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The EUDAMED reference number for the incident.</rdfs:comment>
+        <rdfs:label xml:lang="en">EUDAMED incident reference</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#eudamedSRN -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#eudamedSRN">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The Single Registration Number assigned by EUDAMED to the manufacturer.</rdfs:comment>
+        <rdfs:label xml:lang="en">EUDAMED SRN</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#eventDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#eventDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">The date on which the incident event occurred.</rdfs:comment>
+        <rdfs:label xml:lang="en">event date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#fscaId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#fscaId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The unique identifier of the field safety corrective action.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#imdrfCode -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#imdrfCode">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The IMDRF nomenclature code for the risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">IMDRF code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#incidentId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#incidentId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The unique identifier of the incident.</rdfs:comment>
+        <rdfs:label xml:lang="en">incident ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#intendedPurpose -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#intendedPurpose">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The intended purpose of the medical device as stated by the manufacturer.</rdfs:comment>
+        <rdfs:label xml:lang="en">intended purpose</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#isActive -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#isActive">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Indicates whether the device requires an energy source to operate.</rdfs:comment>
+        <rdfs:label xml:lang="en">is active</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#isIVD -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#isIVD">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Indicates whether the device is an in vitro diagnostic device.</rdfs:comment>
+        <rdfs:label xml:lang="en">is IVD</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#isImplantable -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#isImplantable">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Indicates whether the device is implantable.</rdfs:comment>
+        <rdfs:label xml:lang="en">is implantable</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#isReusable -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#isReusable">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Indicates whether the device is intended for reuse.</rdfs:comment>
+        <rdfs:label xml:lang="en">is reusable</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#manufacturerName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#manufacturerName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The official name of the manufacturer.</rdfs:comment>
+        <rdfs:label xml:lang="en">manufacturer name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#outcome -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#outcome">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The clinical outcome of the incident.</rdfs:comment>
+        <rdfs:label xml:lang="en">outcome</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#patientAge -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#patientAge">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">The age of the patient involved in the incident.</rdfs:comment>
+        <rdfs:label xml:lang="en">patient age</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#patientSex -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#patientSex">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The sex of the patient involved in the incident.</rdfs:comment>
+        <rdfs:label xml:lang="en">patient sex</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#probability -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#probability">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The probability of occurrence of the risk (Low, Medium, High).</rdfs:comment>
+        <rdfs:label xml:lang="en">probability</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#reportDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#reportDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">The date on which the incident was reported to the competent authority.</rdfs:comment>
+        <rdfs:label xml:lang="en">report date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#riskId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#riskId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The unique identifier of the risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">risk ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#riskName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#riskName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The name of the risk according to IMDRF nomenclature.</rdfs:comment>
+        <rdfs:label xml:lang="en">risk name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#severity -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#severity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The severity level of the risk (Critical, Serious, Moderate).</rdfs:comment>
+        <rdfs:label xml:lang="en">severity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#status -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#status">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The current status of the field safety corrective action (Open or Closed).</rdfs:comment>
+        <rdfs:label xml:lang="en">status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#udiDI -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeManagement/mdrco#udiDI">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The Unique Device Identifier - Device Identifier.</rdfs:comment>
+        <rdfs:label xml:lang="en">UDI-DI</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#ActiveDevice -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#ActiveDevice">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Device"/>
+        <rdfs:comment xml:lang="en">A device whose operation depends on a source of energy.</rdfs:comment>
+        <rdfs:label xml:lang="en">Active Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#ActiveImplant -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#ActiveImplant">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ImplantableDevice"/>
+        <rdfs:comment xml:lang="en">An active device designed to be totally introduced into the human body.</rdfs:comment>
+        <rdfs:label xml:lang="en">Active Implant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#ClassA -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#ClassA">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RiskClass"/>
+        <owl:disjointWith rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ClassB"/>
+        <owl:disjointWith rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ClassC"/>
+        <owl:disjointWith rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ClassD"/>
+        <rdfs:comment xml:lang="en">IVDR risk class A - lowest risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">Class A</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#ClassB -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#ClassB">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RiskClass"/>
+        <owl:disjointWith rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ClassC"/>
+        <owl:disjointWith rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ClassD"/>
+        <rdfs:comment xml:lang="en">IVDR risk class B - medium risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">Class B</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#ClassC -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#ClassC">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RiskClass"/>
+        <owl:disjointWith rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ClassD"/>
+        <rdfs:comment xml:lang="en">IVDR risk class C - medium-high risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">Class C</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#ClassD -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#ClassD">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RiskClass"/>
+        <rdfs:comment xml:lang="en">IVDR risk class D - highest risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">Class D</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#ClassI -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#ClassI">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RiskClass"/>
+        <owl:disjointWith rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ClassIII"/>
+        <owl:disjointWith rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ClassIIa"/>
+        <owl:disjointWith rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ClassIIb"/>
+        <rdfs:comment xml:lang="en">MDR risk class I - lowest risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">Class I</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#ClassIII -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#ClassIII">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RiskClass"/>
+        <owl:disjointWith rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ClassIIa"/>
+        <owl:disjointWith rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ClassIIb"/>
+        <rdfs:comment xml:lang="en">MDR risk class III - highest risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">Class III</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#ClassIIa -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#ClassIIa">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RiskClass"/>
+        <owl:disjointWith rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ClassIIb"/>
+        <rdfs:comment xml:lang="en">MDR risk class IIa - medium risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">Class IIa</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#ClassIIb -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#ClassIIb">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RiskClass"/>
+        <rdfs:comment xml:lang="en">MDR risk class IIb - medium-high risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">Class IIb</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#ClosedFSCA -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#ClosedFSCA">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction"/>
+        <rdfs:comment xml:lang="en">A field safety corrective action that has a closure date, inferred by SWRL rule</rdfs:comment>
+        <rdfs:label xml:lang="en">Closed FSCA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#CompetentAuthority -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#CompetentAuthority">
+        <rdfs:comment xml:lang="en">The national authority responsible for supervising medical device manufacturers in a given country.</rdfs:comment>
+        <rdfs:label xml:lang="en">Competent Authority</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Country -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Country">
+        <rdfs:comment xml:lang="en">A country where a manufacturer is registered or where an incident has been reported.</rdfs:comment>
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://schema.org/Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Device -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Device">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#manufacturedBy"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A medical device as defined under MDR (EU 2017/745) or IVDR (EU 2017/746) regulations.</rdfs:comment>
+        <rdfs:label xml:lang="en">Device</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/ontology/MedicalDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DeviceFailure -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DeviceFailure">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Risk"/>
+        <rdfs:comment xml:lang="en">Risk category related to device failure.</rdfs:comment>
+        <rdfs:label xml:lang="en">Device Failure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DevicePerformance -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DevicePerformance">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Risk"/>
+        <rdfs:comment xml:lang="en">Risk category related to suboptimal device performance.</rdfs:comment>
+        <rdfs:label xml:lang="en">Device Performance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DeviceSafety -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DeviceSafety">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Risk"/>
+        <rdfs:comment xml:lang="en">Risk category related to device safety vulnerabilities.</rdfs:comment>
+        <rdfs:label xml:lang="en">Device Safety</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DiagnosticError -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DiagnosticError">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Risk"/>
+        <rdfs:comment xml:lang="en">Risk category related to incorrect diagnostic results.</rdfs:comment>
+        <rdfs:label xml:lang="en">Diagnostic Error</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#EUAuthorizedManufacturer -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#EUAuthorizedManufacturer">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <rdfs:comment xml:lang="en">A manufacturer that holds an EU authorization number, inferred by SWRL rule</rdfs:comment>
+        <rdfs:label xml:lang="en">EU Authorized Manufacturer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#addressesIncident"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An action taken to reduce a risk of death or serious deterioration in health associated with a device in use.</rdfs:comment>
+        <rdfs:label xml:lang="en">Field Safety Corrective Action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#HighRiskIncident -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#HighRiskIncident">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Incident"/>
+        <rdfs:comment xml:lang="en">An incident involving a device classified as Class III, inferred by SWRL rule</rdfs:comment>
+        <rdfs:label xml:lang="en">High Risk Incident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#IVDR -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#IVDR">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RegulatoryFramework"/>
+        <owl:disjointWith rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MDR"/>
+        <rdfs:comment xml:lang="en">In Vitro Diagnostic Regulation EU 2017/746 applicable to IVD devices.</rdfs:comment>
+        <rdfs:label xml:lang="en">IVDR</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#ImplantableActiveDevice -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#ImplantableActiveDevice">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Device"/>
+        <rdfs:comment xml:lang="en">An active device intended to be totally or partially introduced into the human body.</rdfs:comment>
+        <rdfs:label xml:lang="en">Implantable Active Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#ImplantableDevice -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#ImplantableDevice">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Device"/>
+        <rdfs:comment xml:lang="en">A device intended to be totally or partially introduced into the human body.</rdfs:comment>
+        <rdfs:label xml:lang="en">Implantable Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#InSituCorrection -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#InSituCorrection">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction"/>
+        <owl:disjointWith rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Recall"/>
+        <owl:disjointWith rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SafetyAlert"/>
+        <owl:disjointWith rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#UserNotice"/>
+        <rdfs:comment xml:lang="en">A FSCA involving correction or modification of the device at its current location.</rdfs:comment>
+        <rdfs:label xml:lang="en">In Situ Correction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#InVitroDiagnosticDevice -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#InVitroDiagnosticDevice">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Device"/>
+        <rdfs:comment xml:lang="en">A device used for examination of specimens derived from the human body.</rdfs:comment>
+        <rdfs:label xml:lang="en">In Vitro Diagnostic Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Incident -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Incident">
+        <rdfs:comment xml:lang="en">Any malfunction or deterioration in the characteristics of a device that has led or could lead to patient harm.</rdfs:comment>
+        <rdfs:label xml:lang="en">Incident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#MDR -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#MDR">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RegulatoryFramework"/>
+        <rdfs:comment xml:lang="en">Medical Device Regulation EU 2017/745 applicable to general medical devices.</rdfs:comment>
+        <rdfs:label xml:lang="en">MDR</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Manufacturer -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer">
+        <rdfs:comment xml:lang="en">A natural or legal person responsible for the design and manufacture of a medical device.</rdfs:comment>
+        <rdfs:label xml:lang="en">Manufacturer</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#NearMissIncident -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#NearMissIncident">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Incident"/>
+        <owl:disjointWith rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident"/>
+        <rdfs:comment xml:lang="en">An incident that could have led to patient harm but did not due to fortunate circumstances.</rdfs:comment>
+        <rdfs:label xml:lang="en">Near Miss Incident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#PatientHarm -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#PatientHarm">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Risk"/>
+        <rdfs:comment xml:lang="en">Risk category related to direct patient harm.</rdfs:comment>
+        <rdfs:label xml:lang="en">Patient Harm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#ProductQuality -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#ProductQuality">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Risk"/>
+        <rdfs:comment xml:lang="en">Risk category related to product quality issues.</rdfs:comment>
+        <rdfs:label xml:lang="en">Product Quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Recall -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Recall">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction"/>
+        <owl:disjointWith rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SafetyAlert"/>
+        <owl:disjointWith rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#UserNotice"/>
+        <rdfs:comment xml:lang="en">A FSCA involving the return of a device to the manufacturer.</rdfs:comment>
+        <rdfs:label xml:lang="en">Recall</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#RegulatoryFramework -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#RegulatoryFramework">
+        <rdfs:comment xml:lang="en">The European regulatory framework applicable to a medical device.</rdfs:comment>
+        <rdfs:label xml:lang="en">Regulatory Framework</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Risk -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Risk">
+        <rdfs:comment xml:lang="en">A potential hazard associated with a medical device as classified by the IMDRF nomenclature.</rdfs:comment>
+        <rdfs:label xml:lang="en">Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#RiskClass -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#RiskClass">
+        <rdfs:comment xml:lang="en">The risk classification assigned to a medical device according to MDR or IVDR regulations.</rdfs:comment>
+        <rdfs:label xml:lang="en">Risk Class</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#SafetyAlert -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#SafetyAlert">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction"/>
+        <owl:disjointWith rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#UserNotice"/>
+        <rdfs:comment xml:lang="en">A FSCA involving a safety communication to users and patients.</rdfs:comment>
+        <rdfs:label xml:lang="en">Safety Alert</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#SelfTestDevice -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#SelfTestDevice">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#InVitroDiagnosticDevice"/>
+        <rdfs:comment xml:lang="en">An IVD device intended to be used by lay persons in a home environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Self Test Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Incident"/>
+        <rdfs:comment xml:lang="en">An incident that directly or indirectly led to serious injury or death of a patient.</rdfs:comment>
+        <rdfs:label xml:lang="en">Serious Incident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#SingleUseDevice -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#SingleUseDevice">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Device"/>
+        <rdfs:comment xml:lang="en">A device intended to be used on one individual during a single procedure.</rdfs:comment>
+        <rdfs:label xml:lang="en">Single Use Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#UserNotice -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeManagement/mdrco#UserNotice">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction"/>
+        <rdfs:comment xml:lang="en">A FSCA involving a notice sent to device users with corrective instructions.</rdfs:comment>
+        <rdfs:label xml:lang="en">User Notice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Agence_fédérale_des_médicaments_et_des_produits_de_santé_AFMPS -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Agence_fédérale_des_médicaments_et_des_produits_de_santé_AFMPS">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#CompetentAuthority"/>
+        <rdfs:comment xml:lang="en">Competent authority: Agence fédérale des médicaments et des produits de santé (AFMPS)</rdfs:comment>
+        <rdfs:label xml:lang="en">Agence fédérale des médicaments et des produits de santé (AFMPS)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Agence_nationale_de_sécurité_du_médicament_ANSM -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Agence_nationale_de_sécurité_du_médicament_ANSM">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#CompetentAuthority"/>
+        <rdfs:comment xml:lang="en">Competent authority: Agence nationale de sécurité du médicament (ANSM)</rdfs:comment>
+        <rdfs:label xml:lang="en">Agence nationale de sécurité du médicament (ANSM)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Belgium -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Belgium">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Country"/>
+        <countryName>Belgium</countryName>
+        <rdfs:label xml:lang="en">Belgium</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Bundesinstitut_für_Arzneimittel_und_Medizinprodukte_BfArM -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Bundesinstitut_für_Arzneimittel_und_Medizinprodukte_BfArM">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#CompetentAuthority"/>
+        <rdfs:comment xml:lang="en">Competent authority: Bundesinstitut für Arzneimittel und Medizinprodukte (BfArM)</rdfs:comment>
+        <rdfs:label xml:lang="en">Bundesinstitut für Arzneimittel und Medizinprodukte (BfArM)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-001">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ImplantableActiveDevice"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIII"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-001"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_MDR"/>
+        <deviceId>DEV-001</deviceId>
+        <deviceName>HeartMate 3 LVAD</deviceName>
+        <intendedPurpose>Ventricular assist device for end-stage heart failure</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isReusable>
+        <udiDI>(01)00380740009095</udiDI>
+        <rdfs:comment xml:lang="en">Ventricular assist device for end-stage heart failure</rdfs:comment>
+        <rdfs:label xml:lang="en">HeartMate 3 LVAD</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-002 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-002">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ActiveImplant"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIII"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-001"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_MDR"/>
+        <deviceId>DEV-002</deviceId>
+        <deviceName>Micra AV Transcatheter Pacing System</deviceName>
+        <intendedPurpose>Leadless cardiac pacemaker for atrioventricular synchrony</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isReusable>
+        <udiDI>(01)00380740009112</udiDI>
+        <rdfs:comment xml:lang="en">Leadless cardiac pacemaker for atrioventricular synchrony</rdfs:comment>
+        <rdfs:label xml:lang="en">Micra AV Transcatheter Pacing System</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-003 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-003">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ImplantableDevice"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIII"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-002"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_MDR"/>
+        <deviceId>DEV-003</deviceId>
+        <deviceName>Portico Transcatheter Heart Valve</deviceName>
+        <intendedPurpose>Transcatheter aortic valve replacement (TAVI)</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isReusable>
+        <udiDI>(01)00800002222291</udiDI>
+        <rdfs:comment xml:lang="en">Transcatheter aortic valve replacement (TAVI)</rdfs:comment>
+        <rdfs:label xml:lang="en">Portico Transcatheter Heart Valve</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-004 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-004">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ImplantableActiveDevice"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIIb"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-006"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_MDR"/>
+        <deviceId>DEV-004</deviceId>
+        <deviceName>SYNERGY Stent System</deviceName>
+        <intendedPurpose>Drug-eluting coronary stent</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isReusable>
+        <udiDI>(01)08714729002817</udiDI>
+        <rdfs:comment xml:lang="en">Drug-eluting coronary stent</rdfs:comment>
+        <rdfs:label xml:lang="en">SYNERGY Stent System</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-005 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-005">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ActiveImplant"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIII"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-006"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_MDR"/>
+        <deviceId>DEV-005</deviceId>
+        <deviceName>ACUITY X4 Quadripolar LV Lead</deviceName>
+        <intendedPurpose>Cardiac resynchronization therapy lead</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isReusable>
+        <udiDI>(01)08714729004873</udiDI>
+        <rdfs:comment xml:lang="en">Cardiac resynchronization therapy lead</rdfs:comment>
+        <rdfs:label xml:lang="en">ACUITY X4 Quadripolar LV Lead</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-006 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-006">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SingleUseDevice"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIIb"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-004"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_MDR"/>
+        <deviceId>DEV-006</deviceId>
+        <deviceName>STELLAREX Drug-Coated Balloon</deviceName>
+        <intendedPurpose>Peripheral artery drug-coated angioplasty balloon</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isReusable>
+        <udiDI>(01)08718998000001</udiDI>
+        <rdfs:comment xml:lang="en">Peripheral artery drug-coated angioplasty balloon</rdfs:comment>
+        <rdfs:label xml:lang="en">STELLAREX Drug-Coated Balloon</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-007 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-007">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ActiveDevice"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIIa"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-003"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_MDR"/>
+        <deviceId>DEV-007</deviceId>
+        <deviceName>ACUSON Sequoia Ultrasound</deviceName>
+        <intendedPurpose>Diagnostic ultrasound imaging system</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isReusable>
+        <udiDI>(01)04054839450001</udiDI>
+        <rdfs:comment xml:lang="en">Diagnostic ultrasound imaging system</rdfs:comment>
+        <rdfs:label xml:lang="en">ACUSON Sequoia Ultrasound</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-008 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-008">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ActiveDevice"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIIa"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-003"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_MDR"/>
+        <deviceId>DEV-008</deviceId>
+        <deviceName>MAGNETOM Vida MRI System</deviceName>
+        <intendedPurpose>Magnetic resonance imaging system 3T</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isReusable>
+        <udiDI>(01)04054839460002</udiDI>
+        <rdfs:comment xml:lang="en">Magnetic resonance imaging system 3T</rdfs:comment>
+        <rdfs:label xml:lang="en">MAGNETOM Vida MRI System</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-009 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-009">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ImplantableDevice"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIII"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-010"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_MDR"/>
+        <deviceId>DEV-009</deviceId>
+        <deviceName>Persona Knee System</deviceName>
+        <intendedPurpose>Total knee arthroplasty implant system</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isReusable>
+        <udiDI>(01)07612345001001</udiDI>
+        <rdfs:comment xml:lang="en">Total knee arthroplasty implant system</rdfs:comment>
+        <rdfs:label xml:lang="en">Persona Knee System</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-010 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-010">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ImplantableDevice"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIII"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-007"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_MDR"/>
+        <deviceId>DEV-010</deviceId>
+        <deviceName>TRITON Total Hip System</deviceName>
+        <intendedPurpose>Ceramic-on-ceramic total hip replacement</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isReusable>
+        <udiDI>(01)09876543002002</udiDI>
+        <rdfs:comment xml:lang="en">Ceramic-on-ceramic total hip replacement</rdfs:comment>
+        <rdfs:label xml:lang="en">TRITON Total Hip System</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-011 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-011">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ActiveImplant"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIII"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-011"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_MDR"/>
+        <deviceId>DEV-011</deviceId>
+        <deviceName>Iluvien Intravitreal Implant</deviceName>
+        <intendedPurpose>Sustained-release fluocinolone acetonide ocular implant</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isReusable>
+        <udiDI>(01)05391520001011</udiDI>
+        <rdfs:comment xml:lang="en">Sustained-release fluocinolone acetonide ocular implant</rdfs:comment>
+        <rdfs:label xml:lang="en">Iluvien Intravitreal Implant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-012 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-012">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ActiveImplant"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIII"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-008"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_MDR"/>
+        <deviceId>DEV-012</deviceId>
+        <deviceName>Viva Cardiac Resynchronization Defibrillator</deviceName>
+        <intendedPurpose>Cardiac resynchronization therapy with defibrillation</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isReusable>
+        <udiDI>(01)04012099001012</udiDI>
+        <rdfs:comment xml:lang="en">Cardiac resynchronization therapy with defibrillation</rdfs:comment>
+        <rdfs:label xml:lang="en">Viva Cardiac Resynchronization Defibrillator</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-013 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-013">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ActiveDevice"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIIb"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-012"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_MDR"/>
+        <deviceId>DEV-013</deviceId>
+        <deviceName>ATERA Mechanical Ventilator</deviceName>
+        <intendedPurpose>ICU mechanical ventilator with pressure and volume modes</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isReusable>
+        <udiDI>(01)04046539001013</udiDI>
+        <rdfs:comment xml:lang="en">ICU mechanical ventilator with pressure and volume modes</rdfs:comment>
+        <rdfs:label xml:lang="en">ATERA Mechanical Ventilator</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-014 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-014">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ActiveDevice"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIIa"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-004"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_MDR"/>
+        <deviceId>DEV-014</deviceId>
+        <deviceName>Lumify Portable Ultrasound</deviceName>
+        <intendedPurpose>Handheld point-of-care ultrasound probe</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isReusable>
+        <udiDI>(01)08718998001014</udiDI>
+        <rdfs:comment xml:lang="en">Handheld point-of-care ultrasound probe</rdfs:comment>
+        <rdfs:label xml:lang="en">Lumify Portable Ultrasound</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-015 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-015">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ActiveDevice"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIIb"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-013"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_MDR"/>
+        <deviceId>DEV-015</deviceId>
+        <deviceName>Hemodialysis Machine 5008S</deviceName>
+        <intendedPurpose>High-volume online hemodiafiltration machine</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isReusable>
+        <udiDI>(01)04547597001015</udiDI>
+        <rdfs:comment xml:lang="en">High-volume online hemodiafiltration machine</rdfs:comment>
+        <rdfs:label xml:lang="en">Hemodialysis Machine 5008S</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-016 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-016">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#InVitroDiagnosticDevice"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassC"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-005"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_IVDR"/>
+        <deviceId>DEV-016</deviceId>
+        <deviceName>cobas e 801 Immunoassay Analyzer</deviceName>
+        <intendedPurpose>Automated immunoassay analyzer for clinical laboratory</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isReusable>
+        <udiDI>(01)04015630001016</udiDI>
+        <rdfs:comment xml:lang="en">Automated immunoassay analyzer for clinical laboratory</rdfs:comment>
+        <rdfs:label xml:lang="en">cobas e 801 Immunoassay Analyzer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-017 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-017">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#InVitroDiagnosticDevice"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassC"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-005"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_IVDR"/>
+        <deviceId>DEV-017</deviceId>
+        <deviceName>cobas SARS-CoV-2 RT-PCR Test</deviceName>
+        <intendedPurpose>Molecular diagnostic test for SARS-CoV-2 detection</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isReusable>
+        <udiDI>(01)04015630001017</udiDI>
+        <rdfs:comment xml:lang="en">Molecular diagnostic test for SARS-CoV-2 detection</rdfs:comment>
+        <rdfs:label xml:lang="en">cobas SARS-CoV-2 RT-PCR Test</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-018 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-018">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#InVitroDiagnosticDevice"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassD"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-015"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_IVDR"/>
+        <deviceId>DEV-018</deviceId>
+        <deviceName>VIDAS HIV DUO Ultra</deviceName>
+        <intendedPurpose>Combined HIV Ag/Ab detection assay</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isReusable>
+        <udiDI>(01)03760027001018</udiDI>
+        <rdfs:comment xml:lang="en">Combined HIV Ag/Ab detection assay</rdfs:comment>
+        <rdfs:label xml:lang="en">VIDAS HIV DUO Ultra</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-019 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-019">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#InVitroDiagnosticDevice"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassC"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-014"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_IVDR"/>
+        <deviceId>DEV-019</deviceId>
+        <deviceName>PROGENSA PCA3 Assay</deviceName>
+        <intendedPurpose>Urine-based prostate cancer diagnosis assay</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isReusable>
+        <udiDI>(01)07000087001019</udiDI>
+        <rdfs:comment xml:lang="en">Urine-based prostate cancer diagnosis assay</rdfs:comment>
+        <rdfs:label xml:lang="en">PROGENSA PCA3 Assay</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-020 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-020">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#InVitroDiagnosticDevice"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassD"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-002"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_IVDR"/>
+        <deviceId>DEV-020</deviceId>
+        <deviceName>Harmony Prenatal Test</deviceName>
+        <intendedPurpose>Non-invasive prenatal testing (NIPT) for aneuploidies</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isReusable>
+        <udiDI>(01)00800002001020</udiDI>
+        <rdfs:comment xml:lang="en">Non-invasive prenatal testing (NIPT) for aneuploidies</rdfs:comment>
+        <rdfs:label xml:lang="en">Harmony Prenatal Test</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-021 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-021">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SelfTestDevice"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassC"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-009"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_IVDR"/>
+        <deviceId>DEV-021</deviceId>
+        <deviceName>OPTIGA Glucose Monitoring System</deviceName>
+        <intendedPurpose>Continuous glucose monitor for patients with diabetes</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isReusable>
+        <udiDI>(01)07300000001021</udiDI>
+        <rdfs:comment xml:lang="en">Continuous glucose monitor for patients with diabetes</rdfs:comment>
+        <rdfs:label xml:lang="en">OPTIGA Glucose Monitoring System</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-022 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-022">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ActiveDevice"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIIa"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-009"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_MDR"/>
+        <deviceId>DEV-022</deviceId>
+        <deviceName>BeneVision N1 Patient Monitor</deviceName>
+        <intendedPurpose>Portable patient monitor for vital signs</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isReusable>
+        <udiDI>(01)07300000001022</udiDI>
+        <rdfs:comment xml:lang="en">Portable patient monitor for vital signs</rdfs:comment>
+        <rdfs:label xml:lang="en">BeneVision N1 Patient Monitor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-023 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-023">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ActiveImplant"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIII"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-008"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_MDR"/>
+        <deviceId>DEV-023</deviceId>
+        <deviceName>Tivoli II Cochlear Implant</deviceName>
+        <intendedPurpose>Active cochlear implant for sensorineural hearing loss</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isReusable>
+        <udiDI>(01)04012099001023</udiDI>
+        <rdfs:comment xml:lang="en">Active cochlear implant for sensorineural hearing loss</rdfs:comment>
+        <rdfs:label xml:lang="en">Tivoli II Cochlear Implant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-024 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-024">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ActiveDevice"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIIb"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-002"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_MDR"/>
+        <deviceId>DEV-024</deviceId>
+        <deviceName>Infusion Pump Plum 360</deviceName>
+        <intendedPurpose>Large volume infusion pump with drug library</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isReusable>
+        <udiDI>(01)00800002001024</udiDI>
+        <rdfs:comment xml:lang="en">Large volume infusion pump with drug library</rdfs:comment>
+        <rdfs:label xml:lang="en">Infusion Pump Plum 360</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#DEV-025 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#DEV-025">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ImplantableDevice"/>
+        <hasRiskClass rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIII"/>
+        <manufacturedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-011"/>
+        <regulatedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#inst_MDR"/>
+        <deviceId>DEV-025</deviceId>
+        <deviceName>ValveXpert Transcatheter Mitral Valve</deviceName>
+        <intendedPurpose>Transcatheter mitral valve replacement system</intendedPurpose>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isActive>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isImplantable>
+        <isReusable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isReusable>
+        <udiDI>(01)05391520001025</udiDI>
+        <rdfs:comment xml:lang="en">Transcatheter mitral valve replacement system</rdfs:comment>
+        <rdfs:label xml:lang="en">ValveXpert Transcatheter Mitral Valve</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Denmark -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Denmark">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Country"/>
+        <countryName>Denmark</countryName>
+        <rdfs:label xml:lang="en">Denmark</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#FSCA-001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#FSCA-001">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SafetyAlert"/>
+        <addressesIncident rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#INC-001"/>
+        <actionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-01</actionDate>
+        <devicesAffected>850</devicesAffected>
+        <eudamedFSCARef>EU-FSCA-2024-000001</eudamedFSCARef>
+        <fscaId>FSCA-001</fscaId>
+        <status>Open</status>
+        <rdfs:comment xml:lang="en">Safety alert issued to all implanting centres regarding anticoagulation protocol update for HeartMate 3 to reduce device thrombosis risk. INR target range revised to 2.0–3.0.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA-001</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#FSCA-002 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#FSCA-002">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Recall"/>
+        <addressesIncident rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#INC-002"/>
+        <actionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-28</actionDate>
+        <closureDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-31</closureDate>
+        <devicesAffected>1240</devicesAffected>
+        <eudamedFSCARef>EU-FSCA-2024-000002</eudamedFSCARef>
+        <fscaId>FSCA-002</fscaId>
+        <status>Closed</status>
+        <rdfs:comment xml:lang="en">Voluntary recall of affected Micra AV lots due to premature battery depletion. Replacement units provided. 97% of affected devices successfully replaced.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA-002</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#FSCA-003 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#FSCA-003">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#InSituCorrection"/>
+        <addressesIncident rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#INC-003"/>
+        <actionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-03-15</actionDate>
+        <closureDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-30</closureDate>
+        <devicesAffected>320</devicesAffected>
+        <eudamedFSCARef>EU-FSCA-2024-000003</eudamedFSCARef>
+        <fscaId>FSCA-003</fscaId>
+        <status>Closed</status>
+        <rdfs:comment xml:lang="en">Enhanced deployment training and updated IFU for Portico valve implantation technique. New implantation checklist mandatory for all TAVI centres.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA-003</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#FSCA-004 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#FSCA-004">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SafetyAlert"/>
+        <addressesIncident rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#INC-005"/>
+        <actionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-04-10</actionDate>
+        <devicesAffected>2100</devicesAffected>
+        <eudamedFSCARef>EU-FSCA-2024-000004</eudamedFSCARef>
+        <fscaId>FSCA-004</fscaId>
+        <status>Open</status>
+        <rdfs:comment xml:lang="en">Safety communication to implanting cardiologists regarding optimal fixation technique for ACUITY X4 lead. Enhanced fluoroscopy verification protocol at implantation.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA-004</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#FSCA-005 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#FSCA-005">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#InSituCorrection"/>
+        <addressesIncident rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#INC-007"/>
+        <actionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-20</actionDate>
+        <closureDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</closureDate>
+        <devicesAffected>780</devicesAffected>
+        <eudamedFSCARef>EU-FSCA-2024-000005</eudamedFSCARef>
+        <fscaId>FSCA-005</fscaId>
+        <status>Closed</status>
+        <rdfs:comment xml:lang="en">Enhanced surveillance programme: annual DEXA scan and serum particle monitoring for patients with affected tibial inserts. Patients contacted individually.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA-005</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#FSCA-006 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#FSCA-006">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Recall"/>
+        <addressesIncident rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#INC-008"/>
+        <actionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-30</actionDate>
+        <devicesAffected>540</devicesAffected>
+        <eudamedFSCARef>EU-FSCA-2024-000006</eudamedFSCARef>
+        <fscaId>FSCA-006</fscaId>
+        <status>Open</status>
+        <rdfs:comment xml:lang="en">Urgent safety recall due to elevated metal ion levels. Revision surgery recommended for patients with serum cobalt &gt;7 ppb or symptomatic ALTR. Replacement implants provided.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA-006</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#FSCA-007 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#FSCA-007">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#UserNotice"/>
+        <addressesIncident rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#INC-009"/>
+        <actionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-25</actionDate>
+        <closureDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-31</closureDate>
+        <devicesAffected>4300</devicesAffected>
+        <eudamedFSCARef>EU-FSCA-2024-000007</eudamedFSCARef>
+        <fscaId>FSCA-007</fscaId>
+        <status>Closed</status>
+        <rdfs:comment xml:lang="en">Urgent safety notice regarding MRI scanning protocol. Updated MRI-conditional guidelines issued. Mandatory reprogramming required before any MRI scan. Programmer software update v3.2 released.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA-007</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#FSCA-008 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#FSCA-008">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Recall"/>
+        <addressesIncident rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#INC-010"/>
+        <actionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-05</actionDate>
+        <closureDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-08-15</closureDate>
+        <devicesAffected>180</devicesAffected>
+        <eudamedFSCARef>EU-FSCA-2024-000008</eudamedFSCARef>
+        <fscaId>FSCA-008</fscaId>
+        <status>Closed</status>
+        <rdfs:comment xml:lang="en">Software recall: mandatory update to version 2.2.0 resolving FiO2 calibration error. Biomedical engineers visited all affected units within 14 days. Field service documentation required.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA-008</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#FSCA-009 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#FSCA-009">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#UserNotice"/>
+        <addressesIncident rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#INC-011"/>
+        <actionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-20</actionDate>
+        <closureDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</closureDate>
+        <devicesAffected>620</devicesAffected>
+        <eudamedFSCARef>EU-FSCA-2024-000009</eudamedFSCARef>
+        <fscaId>FSCA-009</fscaId>
+        <status>Closed</status>
+        <rdfs:comment xml:lang="en">Customer field notification regarding biotin interference in TSH assay. Updated sample preparation protocol and interference screening algorithm released via software update 4.1.2.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA-009</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#FSCA-010 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#FSCA-010">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Recall"/>
+        <addressesIncident rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#INC-012"/>
+        <actionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-30</actionDate>
+        <closureDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-08-31</closureDate>
+        <devicesAffected>12500 tests</devicesAffected>
+        <eudamedFSCARef>EU-FSCA-2024-000010</eudamedFSCARef>
+        <fscaId>FSCA-010</fscaId>
+        <status>Closed</status>
+        <rdfs:comment xml:lang="en">Immediate quarantine and replacement of affected reagent lots. Reflex testing protocol issued. All positive results from affected lots to be re-confirmed. New primer design covering BA.2.86 released.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA-010</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#FSCA-011 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#FSCA-011">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#InSituCorrection"/>
+        <addressesIncident rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#INC-014"/>
+        <actionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-08-01</actionDate>
+        <devicesAffected>3200</devicesAffected>
+        <eudamedFSCARef>EU-FSCA-2024-000011</eudamedFSCARef>
+        <fscaId>FSCA-011</fscaId>
+        <status>Open</status>
+        <rdfs:comment xml:lang="en">Enhanced calibration protocol issued. Firmware update v1.8.5 mandatory improving temperature compensation algorithm. Patients instructed to perform confirmatory finger-stick at glucose readings &lt;4.5 or &gt;13.9 mmol/L.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA-011</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#FSCA-012 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#FSCA-012">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Recall"/>
+        <addressesIncident rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#INC-015"/>
+        <actionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-08-20</actionDate>
+        <closureDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-10-31</closureDate>
+        <devicesAffected>2870</devicesAffected>
+        <eudamedFSCARef>EU-FSCA-2024-000012</eudamedFSCARef>
+        <fscaId>FSCA-012</fscaId>
+        <status>Closed</status>
+        <rdfs:comment xml:lang="en">Urgent recall and remote software update. Drug library version 4.3.0 deployed correcting decimal point error. All units verified by biomedical engineering before return to clinical use.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA-012</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#FSCA-013 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#FSCA-013">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SafetyAlert"/>
+        <addressesIncident rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#INC-016"/>
+        <actionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-10</actionDate>
+        <devicesAffected>420</devicesAffected>
+        <eudamedFSCARef>EU-FSCA-2024-000013</eudamedFSCARef>
+        <fscaId>FSCA-013</fscaId>
+        <status>Open</status>
+        <rdfs:comment xml:lang="en">Safety communication regarding outflow graft kinking risk. Updated surgical technique for graft routing issued. Mandatory follow-up CT at 6 months for patients with affected lot numbers.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA-013</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#FSCA-014 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#FSCA-014">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#UserNotice"/>
+        <addressesIncident rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#INC-017"/>
+        <actionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-25</actionDate>
+        <closureDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-12-31</closureDate>
+        <devicesAffected>1100</devicesAffected>
+        <eudamedFSCARef>EU-FSCA-2024-000014</eudamedFSCARef>
+        <fscaId>FSCA-014</fscaId>
+        <status>Closed</status>
+        <rdfs:comment xml:lang="en">Updated IFU regarding post-operative infection prophylaxis protocol. Extended topical antibiotic course (14 days) mandatory post-insertion. Healthcare professionals notified via direct mail and implanting centre visits.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA-014</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#FSCA-015 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#FSCA-015">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#InSituCorrection"/>
+        <addressesIncident rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#INC-018"/>
+        <actionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-10-01</actionDate>
+        <devicesAffected>890</devicesAffected>
+        <eudamedFSCARef>EU-FSCA-2024-000015</eudamedFSCARef>
+        <fscaId>FSCA-015</fscaId>
+        <status>Open</status>
+        <rdfs:comment xml:lang="en">Security patch 3.0.1 mandatory deployment disabling unrestricted web interface access. Network segmentation guidance issued to hospital IT departments. Penetration test report provided to competent authorities.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA-015</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#France -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#France">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Country"/>
+        <countryName>France</countryName>
+        <rdfs:label xml:lang="en">France</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Germany -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Germany">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Country"/>
+        <countryName>Germany</countryName>
+        <rdfs:label xml:lang="en">Germany</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Health_Products_Regulatory_Authority_HPRA -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Health_Products_Regulatory_Authority_HPRA">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#CompetentAuthority"/>
+        <rdfs:comment xml:lang="en">Competent authority: Health Products Regulatory Authority (HPRA)</rdfs:comment>
+        <rdfs:label xml:lang="en">Health Products Regulatory Authority (HPRA)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#INC-001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#INC-001">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident"/>
+        <hasRisk rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RSK-003"/>
+        <involvedDevice rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DEV-001"/>
+        <reportedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-001"/>
+        <reportedInCountry rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Germany"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</correctiveActionTaken>
+        <eudamedIncidentRef>EU-INC-2024-000001</eudamedIncidentRef>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-08</eventDate>
+        <incidentId>INC-001</incidentId>
+        <outcome>Serious patient injury - embolic stroke</outcome>
+        <patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#float">58.0</patientAge>
+        <patientSex>Male</patientSex>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-15</reportDate>
+        <rdfs:comment xml:lang="en">Patient implanted with HeartMate 3 LVAD developed ischemic stroke 6 months post-implant. Device thrombus confirmed by echocardiography.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-001</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#INC-002 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#INC-002">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident"/>
+        <hasRisk rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RSK-009"/>
+        <involvedDevice rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DEV-002"/>
+        <reportedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-001"/>
+        <reportedInCountry rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#France"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</correctiveActionTaken>
+        <eudamedIncidentRef>EU-INC-2024-000002</eudamedIncidentRef>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-29</eventDate>
+        <incidentId>INC-002</incidentId>
+        <outcome>Device malfunction - premature battery depletion</outcome>
+        <patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#float">72.0</patientAge>
+        <patientSex>Female</patientSex>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-03</reportDate>
+        <rdfs:comment xml:lang="en">Micra AV pacemaker reached elective replacement indicator 14 months earlier than expected longevity specification.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-002</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#INC-003 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#INC-003">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident"/>
+        <hasRisk rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RSK-005"/>
+        <involvedDevice rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DEV-003"/>
+        <reportedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-002"/>
+        <reportedInCountry rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Italy"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</correctiveActionTaken>
+        <eudamedIncidentRef>EU-INC-2024-000003</eudamedIncidentRef>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-15</eventDate>
+        <incidentId>INC-003</incidentId>
+        <outcome>Surgical intervention required - valve re-anchoring</outcome>
+        <patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#float">67.0</patientAge>
+        <patientSex>Male</patientSex>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-20</reportDate>
+        <rdfs:comment xml:lang="en">Portico valve showed paravalvular leak grade III due to partial migration 2 weeks post-TAVI procedure.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-003</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#INC-004 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#INC-004">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident"/>
+        <hasRisk rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RSK-002"/>
+        <involvedDevice rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DEV-004"/>
+        <reportedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-006"/>
+        <reportedInCountry rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Spain"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</correctiveActionTaken>
+        <eudamedIncidentRef>EU-INC-2024-000004</eudamedIncidentRef>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-28</eventDate>
+        <incidentId>INC-004</incidentId>
+        <outcome>Device malfunction - stent fracture</outcome>
+        <patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#float">55.0</patientAge>
+        <patientSex>Female</patientSex>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-03-05</reportDate>
+        <rdfs:comment xml:lang="en">SYNERGY stent fracture detected on angiography 18 months post-implant causing in-stent restenosis.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-004</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#INC-005 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#INC-005">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident"/>
+        <hasRisk rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RSK-006"/>
+        <involvedDevice rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DEV-005"/>
+        <reportedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-006"/>
+        <reportedInCountry rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Netherlands"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</correctiveActionTaken>
+        <eudamedIncidentRef>EU-INC-2024-000005</eudamedIncidentRef>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-03-12</eventDate>
+        <incidentId>INC-005</incidentId>
+        <outcome>Surgical intervention required - lead extraction</outcome>
+        <patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#float">63.0</patientAge>
+        <patientSex>Male</patientSex>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-03-18</reportDate>
+        <rdfs:comment xml:lang="en">ACUITY X4 lead dislodgement to right ventricle requiring fluoroscopy-guided repositioning.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-005</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#INC-006 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#INC-006">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident"/>
+        <hasRisk rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RSK-001"/>
+        <involvedDevice rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DEV-007"/>
+        <reportedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-003"/>
+        <reportedInCountry rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Belgium"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</correctiveActionTaken>
+        <eudamedIncidentRef>EU-INC-2024-000006</eudamedIncidentRef>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-04-01</eventDate>
+        <incidentId>INC-006</incidentId>
+        <outcome>Device malfunction - complete system failure</outcome>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-04-02</reportDate>
+        <rdfs:comment xml:lang="en">ACUSON Sequoia ultrasound system froze mid-examination. Emergency shutdown required; patient examination incomplete.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-006</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#INC-007 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#INC-007">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident"/>
+        <hasRisk rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RSK-019"/>
+        <involvedDevice rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DEV-009"/>
+        <reportedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-010"/>
+        <reportedInCountry rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Sweden"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</correctiveActionTaken>
+        <eudamedIncidentRef>EU-INC-2024-000007</eudamedIncidentRef>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-03-01</eventDate>
+        <incidentId>INC-007</incidentId>
+        <outcome>Patient harm - adverse tissue reaction</outcome>
+        <patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#float">70.0</patientAge>
+        <patientSex>Male</patientSex>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-04-14</reportDate>
+        <rdfs:comment xml:lang="en">Persona knee tibial insert showing accelerated polyethylene wear with metallosis confirmed at 3-year revision surgery.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-007</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#INC-008 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#INC-008">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident"/>
+        <hasRisk rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RSK-020"/>
+        <involvedDevice rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DEV-010"/>
+        <reportedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-007"/>
+        <reportedInCountry rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Denmark"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</correctiveActionTaken>
+        <eudamedIncidentRef>EU-INC-2024-000008</eudamedIncidentRef>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-04-20</eventDate>
+        <incidentId>INC-008</incidentId>
+        <outcome>Patient harm - cobalt toxicity</outcome>
+        <patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#float">65.0</patientAge>
+        <patientSex>Female</patientSex>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-04-28</reportDate>
+        <rdfs:comment xml:lang="en">TRITON hip patient presented with elevated serum cobalt (18 ppb). Adverse local tissue reaction (ALTR) confirmed by MRI.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-008</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#INC-009 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#INC-009">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident"/>
+        <hasRisk rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RSK-013"/>
+        <involvedDevice rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DEV-012"/>
+        <reportedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-008"/>
+        <reportedInCountry rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Poland"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</correctiveActionTaken>
+        <eudamedIncidentRef>EU-INC-2024-000009</eudamedIncidentRef>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-03</eventDate>
+        <incidentId>INC-009</incidentId>
+        <outcome>Inappropriate shock delivery</outcome>
+        <patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#float">68.0</patientAge>
+        <patientSex>Male</patientSex>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-06</reportDate>
+        <rdfs:comment xml:lang="en">Viva CRT-D delivered inappropriate ICD therapy during MRI scan despite MRI-conditional programming. Patient experienced pain and syncope.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-009</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#INC-010 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#INC-010">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident"/>
+        <hasRisk rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RSK-010"/>
+        <involvedDevice rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DEV-013"/>
+        <reportedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-012"/>
+        <reportedInCountry rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Germany"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</correctiveActionTaken>
+        <eudamedIncidentRef>EU-INC-2024-000010</eudamedIncidentRef>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-19</eventDate>
+        <incidentId>INC-010</incidentId>
+        <outcome>Device malfunction - incorrect FiO2 delivery</outcome>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-20</reportDate>
+        <rdfs:comment xml:lang="en">ATERA ventilator software version 2.1.3 delivered FiO2 6% lower than set value for patients in ARDS protocol. 3 patients affected.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-010</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#INC-011 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#INC-011">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident"/>
+        <hasRisk rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RSK-014"/>
+        <involvedDevice rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DEV-016"/>
+        <reportedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-005"/>
+        <reportedInCountry rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#France"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</correctiveActionTaken>
+        <eudamedIncidentRef>EU-INC-2024-000011</eudamedIncidentRef>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-28</eventDate>
+        <incidentId>INC-011</incidentId>
+        <outcome>Diagnostic error - false positive TSH results</outcome>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-03</reportDate>
+        <rdfs:comment xml:lang="en">cobas e 801 thyroid-stimulating hormone (TSH) assay reported false positive results (&gt;10 mIU/L) in 12 euthyroid patients due to biotin interference.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-011</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#INC-012 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#INC-012">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident"/>
+        <hasRisk rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RSK-015"/>
+        <involvedDevice rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DEV-017"/>
+        <reportedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-005"/>
+        <reportedInCountry rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Spain"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</correctiveActionTaken>
+        <eudamedIncidentRef>EU-INC-2024-000012</eudamedIncidentRef>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-10</eventDate>
+        <incidentId>INC-012</incidentId>
+        <outcome>Diagnostic error - false negative SARS-CoV-2</outcome>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-15</reportDate>
+        <rdfs:comment xml:lang="en">cobas SARS-CoV-2 assay failed to detect Omicron BA.2.86 subvariant in 7 samples confirmed positive by sequencing. Lot-specific issue.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-012</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#INC-013 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#INC-013">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident"/>
+        <hasRisk rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RSK-015"/>
+        <involvedDevice rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DEV-018"/>
+        <reportedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-015"/>
+        <reportedInCountry rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Germany"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</correctiveActionTaken>
+        <eudamedIncidentRef>EU-INC-2024-000013</eudamedIncidentRef>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-25</eventDate>
+        <incidentId>INC-013</incidentId>
+        <outcome>Diagnostic error - false negative HIV</outcome>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-01</reportDate>
+        <rdfs:comment xml:lang="en">VIDAS HIV DUO Ultra failed to detect HIV-1 group O infection in seroconversion panel. Patient missed early treatment window.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-013</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#INC-014 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#INC-014">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident"/>
+        <hasRisk rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RSK-014"/>
+        <involvedDevice rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DEV-021"/>
+        <reportedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-009"/>
+        <reportedInCountry rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Netherlands"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</correctiveActionTaken>
+        <eudamedIncidentRef>EU-INC-2024-000014</eudamedIncidentRef>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-10</eventDate>
+        <incidentId>INC-014</incidentId>
+        <outcome>Patient harm - hyperglycaemic event</outcome>
+        <patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45.0</patientAge>
+        <patientSex>Female</patientSex>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-18</reportDate>
+        <rdfs:comment xml:lang="en">OPTIGA CGM sensor reported glucose 3.8 mmol/L while laboratory reference showed 14.2 mmol/L. Patient delayed insulin administration.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-014</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#INC-015 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#INC-015">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident"/>
+        <hasRisk rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RSK-010"/>
+        <involvedDevice rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DEV-024"/>
+        <reportedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-002"/>
+        <reportedInCountry rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Italy"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</correctiveActionTaken>
+        <eudamedIncidentRef>EU-INC-2024-000015</eudamedIncidentRef>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-08-04</eventDate>
+        <incidentId>INC-015</incidentId>
+        <outcome>Patient harm - drug overdose</outcome>
+        <patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#float">81.0</patientAge>
+        <patientSex>Female</patientSex>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-08-05</reportDate>
+        <rdfs:comment xml:lang="en">Plum 360 infusion pump delivered 10x heparin dose due to software decimal point error in drug library version 4.2.1.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-015</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#INC-016 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#INC-016">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident"/>
+        <hasRisk rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RSK-004"/>
+        <involvedDevice rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DEV-001"/>
+        <reportedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-001"/>
+        <reportedInCountry rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#United_Kingdom"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</correctiveActionTaken>
+        <eudamedIncidentRef>EU-INC-2024-000016</eudamedIncidentRef>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-08-15</eventDate>
+        <incidentId>INC-016</incidentId>
+        <outcome>Patient harm - haemolytic anaemia</outcome>
+        <patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#float">52.0</patientAge>
+        <patientSex>Male</patientSex>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-08-20</reportDate>
+        <rdfs:comment xml:lang="en">HeartMate 3 patient developed severe haemolysis (LDH &gt;2000 U/L) associated with outflow graft kinking confirmed by CT.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-016</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#INC-017 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#INC-017">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident"/>
+        <hasRisk rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RSK-007"/>
+        <involvedDevice rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DEV-011"/>
+        <reportedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-011"/>
+        <reportedInCountry rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#France"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</correctiveActionTaken>
+        <eudamedIncidentRef>EU-INC-2024-000017</eudamedIncidentRef>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-08-25</eventDate>
+        <incidentId>INC-017</incidentId>
+        <outcome>Surgical intervention - implant removal</outcome>
+        <patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#float">54.0</patientAge>
+        <patientSex>Female</patientSex>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-02</reportDate>
+        <rdfs:comment xml:lang="en">Iluvien implant required surgical removal due to device-related endophthalmitis confirmed by vitreous culture.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-017</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#INC-018 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#INC-018">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident"/>
+        <hasRisk rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RSK-018"/>
+        <involvedDevice rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DEV-015"/>
+        <reportedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-013"/>
+        <reportedInCountry rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Germany"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</correctiveActionTaken>
+        <eudamedIncidentRef>EU-INC-2024-000018</eudamedIncidentRef>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-12</eventDate>
+        <incidentId>INC-018</incidentId>
+        <outcome>Cybersecurity incident - unauthorised access</outcome>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-15</reportDate>
+        <rdfs:comment xml:lang="en">5008S hemodialysis machine web interface exposed to hospital internal network. Unauthorised session accessed alarm configuration.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-018</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#INC-019 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#INC-019">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#NearMissIncident"/>
+        <hasRisk rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RSK-001"/>
+        <involvedDevice rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DEV-023"/>
+        <reportedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-008"/>
+        <reportedInCountry rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Sweden"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</correctiveActionTaken>
+        <eudamedIncidentRef>EU-INC-2024-000019</eudamedIncidentRef>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-28</eventDate>
+        <incidentId>INC-019</incidentId>
+        <outcome>Near-miss - device not activated post-surgery</outcome>
+        <patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#float">71.0</patientAge>
+        <patientSex>Male</patientSex>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-10-01</reportDate>
+        <rdfs:comment xml:lang="en">Tivoli II cochlear implant failed to respond to initial activation programming. Sound processor replacement resolved the issue.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-019</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#INC-020 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#INC-020">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident"/>
+        <hasRisk rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#RSK-011"/>
+        <involvedDevice rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DEV-008"/>
+        <reportedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MAN-003"/>
+        <reportedInCountry rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Belgium"/>
+        <correctiveActionTaken rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</correctiveActionTaken>
+        <eudamedIncidentRef>EU-INC-2024-000020</eudamedIncidentRef>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-10-10</eventDate>
+        <incidentId>INC-020</incidentId>
+        <outcome>Patient harm - SAR heating injury</outcome>
+        <patientAge rdf:datatype="http://www.w3.org/2001/XMLSchema#float">38.0</patientAge>
+        <patientSex>Female</patientSex>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-10-14</reportDate>
+        <rdfs:comment xml:lang="en">MAGNETOM Vida MRI caused localised skin burn (1st degree) at anterior electrode lead in patient with DBS system not declared prior to scan.</rdfs:comment>
+        <rdfs:label xml:lang="en">INC-020</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Ireland -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Ireland">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Country"/>
+        <countryName>Ireland</countryName>
+        <rdfs:label xml:lang="en">Ireland</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Italy -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Italy">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Country"/>
+        <countryName>Italy</countryName>
+        <rdfs:label xml:lang="en">Italy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Läkemedelsverket_MPA -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Läkemedelsverket_MPA">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#CompetentAuthority"/>
+        <rdfs:comment xml:lang="en">Competent authority: Läkemedelsverket (MPA)</rdfs:comment>
+        <rdfs:label xml:lang="en">Läkemedelsverket (MPA)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#MAN-001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#MAN-001">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <registeredIn rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Ireland"/>
+        <supervisedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Health_Products_Regulatory_Authority_HPRA"/>
+        <authorizationNumber>IE/2017/001234</authorizationNumber>
+        <contactEmail>regulatory@medtronic.com</contactEmail>
+        <eudamedSRN>SRN-IE-MED-0001</eudamedSRN>
+        <manufacturerName>Medtronic plc</manufacturerName>
+        <rdfs:comment xml:lang="en">Manufacturer: Medtronic plc</rdfs:comment>
+        <rdfs:label xml:lang="en">Medtronic plc</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#MAN-002 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#MAN-002">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <registeredIn rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Germany"/>
+        <supervisedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Bundesinstitut_für_Arzneimittel_und_Medizinprodukte_BfArM"/>
+        <authorizationNumber>DE/2017/005678</authorizationNumber>
+        <contactEmail>regulatory@abbott.com</contactEmail>
+        <eudamedSRN>SRN-DE-MED-0002</eudamedSRN>
+        <manufacturerName>Abbott Medical Devices</manufacturerName>
+        <rdfs:comment xml:lang="en">Manufacturer: Abbott Medical Devices</rdfs:comment>
+        <rdfs:label xml:lang="en">Abbott Medical Devices</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#MAN-003 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#MAN-003">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <registeredIn rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Germany"/>
+        <supervisedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Bundesinstitut_für_Arzneimittel_und_Medizinprodukte_BfArM"/>
+        <authorizationNumber>DE/2017/009012</authorizationNumber>
+        <contactEmail>regulatory@siemens-healthineers.com</contactEmail>
+        <eudamedSRN>SRN-DE-MED-0003</eudamedSRN>
+        <manufacturerName>Siemens Healthineers AG</manufacturerName>
+        <rdfs:comment xml:lang="en">Manufacturer: Siemens Healthineers AG</rdfs:comment>
+        <rdfs:label xml:lang="en">Siemens Healthineers AG</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#MAN-004 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#MAN-004">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <registeredIn rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Netherlands"/>
+        <supervisedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Rijksinstituut_voor_Volksgezondheid_en_Milieu_RIVM"/>
+        <authorizationNumber>NL/2017/003456</authorizationNumber>
+        <contactEmail>regulatory@philips.com</contactEmail>
+        <eudamedSRN>SRN-NL-MED-0004</eudamedSRN>
+        <manufacturerName>Philips Medical Systems</manufacturerName>
+        <rdfs:comment xml:lang="en">Manufacturer: Philips Medical Systems</rdfs:comment>
+        <rdfs:label xml:lang="en">Philips Medical Systems</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#MAN-005 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#MAN-005">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <registeredIn rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Germany"/>
+        <supervisedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Bundesinstitut_für_Arzneimittel_und_Medizinprodukte_BfArM"/>
+        <authorizationNumber>DE/2017/007890</authorizationNumber>
+        <contactEmail>regulatory@roche.com</contactEmail>
+        <eudamedSRN>SRN-DE-MED-0005</eudamedSRN>
+        <manufacturerName>Roche Diagnostics GmbH</manufacturerName>
+        <rdfs:comment xml:lang="en">Manufacturer: Roche Diagnostics GmbH</rdfs:comment>
+        <rdfs:label xml:lang="en">Roche Diagnostics GmbH</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#MAN-006 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#MAN-006">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <registeredIn rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Ireland"/>
+        <supervisedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Health_Products_Regulatory_Authority_HPRA"/>
+        <authorizationNumber>IE/2017/002345</authorizationNumber>
+        <contactEmail>regulatory@bsci.com</contactEmail>
+        <eudamedSRN>SRN-IE-MED-0006</eudamedSRN>
+        <manufacturerName>Boston Scientific Corporation</manufacturerName>
+        <rdfs:comment xml:lang="en">Manufacturer: Boston Scientific Corporation</rdfs:comment>
+        <rdfs:label xml:lang="en">Boston Scientific Corporation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#MAN-007 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#MAN-007">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <registeredIn rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Netherlands"/>
+        <supervisedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Rijksinstituut_voor_Volksgezondheid_en_Milieu_RIVM"/>
+        <authorizationNumber>NL/2017/006789</authorizationNumber>
+        <contactEmail>regulatory@stryker.com</contactEmail>
+        <eudamedSRN>SRN-NL-MED-0007</eudamedSRN>
+        <manufacturerName>Stryker Corporation</manufacturerName>
+        <rdfs:comment xml:lang="en">Manufacturer: Stryker Corporation</rdfs:comment>
+        <rdfs:label xml:lang="en">Stryker Corporation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#MAN-008 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#MAN-008">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <registeredIn rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Germany"/>
+        <supervisedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Bundesinstitut_für_Arzneimittel_und_Medizinprodukte_BfArM"/>
+        <authorizationNumber>DE/2017/004567</authorizationNumber>
+        <contactEmail>regulatory@biotronik.com</contactEmail>
+        <eudamedSRN>SRN-DE-MED-0008</eudamedSRN>
+        <manufacturerName>Biotronik SE &amp; Co. KG</manufacturerName>
+        <rdfs:comment xml:lang="en">Manufacturer: Biotronik SE &amp; Co. KG</rdfs:comment>
+        <rdfs:label xml:lang="en">Biotronik SE &amp; Co. KG</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#MAN-009 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#MAN-009">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <registeredIn rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Sweden"/>
+        <supervisedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Läkemedelsverket_MPA"/>
+        <authorizationNumber>SE/2017/008901</authorizationNumber>
+        <contactEmail>regulatory@gehealthcare.com</contactEmail>
+        <eudamedSRN>SRN-SE-MED-0009</eudamedSRN>
+        <manufacturerName>GE HealthCare Technologies</manufacturerName>
+        <rdfs:comment xml:lang="en">Manufacturer: GE HealthCare Technologies</rdfs:comment>
+        <rdfs:label xml:lang="en">GE HealthCare Technologies</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#MAN-010 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#MAN-010">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <registeredIn rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Switzerland"/>
+        <supervisedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Swissmedic"/>
+        <authorizationNumber>CH/2017/001122</authorizationNumber>
+        <contactEmail>regulatory@zimmerbiomet.com</contactEmail>
+        <eudamedSRN>SRN-CH-MED-0010</eudamedSRN>
+        <manufacturerName>Zimmer Biomet Holdings</manufacturerName>
+        <rdfs:comment xml:lang="en">Manufacturer: Zimmer Biomet Holdings</rdfs:comment>
+        <rdfs:label xml:lang="en">Zimmer Biomet Holdings</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#MAN-011 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#MAN-011">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <registeredIn rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#United_Kingdom"/>
+        <supervisedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Medicines_and_Healthcare_products_Regulatory_Agency_MHRA"/>
+        <authorizationNumber>UK/2017/003344</authorizationNumber>
+        <contactEmail>regulatory@livanova.com</contactEmail>
+        <eudamedSRN>SRN-UK-MED-0011</eudamedSRN>
+        <manufacturerName>LivaNova PLC</manufacturerName>
+        <rdfs:comment xml:lang="en">Manufacturer: LivaNova PLC</rdfs:comment>
+        <rdfs:label xml:lang="en">LivaNova PLC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#MAN-012 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#MAN-012">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <registeredIn rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Germany"/>
+        <supervisedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Bundesinstitut_für_Arzneimittel_und_Medizinprodukte_BfArM"/>
+        <authorizationNumber>DE/2017/005566</authorizationNumber>
+        <contactEmail>regulatory@draeger.com</contactEmail>
+        <eudamedSRN>SRN-DE-MED-0012</eudamedSRN>
+        <manufacturerName>Drägerwerk AG &amp; Co. KGaA</manufacturerName>
+        <rdfs:comment xml:lang="en">Manufacturer: Drägerwerk AG &amp; Co. KGaA</rdfs:comment>
+        <rdfs:label xml:lang="en">Drägerwerk AG &amp; Co. KGaA</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#MAN-013 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#MAN-013">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <registeredIn rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#France"/>
+        <supervisedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Agence_nationale_de_sécurité_du_médicament_ANSM"/>
+        <authorizationNumber>FR/2017/007788</authorizationNumber>
+        <contactEmail>regulatory@nipro.com</contactEmail>
+        <eudamedSRN>SRN-FR-MED-0013</eudamedSRN>
+        <manufacturerName>Nipro Corporation</manufacturerName>
+        <rdfs:comment xml:lang="en">Manufacturer: Nipro Corporation</rdfs:comment>
+        <rdfs:label xml:lang="en">Nipro Corporation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#MAN-014 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#MAN-014">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <registeredIn rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Belgium"/>
+        <supervisedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Agence_fédérale_des_médicaments_et_des_produits_de_santé_AFMPS"/>
+        <authorizationNumber>BE/2017/009900</authorizationNumber>
+        <contactEmail>regulatory@hologic.com</contactEmail>
+        <eudamedSRN>SRN-BE-MED-0014</eudamedSRN>
+        <manufacturerName>Hologic Inc.</manufacturerName>
+        <rdfs:comment xml:lang="en">Manufacturer: Hologic Inc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hologic Inc.</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#MAN-015 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#MAN-015">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+        <registeredIn rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#France"/>
+        <supervisedBy rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Agence_nationale_de_sécurité_du_médicament_ANSM"/>
+        <authorizationNumber>FR/2017/002211</authorizationNumber>
+        <contactEmail>regulatory@biomerieux.com</contactEmail>
+        <eudamedSRN>SRN-FR-MED-0015</eudamedSRN>
+        <manufacturerName>bioMérieux SA</manufacturerName>
+        <rdfs:comment xml:lang="en">Manufacturer: bioMérieux SA</rdfs:comment>
+        <rdfs:label xml:lang="en">bioMérieux SA</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Medicines_and_Healthcare_products_Regulatory_Agency_MHRA -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Medicines_and_Healthcare_products_Regulatory_Agency_MHRA">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#CompetentAuthority"/>
+        <rdfs:comment xml:lang="en">Competent authority: Medicines and Healthcare products Regulatory Agency (MHRA)</rdfs:comment>
+        <rdfs:label xml:lang="en">Medicines and Healthcare products Regulatory Agency (MHRA)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Netherlands -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Netherlands">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Country"/>
+        <countryName>Netherlands</countryName>
+        <rdfs:label xml:lang="en">Netherlands</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Poland -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Poland">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Country"/>
+        <countryName>Poland</countryName>
+        <rdfs:label xml:lang="en">Poland</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#RSK-001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#RSK-001">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DeviceFailure"/>
+        <description>Complete loss of electrical function leading to device shutdown</description>
+        <imdrfCode>A0101</imdrfCode>
+        <probability>Low</probability>
+        <riskId>RSK-001</riskId>
+        <riskName>Device failure - electrical</riskName>
+        <severity>Critical</severity>
+        <rdfs:comment xml:lang="en">Complete loss of electrical function leading to device shutdown</rdfs:comment>
+        <rdfs:label xml:lang="en">Device failure - electrical</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#RSK-002 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#RSK-002">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DeviceFailure"/>
+        <description>Structural failure of mechanical components under physiological load</description>
+        <imdrfCode>A0102</imdrfCode>
+        <probability>Medium</probability>
+        <riskId>RSK-002</riskId>
+        <riskName>Device failure - mechanical</riskName>
+        <severity>Critical</severity>
+        <rdfs:comment xml:lang="en">Structural failure of mechanical components under physiological load</rdfs:comment>
+        <rdfs:label xml:lang="en">Device failure - mechanical</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#RSK-003 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#RSK-003">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#PatientHarm"/>
+        <description>Thrombus formation on device surface causing embolic events</description>
+        <imdrfCode>A0201</imdrfCode>
+        <probability>Low</probability>
+        <riskId>RSK-003</riskId>
+        <riskName>Thrombosis - device-related</riskName>
+        <severity>Critical</severity>
+        <rdfs:comment xml:lang="en">Thrombus formation on device surface causing embolic events</rdfs:comment>
+        <rdfs:label xml:lang="en">Thrombosis - device-related</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#RSK-004 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#RSK-004">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#PatientHarm"/>
+        <description>Mechanical destruction of red blood cells by pump mechanism</description>
+        <imdrfCode>A0202</imdrfCode>
+        <probability>Low</probability>
+        <riskId>RSK-004</riskId>
+        <riskName>Hemolysis - pump-induced</riskName>
+        <severity>Serious</severity>
+        <rdfs:comment xml:lang="en">Mechanical destruction of red blood cells by pump mechanism</rdfs:comment>
+        <rdfs:label xml:lang="en">Hemolysis - pump-induced</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#RSK-005 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#RSK-005">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DevicePerformance"/>
+        <description>Unintended displacement of implant from intended anatomical position</description>
+        <imdrfCode>A0301</imdrfCode>
+        <probability>Low</probability>
+        <riskId>RSK-005</riskId>
+        <riskName>Device migration - implant</riskName>
+        <severity>Serious</severity>
+        <rdfs:comment xml:lang="en">Unintended displacement of implant from intended anatomical position</rdfs:comment>
+        <rdfs:label xml:lang="en">Device migration - implant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#RSK-006 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#RSK-006">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DevicePerformance"/>
+        <description>Cardiac lead displacement requiring repositioning or replacement</description>
+        <imdrfCode>A0302</imdrfCode>
+        <probability>Medium</probability>
+        <riskId>RSK-006</riskId>
+        <riskName>Lead dislodgement</riskName>
+        <severity>Serious</severity>
+        <rdfs:comment xml:lang="en">Cardiac lead displacement requiring repositioning or replacement</rdfs:comment>
+        <rdfs:label xml:lang="en">Lead dislodgement</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#RSK-007 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#RSK-007">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#PatientHarm"/>
+        <description>Device-related infection at implantation site or systemic sepsis</description>
+        <imdrfCode>A0401</imdrfCode>
+        <probability>Medium</probability>
+        <riskId>RSK-007</riskId>
+        <riskName>Infection - device-related</riskName>
+        <severity>Serious</severity>
+        <rdfs:comment xml:lang="en">Device-related infection at implantation site or systemic sepsis</rdfs:comment>
+        <rdfs:label xml:lang="en">Infection - device-related</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#RSK-008 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#RSK-008">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#PatientHarm"/>
+        <description>Bacterial biofilm accumulation on implant surface resistant to antibiotics</description>
+        <imdrfCode>A0402</imdrfCode>
+        <probability>High</probability>
+        <riskId>RSK-008</riskId>
+        <riskName>Biofilm formation</riskName>
+        <severity>Moderate</severity>
+        <rdfs:comment xml:lang="en">Bacterial biofilm accumulation on implant surface resistant to antibiotics</rdfs:comment>
+        <rdfs:label xml:lang="en">Biofilm formation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#RSK-009 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#RSK-009">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DeviceFailure"/>
+        <description>Battery end-of-life earlier than specified, risking therapy interruption</description>
+        <imdrfCode>A0501</imdrfCode>
+        <probability>Low</probability>
+        <riskId>RSK-009</riskId>
+        <riskName>Battery depletion - premature</riskName>
+        <severity>Critical</severity>
+        <rdfs:comment xml:lang="en">Battery end-of-life earlier than specified, risking therapy interruption</rdfs:comment>
+        <rdfs:label xml:lang="en">Battery depletion - premature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#RSK-010 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#RSK-010">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DeviceFailure"/>
+        <description>Software bug causing incorrect dosing, alarming, or therapy delivery</description>
+        <imdrfCode>A0502</imdrfCode>
+        <probability>Low</probability>
+        <riskId>RSK-010</riskId>
+        <riskName>Software malfunction</riskName>
+        <severity>Critical</severity>
+        <rdfs:comment xml:lang="en">Software bug causing incorrect dosing, alarming, or therapy delivery</rdfs:comment>
+        <rdfs:label xml:lang="en">Software malfunction</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#RSK-011 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#RSK-011">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#PatientHarm"/>
+        <description>Unintended ionising radiation exposure exceeding therapeutic dose</description>
+        <imdrfCode>A0601</imdrfCode>
+        <probability>Low</probability>
+        <riskId>RSK-011</riskId>
+        <riskName>Radiation overdose</riskName>
+        <severity>Critical</severity>
+        <rdfs:comment xml:lang="en">Unintended ionising radiation exposure exceeding therapeutic dose</rdfs:comment>
+        <rdfs:label xml:lang="en">Radiation overdose</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#RSK-012 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#RSK-012">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DevicePerformance"/>
+        <description>Metallic implant causing MRI image artifacts compromising diagnostics</description>
+        <imdrfCode>A0701</imdrfCode>
+        <probability>High</probability>
+        <riskId>RSK-012</riskId>
+        <riskName>Metallic artifact - MRI</riskName>
+        <severity>Moderate</severity>
+        <rdfs:comment xml:lang="en">Metallic implant causing MRI image artifacts compromising diagnostics</rdfs:comment>
+        <rdfs:label xml:lang="en">Metallic artifact - MRI</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#RSK-013 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#RSK-013">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DevicePerformance"/>
+        <description>External EMI affecting pacemaker/ICD sensing and pacing functions</description>
+        <imdrfCode>A0702</imdrfCode>
+        <probability>Low</probability>
+        <riskId>RSK-013</riskId>
+        <riskName>Electromagnetic interference</riskName>
+        <severity>Serious</severity>
+        <rdfs:comment xml:lang="en">External EMI affecting pacemaker/ICD sensing and pacing functions</rdfs:comment>
+        <rdfs:label xml:lang="en">Electromagnetic interference</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#RSK-014 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#RSK-014">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DiagnosticError"/>
+        <description>IVD test returns positive result in absence of target condition</description>
+        <imdrfCode>B0101</imdrfCode>
+        <probability>Medium</probability>
+        <riskId>RSK-014</riskId>
+        <riskName>False positive result</riskName>
+        <severity>Serious</severity>
+        <rdfs:comment xml:lang="en">IVD test returns positive result in absence of target condition</rdfs:comment>
+        <rdfs:label xml:lang="en">False positive result</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#RSK-015 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#RSK-015">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DiagnosticError"/>
+        <description>IVD test fails to detect target condition in affected individual</description>
+        <imdrfCode>B0102</imdrfCode>
+        <probability>Low</probability>
+        <riskId>RSK-015</riskId>
+        <riskName>False negative result</riskName>
+        <severity>Critical</severity>
+        <rdfs:comment xml:lang="en">IVD test fails to detect target condition in affected individual</rdfs:comment>
+        <rdfs:label xml:lang="en">False negative result</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#RSK-016 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#RSK-016">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DiagnosticError"/>
+        <description>Reagent reacts with non-target analyte producing incorrect result</description>
+        <imdrfCode>B0201</imdrfCode>
+        <probability>Medium</probability>
+        <riskId>RSK-016</riskId>
+        <riskName>Cross-reactivity</riskName>
+        <severity>Serious</severity>
+        <rdfs:comment xml:lang="en">Reagent reacts with non-target analyte producing incorrect result</rdfs:comment>
+        <rdfs:label xml:lang="en">Cross-reactivity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#RSK-017 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#RSK-017">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ProductQuality"/>
+        <description>Reagent lot contamination leading to systematic diagnostic errors</description>
+        <imdrfCode>B0301</imdrfCode>
+        <probability>Low</probability>
+        <riskId>RSK-017</riskId>
+        <riskName>Contamination - reagent</riskName>
+        <severity>Critical</severity>
+        <rdfs:comment xml:lang="en">Reagent lot contamination leading to systematic diagnostic errors</rdfs:comment>
+        <rdfs:label xml:lang="en">Contamination - reagent</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#RSK-018 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#RSK-018">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#DeviceSafety"/>
+        <description>Exploitable software vulnerability enabling unauthorized device access</description>
+        <imdrfCode>B0401</imdrfCode>
+        <probability>Low</probability>
+        <riskId>RSK-018</riskId>
+        <riskName>Cybersecurity vulnerability</riskName>
+        <severity>Critical</severity>
+        <rdfs:comment xml:lang="en">Exploitable software vulnerability enabling unauthorized device access</rdfs:comment>
+        <rdfs:label xml:lang="en">Cybersecurity vulnerability</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#RSK-019 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#RSK-019">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#PatientHarm"/>
+        <description>Particulate debris from bearing surfaces causing adverse tissue reaction</description>
+        <imdrfCode>C0101</imdrfCode>
+        <probability>Medium</probability>
+        <riskId>RSK-019</riskId>
+        <riskName>Wear debris - joint implant</riskName>
+        <severity>Serious</severity>
+        <rdfs:comment xml:lang="en">Particulate debris from bearing surfaces causing adverse tissue reaction</rdfs:comment>
+        <rdfs:label xml:lang="en">Wear debris - joint implant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#RSK-020 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#RSK-020">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#PatientHarm"/>
+        <description>Metallic ion release from corrosion causing local or systemic toxicity</description>
+        <imdrfCode>C0201</imdrfCode>
+        <probability>Low</probability>
+        <riskId>RSK-020</riskId>
+        <riskName>Corrosion - metallic implant</riskName>
+        <severity>Serious</severity>
+        <rdfs:comment xml:lang="en">Metallic ion release from corrosion causing local or systemic toxicity</rdfs:comment>
+        <rdfs:label xml:lang="en">Corrosion - metallic implant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Rijksinstituut_voor_Volksgezondheid_en_Milieu_RIVM -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Rijksinstituut_voor_Volksgezondheid_en_Milieu_RIVM">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#CompetentAuthority"/>
+        <rdfs:comment xml:lang="en">Competent authority: Rijksinstituut voor Volksgezondheid en Milieu (RIVM)</rdfs:comment>
+        <rdfs:label xml:lang="en">Rijksinstituut voor Volksgezondheid en Milieu (RIVM)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Spain -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Spain">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Country"/>
+        <countryName>Spain</countryName>
+        <rdfs:label xml:lang="en">Spain</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Sweden -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Sweden">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Country"/>
+        <countryName>Sweden</countryName>
+        <rdfs:label xml:lang="en">Sweden</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Swissmedic -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Swissmedic">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#CompetentAuthority"/>
+        <rdfs:comment xml:lang="en">Competent authority: Swissmedic</rdfs:comment>
+        <rdfs:label xml:lang="en">Swissmedic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#Switzerland -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#Switzerland">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Country"/>
+        <countryName>Switzerland</countryName>
+        <rdfs:label xml:lang="en">Switzerland</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#United_Kingdom -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#United_Kingdom">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Country"/>
+        <countryName>United Kingdom</countryName>
+        <rdfs:label xml:lang="en">United Kingdom</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#inst_ClassA -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassA">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ClassA"/>
+        <rdfs:label xml:lang="en">ClassA</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#inst_ClassB -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassB">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ClassB"/>
+        <rdfs:label xml:lang="en">ClassB</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#inst_ClassC -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassC">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ClassC"/>
+        <rdfs:label xml:lang="en">ClassC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#inst_ClassD -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassD">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ClassD"/>
+        <rdfs:label xml:lang="en">ClassD</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#inst_ClassI -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassI">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ClassI"/>
+        <rdfs:label xml:lang="en">ClassI</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIII -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIII">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ClassIII"/>
+        <rdfs:label xml:lang="en">ClassIII</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIIa -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIIa">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ClassIIa"/>
+        <rdfs:label xml:lang="en">ClassIIa</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIIb -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIIb">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ClassIIb"/>
+        <rdfs:label xml:lang="en">ClassIIb</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#inst_IVDR -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#inst_IVDR">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#IVDR"/>
+        <rdfs:label xml:lang="en">IVDR</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uoc.edu/knowledgeManagement/mdrco#inst_MDR -->
+
+
+    <owl:NamedIndividual rdf:about="http://uoc.edu/knowledgeManagement/mdrco#inst_MDR">
+        <rdf:type rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#MDR"/>
+        <rdfs:label xml:lang="en">MDR</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://uoc.edu/knowledgeManagement/f">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://uoc.edu/knowledgeManagement/d">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://uoc.edu/knowledgeManagement/i">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://uoc.edu/knowledgeManagement/rc">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://uoc.edu/knowledgeManagement/m">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://uoc.edu/knowledgeManagement/n">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Incident"/>
+                        <swrl:argument1 rdf:resource="http://uoc.edu/knowledgeManagement/i"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#involvedDevice"/>
+                                <swrl:argument1 rdf:resource="http://uoc.edu/knowledgeManagement/i"/>
+                                <swrl:argument2 rdf:resource="http://uoc.edu/knowledgeManagement/d"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Device"/>
+                                        <swrl:argument1 rdf:resource="http://uoc.edu/knowledgeManagement/d"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#hasRiskClass"/>
+                                                <swrl:argument1 rdf:resource="http://uoc.edu/knowledgeManagement/d"/>
+                                                <swrl:argument2 rdf:resource="http://uoc.edu/knowledgeManagement/rc"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ClassIII"/>
+                                                        <swrl:argument1 rdf:resource="http://uoc.edu/knowledgeManagement/rc"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#HighRiskIncident"/>
+                        <swrl:argument1 rdf:resource="http://uoc.edu/knowledgeManagement/i"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"/>
+                        <swrl:argument1 rdf:resource="http://uoc.edu/knowledgeManagement/m"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#authorizationNumber"/>
+                                <swrl:argument1 rdf:resource="http://uoc.edu/knowledgeManagement/m"/>
+                                <swrl:argument2 rdf:resource="http://uoc.edu/knowledgeManagement/n"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#EUAuthorizedManufacturer"/>
+                        <swrl:argument1 rdf:resource="http://uoc.edu/knowledgeManagement/m"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction"/>
+                        <swrl:argument1 rdf:resource="http://uoc.edu/knowledgeManagement/f"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#closureDate"/>
+                                <swrl:argument1 rdf:resource="http://uoc.edu/knowledgeManagement/f"/>
+                                <swrl:argument2 rdf:resource="http://uoc.edu/knowledgeManagement/d"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uoc.edu/knowledgeManagement/mdrco#ClosedFSCA"/>
+                        <swrl:argument1 rdf:resource="http://uoc.edu/knowledgeManagement/f"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
