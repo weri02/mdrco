@@ -37,16 +37,16 @@
         "value" : "mdrco",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "http://uoc.edu/knowledgeManagement/mdrco#",
-        "type" : "label"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://uoc.edu/knowledgeManagement/mdrco#",
         "type" : "label"
       } ],
       "title" : [ {
@@ -60,30 +60,93 @@
   "namespace" : [ ],
   "class" : [ {
     "id" : "0",
-    "type" : "rdfs:Datatype"
+    "type" : "owl:Class"
   }, {
-    "id" : "1",
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
     "type" : "owl:Class"
   }, {
     "id" : "3",
     "type" : "owl:Class"
   }, {
-    "id" : "8",
+    "id" : "26",
     "type" : "owl:Class"
   }, {
-    "id" : "13",
+    "id" : "31",
     "type" : "owl:Class"
   }, {
-    "id" : "14",
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
     "type" : "owl:Class"
   }, {
     "id" : "6",
     "type" : "owl:Class"
   }, {
-    "id" : "16",
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "71",
     "type" : "owl:Class"
   }, {
     "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
     "type" : "owl:Class"
   }, {
     "id" : "20",
@@ -92,203 +155,172 @@
     "id" : "23",
     "type" : "owl:Class"
   }, {
-    "id" : "24",
+    "id" : "35",
     "type" : "owl:Class"
   }, {
-    "id" : "25",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "26",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "27",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "12",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "29",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "31",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "32",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "33",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "34",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "38",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "9",
-    "type" : "owl:Class"
-  }, {
-    "id" : "45",
-    "type" : "owl:Class"
-  }, {
-    "id" : "18",
-    "type" : "owl:Class"
-  }, {
-    "id" : "19",
-    "type" : "owl:Class"
-  }, {
-    "id" : "56",
-    "type" : "owl:Class"
-  }, {
-    "id" : "47",
-    "type" : "owl:Class"
-  }, {
-    "id" : "62",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "63",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "64",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "42",
-    "type" : "owl:Class"
-  }, {
-    "id" : "65",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "66",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "67",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "68",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "69",
+    "id" : "52",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "7",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "70",
+    "id" : "77",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "71",
+    "id" : "75",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "72",
+    "id" : "79",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "40",
+    "id" : "80",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "48",
     "type" : "rdfs:Datatype"
-  }, {
-    "id" : "55",
-    "type" : "owl:Class"
-  }, {
-    "id" : "2",
-    "type" : "owl:Class"
-  }, {
-    "id" : "78",
-    "type" : "owl:Class"
   }, {
     "id" : "81",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "77",
-    "type" : "owl:Class"
-  }, {
-    "id" : "82",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "83",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "36",
+    "id" : "14",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "85",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "86",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "87",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "88",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "89",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "98",
-    "type" : "owl:Class"
-  }, {
-    "id" : "22",
-    "type" : "owl:Class"
-  }, {
-    "id" : "54",
-    "type" : "owl:Class"
-  }, {
-    "id" : "104",
-    "type" : "owl:Class"
-  }, {
-    "id" : "95",
-    "type" : "owl:Class"
-  }, {
-    "id" : "79",
-    "type" : "owl:Class"
-  }, {
-    "id" : "11",
+    "id" : "34",
     "type" : "owl:Class"
   }, {
     "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "123",
+    "id" : "25",
     "type" : "owl:Class"
   }, {
-    "id" : "43",
+    "id" : "36",
     "type" : "owl:Class"
   }, {
-    "id" : "44",
+    "id" : "98",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "100",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "101",
     "type" : "owl:Class"
   }, {
-    "id" : "15",
+    "id" : "16",
     "type" : "owl:Class"
   }, {
-    "id" : "122",
+    "id" : "39",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "102",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "103",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "104",
     "type" : "owl:Class"
   }, {
-    "id" : "135",
+    "id" : "73",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "105",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "110",
     "type" : "owl:Class"
   }, {
-    "id" : "91",
+    "id" : "113",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "109",
     "type" : "owl:Class"
   }, {
-    "id" : "152",
+    "id" : "114",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "115",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "118",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "119",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "127",
     "type" : "owl:Class"
   }, {
-    "id" : "49",
+    "id" : "133",
     "type" : "owl:Class"
   }, {
-    "id" : "21",
+    "id" : "138",
     "type" : "owl:Class"
   }, {
-    "id" : "124",
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "146",
+    "type" : "owl:Class"
+  }, {
+    "id" : "107",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "137",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "145",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "0",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#InSituCorrection",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
     "instances" : 0,
@@ -340,8 +372,845 @@
     "comment" : {
       "en" : "A FSCA involving correction or modification of the device at its current location."
     },
-    "id" : "1",
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RegulatoryFramework",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RegulatoryFramework",
+      "en" : "Regulatory Framework"
+    },
+    "subClasses" : [ "3", "4" ],
+    "comment" : {
+      "en" : "The European regulatory framework applicable to a medical device."
+    },
+    "id" : "2"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RiskClass",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RiskClass",
+      "en" : "Risk Class"
+    },
+    "subClasses" : [ "16", "17", "18", "19", "20", "21", "22", "23" ],
+    "comment" : {
+      "en" : "The risk classification assigned to a medical device according to MDR or IVDR regulations."
+    },
+    "id" : "15"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#IVDR",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IVDR",
+      "en" : "IVDR"
+    },
+    "individuals" : [ {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#inst_IVDR",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "labels" : {
+        "IRI-based" : "inst_IVDR",
+        "en" : "IVDR"
+      }
+    } ],
+    "comment" : {
+      "en" : "In Vitro Diagnostic Regulation EU 2017/746 applicable to IVD devices."
+    },
+    "id" : "3",
     "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SeriousIncident",
+      "en" : "Serious Incident"
+    },
+    "individuals" : [ {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-015",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Plum 360 infusion pump delivered 10x heparin dose due to software decimal point error in drug library version 4.2.1."
+      },
+      "labels" : {
+        "IRI-based" : "INC-015",
+        "en" : "INC-015"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-004",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "SYNERGY stent fracture detected on angiography 18 months post-implant causing in-stent restenosis."
+      },
+      "labels" : {
+        "IRI-based" : "INC-004",
+        "en" : "INC-004"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-003",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Portico valve showed paravalvular leak grade III due to partial migration 2 weeks post-TAVI procedure."
+      },
+      "labels" : {
+        "IRI-based" : "INC-003",
+        "en" : "INC-003"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-014",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "OPTIGA CGM sensor reported glucose 3.8 mmol/L while laboratory reference showed 14.2 mmol/L. Patient delayed insulin administration."
+      },
+      "labels" : {
+        "IRI-based" : "INC-014",
+        "en" : "INC-014"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-002",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Micra AV pacemaker reached elective replacement indicator 14 months earlier than expected longevity specification."
+      },
+      "labels" : {
+        "IRI-based" : "INC-002",
+        "en" : "INC-002"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-013",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "VIDAS HIV DUO Ultra failed to detect HIV-1 group O infection in seroconversion panel. Patient missed early treatment window."
+      },
+      "labels" : {
+        "IRI-based" : "INC-013",
+        "en" : "INC-013"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-001",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Patient implanted with HeartMate 3 LVAD developed ischemic stroke 6 months post-implant. Device thrombus confirmed by echocardiography."
+      },
+      "labels" : {
+        "IRI-based" : "INC-001",
+        "en" : "INC-001"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-012",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "cobas SARS-CoV-2 assay failed to detect Omicron BA.2.86 subvariant in 7 samples confirmed positive by sequencing. Lot-specific issue."
+      },
+      "labels" : {
+        "IRI-based" : "INC-012",
+        "en" : "INC-012"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-011",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "cobas e 801 thyroid-stimulating hormone (TSH) assay reported false positive results (>10 mIU/L) in 12 euthyroid patients due to biotin interference."
+      },
+      "labels" : {
+        "IRI-based" : "INC-011",
+        "en" : "INC-011"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-010",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "ATERA ventilator software version 2.1.3 delivered FiO2 6% lower than set value for patients in ARDS protocol. 3 patients affected."
+      },
+      "labels" : {
+        "IRI-based" : "INC-010",
+        "en" : "INC-010"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-020",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "MAGNETOM Vida MRI caused localised skin burn (1st degree) at anterior electrode lead in patient with DBS system not declared prior to scan."
+      },
+      "labels" : {
+        "IRI-based" : "INC-020",
+        "en" : "INC-020"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-009",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Viva CRT-D delivered inappropriate ICD therapy during MRI scan despite MRI-conditional programming. Patient experienced pain and syncope."
+      },
+      "labels" : {
+        "IRI-based" : "INC-009",
+        "en" : "INC-009"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-008",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "TRITON hip patient presented with elevated serum cobalt (18 ppb). Adverse local tissue reaction (ALTR) confirmed by MRI."
+      },
+      "labels" : {
+        "IRI-based" : "INC-008",
+        "en" : "INC-008"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-007",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Persona knee tibial insert showing accelerated polyethylene wear with metallosis confirmed at 3-year revision surgery."
+      },
+      "labels" : {
+        "IRI-based" : "INC-007",
+        "en" : "INC-007"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-018",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "5008S hemodialysis machine web interface exposed to hospital internal network. Unauthorised session accessed alarm configuration."
+      },
+      "labels" : {
+        "IRI-based" : "INC-018",
+        "en" : "INC-018"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-006",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "ACUSON Sequoia ultrasound system froze mid-examination. Emergency shutdown required; patient examination incomplete."
+      },
+      "labels" : {
+        "IRI-based" : "INC-006",
+        "en" : "INC-006"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-017",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Iluvien implant required surgical removal due to device-related endophthalmitis confirmed by vitreous culture."
+      },
+      "labels" : {
+        "IRI-based" : "INC-017",
+        "en" : "INC-017"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-016",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "HeartMate 3 patient developed severe haemolysis (LDH >2000 U/L) associated with outflow graft kinking confirmed by CT."
+      },
+      "labels" : {
+        "IRI-based" : "INC-016",
+        "en" : "INC-016"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-005",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "ACUITY X4 lead dislodgement to right ventricle requiring fluoroscopy-guided repositioning."
+      },
+      "labels" : {
+        "IRI-based" : "INC-005",
+        "en" : "INC-005"
+      }
+    } ],
+    "comment" : {
+      "en" : "An incident that directly or indirectly led to serious injury or death of a patient."
+    },
+    "id" : "26",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#InterferenceRisk",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InterferenceRisk",
+      "en" : "Interference Risk"
+    },
+    "individuals" : [ {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-012",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Metallic implant causing MRI image artifacts compromising diagnostics"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-012",
+        "en" : "Metallic artifact - MRI"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-013",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "External EMI affecting pacemaker/ICD sensing and pacing functions"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-013",
+        "en" : "Electromagnetic interference"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk type related to electromagnetic or device interference."
+    },
+    "id" : "31",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FieldSafetyCorrectiveAction",
+      "en" : "Field Safety Corrective Action"
+    },
+    "subClasses" : [ "0", "33", "34", "35", "36" ],
+    "comment" : {
+      "en" : "An action taken to reduce a risk of death or serious deterioration in health associated with a device in use."
+    },
+    "id" : "1"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#DeviceFailure",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DeviceFailure",
+      "en" : "Device Failure"
+    },
+    "individuals" : [ {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-009",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Battery end-of-life earlier than specified, risking therapy interruption"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-009",
+        "en" : "Battery depletion - premature"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-010",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Software bug causing incorrect dosing, alarming, or therapy delivery"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-010",
+        "en" : "Software malfunction"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-001",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Complete loss of electrical function leading to device shutdown"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-001",
+        "en" : "Device failure - electrical"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-002",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Structural failure of mechanical components under physiological load"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-002",
+        "en" : "Device failure - mechanical"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk category related to device failure."
+    },
+    "id" : "40",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#SelfTestDevice",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SelfTestDevice",
+      "en" : "Self Test Device"
+    },
+    "individuals" : [ {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#DEV-021",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Continuous glucose monitor for patients with diabetes"
+      },
+      "labels" : {
+        "IRI-based" : "DEV-021",
+        "en" : "OPTIGA Glucose Monitoring System"
+      }
+    } ],
+    "comment" : {
+      "en" : "An IVD device intended to be used by lay persons in a home environment."
+    },
+    "id" : "41",
+    "superClasses" : [ "42" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#NearMissIncident",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NearMissIncident",
+      "en" : "Near Miss Incident"
+    },
+    "individuals" : [ {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-019",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Tivoli II cochlear implant failed to respond to initial activation programming. Sound processor replacement resolved the issue."
+      },
+      "labels" : {
+        "IRI-based" : "INC-019",
+        "en" : "INC-019"
+      }
+    } ],
+    "comment" : {
+      "en" : "An incident that could have led to patient harm but did not due to fortunate circumstances."
+    },
+    "id" : "43",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#SoftwareRisk",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SoftwareRisk",
+      "en" : "Software Risk"
+    },
+    "individuals" : [ {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-010",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Software bug causing incorrect dosing, alarming, or therapy delivery"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-010",
+        "en" : "Software malfunction"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk type related to software malfunction or erroneous output."
+    },
+    "id" : "49",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#MaterialRisk",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaterialRisk",
+      "en" : "Material Risk"
+    },
+    "individuals" : [ {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-020",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Metallic ion release from corrosion causing local or systemic toxicity"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-020",
+        "en" : "Corrosion - metallic implant"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-019",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Particulate debris from bearing surfaces causing adverse tissue reaction"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-019",
+        "en" : "Wear debris - joint implant"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk type related to material degradation, wear debris or toxicity."
+    },
+    "id" : "50",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#CompetentAuthority",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CompetentAuthority",
+      "en" : "Competent Authority"
+    },
+    "individuals" : [ {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Rijksinstituut_voor_Volksgezondheid_en_Milieu_RIVM",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Competent authority: Rijksinstituut voor Volksgezondheid en Milieu (RIVM)"
+      },
+      "labels" : {
+        "IRI-based" : "Rijksinstituut_voor_Volksgezondheid_en_Milieu_RIVM",
+        "en" : "Rijksinstituut voor Volksgezondheid en Milieu (RIVM)"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Läkemedelsverket_MPA",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Competent authority: Läkemedelsverket (MPA)"
+      },
+      "labels" : {
+        "IRI-based" : "Läkemedelsverket_MPA",
+        "en" : "Läkemedelsverket (MPA)"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Agence_nationale_de_sécurité_du_médicament_ANSM",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Competent authority: Agence nationale de sécurité du médicament (ANSM)"
+      },
+      "labels" : {
+        "IRI-based" : "Agence_nationale_de_sécurité_du_médicament_ANSM",
+        "en" : "Agence nationale de sécurité du médicament (ANSM)"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Swissmedic",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Competent authority: Swissmedic"
+      },
+      "labels" : {
+        "IRI-based" : "Swissmedic",
+        "en" : "Swissmedic"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Agence_fédérale_des_médicaments_et_des_produits_de_santé_AFMPS",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Competent authority: Agence fédérale des médicaments et des produits de santé (AFMPS)"
+      },
+      "labels" : {
+        "IRI-based" : "Agence_fédérale_des_médicaments_et_des_produits_de_santé_AFMPS",
+        "en" : "Agence fédérale des médicaments et des produits de santé (AFMPS)"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Health_Products_Regulatory_Authority_HPRA",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Competent authority: Health Products Regulatory Authority (HPRA)"
+      },
+      "labels" : {
+        "IRI-based" : "Health_Products_Regulatory_Authority_HPRA",
+        "en" : "Health Products Regulatory Authority (HPRA)"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Bundesinstitut_für_Arzneimittel_und_Medizinprodukte_BfArM",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Competent authority: Bundesinstitut für Arzneimittel und Medizinprodukte (BfArM)"
+      },
+      "labels" : {
+        "IRI-based" : "Bundesinstitut_für_Arzneimittel_und_Medizinprodukte_BfArM",
+        "en" : "Bundesinstitut für Arzneimittel und Medizinprodukte (BfArM)"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Medicines_and_Healthcare_products_Regulatory_Agency_MHRA",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Competent authority: Medicines and Healthcare products Regulatory Agency (MHRA)"
+      },
+      "labels" : {
+        "IRI-based" : "Medicines_and_Healthcare_products_Regulatory_Agency_MHRA",
+        "en" : "Medicines and Healthcare products Regulatory Agency (MHRA)"
+      }
+    } ],
+    "comment" : {
+      "en" : "The national authority responsible for supervising medical device manufacturers in a given country."
+    },
+    "id" : "46"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Incident",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Incident",
+      "en" : "Incident"
+    },
+    "subClasses" : [ "26", "55", "43" ],
+    "comment" : {
+      "en" : "Any malfunction or deterioration in the characteristics of a device that has led or could lead to patient harm."
+    },
+    "id" : "6"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RadiationRisk",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RadiationRisk",
+      "en" : "Radiation Risk"
+    },
+    "individuals" : [ {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-011",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Unintended ionising radiation exposure exceeding therapeutic dose"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-011",
+        "en" : "Radiation overdose"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk type related to unintended ionising radiation exposure."
+    },
+    "id" : "58",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#ClassIIa",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassIIa",
+      "en" : "Class IIa"
+    },
+    "individuals" : [ {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIIa",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "labels" : {
+        "IRI-based" : "inst_ClassIIa",
+        "en" : "ClassIIa"
+      }
+    } ],
+    "comment" : {
+      "en" : "MDR risk class IIa - medium risk."
+    },
+    "id" : "21",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#ClassIIb",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassIIb",
+      "en" : "Class IIb"
+    },
+    "individuals" : [ {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIIb",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "labels" : {
+        "IRI-based" : "inst_ClassIIb",
+        "en" : "ClassIIb"
+      }
+    } ],
+    "comment" : {
+      "en" : "MDR risk class IIb - medium-high risk."
+    },
+    "id" : "22",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#PatientHarm",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PatientHarm",
+      "en" : "Patient Harm"
+    },
+    "individuals" : [ {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-020",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Metallic ion release from corrosion causing local or systemic toxicity"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-020",
+        "en" : "Corrosion - metallic implant"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-011",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Unintended ionising radiation exposure exceeding therapeutic dose"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-011",
+        "en" : "Radiation overdose"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-003",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Thrombus formation on device surface causing embolic events"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-003",
+        "en" : "Thrombosis - device-related"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-004",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Mechanical destruction of red blood cells by pump mechanism"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-004",
+        "en" : "Hemolysis - pump-induced"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-007",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Device-related infection at implantation site or systemic sepsis"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-007",
+        "en" : "Infection - device-related"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-019",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Particulate debris from bearing surfaces causing adverse tissue reaction"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-019",
+        "en" : "Wear debris - joint implant"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-008",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Bacterial biofilm accumulation on implant surface resistant to antibiotics"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-008",
+        "en" : "Biofilm formation"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk category related to direct patient harm."
+    },
+    "id" : "59",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#ImplantableActiveDevice",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImplantableActiveDevice",
+      "en" : "Implantable Active Device"
+    },
+    "individuals" : [ {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#DEV-001",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Ventricular assist device for end-stage heart failure"
+      },
+      "labels" : {
+        "IRI-based" : "DEV-001",
+        "en" : "HeartMate 3 LVAD"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#DEV-004",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Drug-eluting coronary stent"
+      },
+      "labels" : {
+        "IRI-based" : "DEV-004",
+        "en" : "SYNERGY Stent System"
+      }
+    } ],
+    "comment" : {
+      "en" : "An active device intended to be totally or partially introduced into the human body."
+    },
+    "id" : "60",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#HighRiskIncident",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HighRiskIncident",
+      "en" : "High Risk Incident"
+    },
+    "comment" : {
+      "en" : "An incident involving a device classified as Class III, inferred by SWRL rule"
+    },
+    "id" : "55",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Device",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/ontology/MedicalDevice",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Device",
+      "en" : "Device"
+    },
+    "subClasses" : [ "60", "66", "67", "42", "25" ],
+    "comment" : {
+      "en" : "A medical device as defined under MDR (EU 2017/745) or IVDR (EU 2017/746) regulations."
+    },
+    "id" : "9"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#ProductQuality",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProductQuality",
+      "en" : "Product Quality"
+    },
+    "individuals" : [ {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-017",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Reagent lot contamination leading to systematic diagnostic errors"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-017",
+        "en" : "Contamination - reagent"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk category related to product quality issues."
+    },
+    "id" : "68",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#CybersecurityRisk",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CybersecurityRisk",
+      "en" : "Cybersecurity Risk"
+    },
+    "individuals" : [ {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-018",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Exploitable software vulnerability enabling unauthorized device access"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-018",
+        "en" : "Cybersecurity vulnerability"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk type related to cybersecurity vulnerabilities in active devices."
+    },
+    "id" : "69",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "70",
+    "label" : {
+      "IRI-based" : "string"
+    }
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#DeviceSafety",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
@@ -364,8 +1233,8 @@
     "comment" : {
       "en" : "Risk category related to device safety vulnerabilities."
     },
-    "id" : "3",
-    "superClasses" : [ "4" ]
+    "id" : "71",
+    "superClasses" : [ "32" ]
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#ClassI",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
@@ -385,8 +1254,8 @@
     "comment" : {
       "en" : "MDR risk class I - lowest risk."
     },
-    "id" : "8",
-    "superClasses" : [ "9" ]
+    "id" : "17",
+    "superClasses" : [ "15" ]
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#ClassC",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
@@ -406,29 +1275,8 @@
     "comment" : {
       "en" : "IVDR risk class C - medium-high risk."
     },
-    "id" : "13",
-    "superClasses" : [ "9" ]
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#ClassB",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "ClassB",
-      "en" : "Class B"
-    },
-    "individuals" : [ {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#inst_ClassB",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "labels" : {
-        "IRI-based" : "inst_ClassB",
-        "en" : "ClassB"
-      }
-    } ],
-    "comment" : {
-      "en" : "IVDR risk class B - medium risk."
-    },
-    "id" : "14",
-    "superClasses" : [ "9" ]
+    "id" : "18",
+    "superClasses" : [ "15" ]
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Manufacturer",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
@@ -536,16 +1384,6 @@
         "en" : "Medtronic plc"
       }
     }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#MAN-002",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Manufacturer: Abbott Medical Devices"
-      },
-      "labels" : {
-        "IRI-based" : "MAN-002",
-        "en" : "Abbott Medical Devices"
-      }
-    }, {
       "iri" : "http://uoc.edu/knowledgeManagement/mdrco#MAN-013",
       "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
       "comment" : {
@@ -556,14 +1394,14 @@
         "en" : "Nipro Corporation"
       }
     }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#MAN-003",
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#MAN-002",
       "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
       "comment" : {
-        "en" : "Manufacturer: Siemens Healthineers AG"
+        "en" : "Manufacturer: Abbott Medical Devices"
       },
       "labels" : {
-        "IRI-based" : "MAN-003",
-        "en" : "Siemens Healthineers AG"
+        "IRI-based" : "MAN-002",
+        "en" : "Abbott Medical Devices"
       }
     }, {
       "iri" : "http://uoc.edu/knowledgeManagement/mdrco#MAN-014",
@@ -574,6 +1412,16 @@
       "labels" : {
         "IRI-based" : "MAN-014",
         "en" : "Hologic Inc."
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#MAN-003",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Manufacturer: Siemens Healthineers AG"
+      },
+      "labels" : {
+        "IRI-based" : "MAN-003",
+        "en" : "Siemens Healthineers AG"
       }
     }, {
       "iri" : "http://uoc.edu/knowledgeManagement/mdrco#MAN-004",
@@ -596,45 +1444,32 @@
         "en" : "bioMérieux SA"
       }
     } ],
-    "subClasses" : [ "15" ],
+    "subClasses" : [ "76" ],
     "comment" : {
       "en" : "A natural or legal person responsible for the design and manufacture of a medical device."
     },
-    "id" : "6"
+    "id" : "13"
   }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#ClassD",
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#ClassB",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "ClassD",
-      "en" : "Class D"
+      "IRI-based" : "ClassB",
+      "en" : "Class B"
     },
     "individuals" : [ {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#inst_ClassD",
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#inst_ClassB",
       "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
       "labels" : {
-        "IRI-based" : "inst_ClassD",
-        "en" : "ClassD"
+        "IRI-based" : "inst_ClassB",
+        "en" : "ClassB"
       }
     } ],
     "comment" : {
-      "en" : "IVDR risk class D - highest risk."
+      "en" : "IVDR risk class B - medium risk."
     },
-    "id" : "16",
-    "superClasses" : [ "9" ]
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RegulatoryFramework",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "RegulatoryFramework",
-      "en" : "Regulatory Framework"
-    },
-    "subClasses" : [ "18", "19" ],
-    "comment" : {
-      "en" : "The European regulatory framework applicable to a medical device."
-    },
-    "id" : "17"
+    "id" : "19",
+    "superClasses" : [ "15" ]
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#InVitroDiagnosticDevice",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
@@ -694,12 +1529,33 @@
         "en" : "PROGENSA PCA3 Assay"
       }
     } ],
-    "subClasses" : [ "22" ],
+    "subClasses" : [ "41" ],
     "comment" : {
       "en" : "A device used for examination of specimens derived from the human body."
     },
+    "id" : "42",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#ClassD",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassD",
+      "en" : "Class D"
+    },
+    "individuals" : [ {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#inst_ClassD",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "labels" : {
+        "IRI-based" : "inst_ClassD",
+        "en" : "ClassD"
+      }
+    } ],
+    "comment" : {
+      "en" : "IVDR risk class D - highest risk."
+    },
     "id" : "20",
-    "superClasses" : [ "21" ]
+    "superClasses" : [ "15" ]
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#ClassA",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
@@ -720,7 +1576,7 @@
       "en" : "IVDR risk class A - lowest risk."
     },
     "id" : "23",
-    "superClasses" : [ "9" ]
+    "superClasses" : [ "15" ]
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Recall",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
@@ -783,91 +1639,76 @@
     "comment" : {
       "en" : "A FSCA involving the return of a device to the manufacturer."
     },
-    "id" : "24",
-    "superClasses" : [ "2" ]
+    "id" : "35",
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "25",
+    "id" : "52",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "26",
+    "id" : "7",
     "label" : {
-      "IRI-based" : "string"
+      "IRI-based" : "date"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "27",
+    "id" : "77",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "12",
+    "id" : "75",
     "label" : {
       "IRI-based" : "boolean"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "29",
+    "id" : "79",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "31",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "32",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#date",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "33",
-    "label" : {
-      "IRI-based" : "date"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "34",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#date",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "38",
-    "label" : {
-      "IRI-based" : "date"
-    }
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RiskClass",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
     "instances" : 0,
+    "union" : [ "32", "1", "6" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "48",
     "label" : {
-      "IRI-based" : "RiskClass",
-      "en" : "Risk Class"
-    },
-    "subClasses" : [ "42", "8", "13", "14", "16", "43", "44", "23" ],
-    "comment" : {
-      "en" : "The risk classification assigned to a medical device according to MDR or IVDR regulations."
-    },
-    "id" : "9"
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "81",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "85",
+    "label" : {
+      "IRI-based" : "date"
+    }
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#ClosedFSCA",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
@@ -879,29 +1720,8 @@
     "comment" : {
       "en" : "A field safety corrective action that has a closure date, inferred by SWRL rule"
     },
-    "id" : "45",
-    "superClasses" : [ "2" ]
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#IVDR",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "IVDR",
-      "en" : "IVDR"
-    },
-    "individuals" : [ {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#inst_IVDR",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "labels" : {
-        "IRI-based" : "inst_IVDR",
-        "en" : "IVDR"
-      }
-    } ],
-    "comment" : {
-      "en" : "In Vitro Diagnostic Regulation EU 2017/746 applicable to IVD devices."
-    },
-    "id" : "18",
-    "superClasses" : [ "17" ]
+    "id" : "34",
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#MDR",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
@@ -921,8 +1741,8 @@
     "comment" : {
       "en" : "Medical Device Regulation EU 2017/745 applicable to general medical devices."
     },
-    "id" : "19",
-    "superClasses" : [ "17" ]
+    "id" : "4",
+    "superClasses" : [ "2" ]
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#SingleUseDevice",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
@@ -945,8 +1765,8 @@
     "comment" : {
       "en" : "A device intended to be used on one individual during a single procedure."
     },
-    "id" : "56",
-    "superClasses" : [ "21" ]
+    "id" : "25",
+    "superClasses" : [ "9" ]
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#UserNotice",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
@@ -989,29 +1809,93 @@
     "comment" : {
       "en" : "A FSCA involving a notice sent to device users with corrective instructions."
     },
-    "id" : "47",
-    "superClasses" : [ "2" ]
+    "id" : "36",
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "62",
+    "id" : "98",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "63",
+    "id" : "99",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "64",
+    "id" : "100",
     "label" : {
       "IRI-based" : "string"
     }
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#MalfunctionRisk",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MalfunctionRisk",
+      "en" : "Malfunction Risk"
+    },
+    "individuals" : [ {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-009",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Battery end-of-life earlier than specified, risking therapy interruption"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-009",
+        "en" : "Battery depletion - premature"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-001",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Complete loss of electrical function leading to device shutdown"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-001",
+        "en" : "Device failure - electrical"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-002",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Structural failure of mechanical components under physiological load"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-002",
+        "en" : "Device failure - mechanical"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-005",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Unintended displacement of implant from intended anatomical position"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-005",
+        "en" : "Device migration - implant"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-006",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Cardiac lead displacement requiring repositioning or replacement"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-006",
+        "en" : "Lead dislodgement"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk type related to device malfunction or functional failure."
+    },
+    "id" : "101",
+    "superClasses" : [ "32" ]
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#ClassIII",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
@@ -1031,295 +1915,122 @@
     "comment" : {
       "en" : "MDR risk class III - highest risk."
     },
-    "id" : "42",
-    "superClasses" : [ "9" ]
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#date",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "65",
-    "label" : {
-      "IRI-based" : "date"
-    }
+    "id" : "16",
+    "superClasses" : [ "15" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "66",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "67",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "68",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "69",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "7",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "70",
+    "id" : "39",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#float",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "71",
+    "id" : "30",
     "label" : {
       "IRI-based" : "float"
     }
   }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "57",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "102",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "72",
+    "id" : "63",
     "label" : {
       "IRI-based" : "boolean"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "40",
+    "id" : "11",
     "label" : {
       "IRI-based" : "boolean"
     }
   }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#SeriousIncident",
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "103",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#DiagnosticRisk",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "SeriousIncident",
-      "en" : "Serious Incident"
+      "IRI-based" : "DiagnosticRisk",
+      "en" : "Diagnostic Risk"
     },
     "individuals" : [ {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-004",
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-014",
       "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
       "comment" : {
-        "en" : "SYNERGY stent fracture detected on angiography 18 months post-implant causing in-stent restenosis."
+        "en" : "IVD test returns positive result in absence of target condition"
       },
       "labels" : {
-        "IRI-based" : "INC-004",
-        "en" : "INC-004"
+        "IRI-based" : "RSK-014",
+        "en" : "False positive result"
       }
     }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-015",
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-015",
       "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
       "comment" : {
-        "en" : "Plum 360 infusion pump delivered 10x heparin dose due to software decimal point error in drug library version 4.2.1."
+        "en" : "IVD test fails to detect target condition in affected individual"
       },
       "labels" : {
-        "IRI-based" : "INC-015",
-        "en" : "INC-015"
+        "IRI-based" : "RSK-015",
+        "en" : "False negative result"
       }
     }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-003",
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-016",
       "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
       "comment" : {
-        "en" : "Portico valve showed paravalvular leak grade III due to partial migration 2 weeks post-TAVI procedure."
+        "en" : "Reagent reacts with non-target analyte producing incorrect result"
       },
       "labels" : {
-        "IRI-based" : "INC-003",
-        "en" : "INC-003"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-014",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "OPTIGA CGM sensor reported glucose 3.8 mmol/L while laboratory reference showed 14.2 mmol/L. Patient delayed insulin administration."
-      },
-      "labels" : {
-        "IRI-based" : "INC-014",
-        "en" : "INC-014"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-002",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Micra AV pacemaker reached elective replacement indicator 14 months earlier than expected longevity specification."
-      },
-      "labels" : {
-        "IRI-based" : "INC-002",
-        "en" : "INC-002"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-013",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "VIDAS HIV DUO Ultra failed to detect HIV-1 group O infection in seroconversion panel. Patient missed early treatment window."
-      },
-      "labels" : {
-        "IRI-based" : "INC-013",
-        "en" : "INC-013"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-012",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "cobas SARS-CoV-2 assay failed to detect Omicron BA.2.86 subvariant in 7 samples confirmed positive by sequencing. Lot-specific issue."
-      },
-      "labels" : {
-        "IRI-based" : "INC-012",
-        "en" : "INC-012"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-001",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Patient implanted with HeartMate 3 LVAD developed ischemic stroke 6 months post-implant. Device thrombus confirmed by echocardiography."
-      },
-      "labels" : {
-        "IRI-based" : "INC-001",
-        "en" : "INC-001"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-011",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "cobas e 801 thyroid-stimulating hormone (TSH) assay reported false positive results (>10 mIU/L) in 12 euthyroid patients due to biotin interference."
-      },
-      "labels" : {
-        "IRI-based" : "INC-011",
-        "en" : "INC-011"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-010",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "ATERA ventilator software version 2.1.3 delivered FiO2 6% lower than set value for patients in ARDS protocol. 3 patients affected."
-      },
-      "labels" : {
-        "IRI-based" : "INC-010",
-        "en" : "INC-010"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-020",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "MAGNETOM Vida MRI caused localised skin burn (1st degree) at anterior electrode lead in patient with DBS system not declared prior to scan."
-      },
-      "labels" : {
-        "IRI-based" : "INC-020",
-        "en" : "INC-020"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-009",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Viva CRT-D delivered inappropriate ICD therapy during MRI scan despite MRI-conditional programming. Patient experienced pain and syncope."
-      },
-      "labels" : {
-        "IRI-based" : "INC-009",
-        "en" : "INC-009"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-008",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "TRITON hip patient presented with elevated serum cobalt (18 ppb). Adverse local tissue reaction (ALTR) confirmed by MRI."
-      },
-      "labels" : {
-        "IRI-based" : "INC-008",
-        "en" : "INC-008"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-018",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "5008S hemodialysis machine web interface exposed to hospital internal network. Unauthorised session accessed alarm configuration."
-      },
-      "labels" : {
-        "IRI-based" : "INC-018",
-        "en" : "INC-018"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-007",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Persona knee tibial insert showing accelerated polyethylene wear with metallosis confirmed at 3-year revision surgery."
-      },
-      "labels" : {
-        "IRI-based" : "INC-007",
-        "en" : "INC-007"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-017",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Iluvien implant required surgical removal due to device-related endophthalmitis confirmed by vitreous culture."
-      },
-      "labels" : {
-        "IRI-based" : "INC-017",
-        "en" : "INC-017"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-006",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "ACUSON Sequoia ultrasound system froze mid-examination. Emergency shutdown required; patient examination incomplete."
-      },
-      "labels" : {
-        "IRI-based" : "INC-006",
-        "en" : "INC-006"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-005",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "ACUITY X4 lead dislodgement to right ventricle requiring fluoroscopy-guided repositioning."
-      },
-      "labels" : {
-        "IRI-based" : "INC-005",
-        "en" : "INC-005"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-016",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "HeartMate 3 patient developed severe haemolysis (LDH >2000 U/L) associated with outflow graft kinking confirmed by CT."
-      },
-      "labels" : {
-        "IRI-based" : "INC-016",
-        "en" : "INC-016"
+        "IRI-based" : "RSK-016",
+        "en" : "Cross-reactivity"
       }
     } ],
     "comment" : {
-      "en" : "An incident that directly or indirectly led to serious injury or death of a patient."
+      "en" : "Risk type related to incorrect or misleading diagnostic results."
     },
-    "id" : "55",
-    "superClasses" : [ "11" ]
+    "id" : "104",
+    "superClasses" : [ "32" ]
   }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "instances" : 0,
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "73",
     "label" : {
-      "IRI-based" : "FieldSafetyCorrectiveAction",
-      "en" : "Field Safety Corrective Action"
-    },
-    "subClasses" : [ "1", "49", "45", "24", "47" ],
-    "comment" : {
-      "en" : "An action taken to reduce a risk of death or serious deterioration in health associated with a device in use."
-    },
-    "id" : "2"
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "105",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "84",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#ActiveImplant",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
@@ -1339,16 +2050,6 @@
         "en" : "Iluvien Intravitreal Implant"
       }
     }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#DEV-023",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Active cochlear implant for sensorineural hearing loss"
-      },
-      "labels" : {
-        "IRI-based" : "DEV-023",
-        "en" : "Tivoli II Cochlear Implant"
-      }
-    }, {
       "iri" : "http://uoc.edu/knowledgeManagement/mdrco#DEV-012",
       "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
       "comment" : {
@@ -1357,6 +2058,16 @@
       "labels" : {
         "IRI-based" : "DEV-012",
         "en" : "Viva Cardiac Resynchronization Defibrillator"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#DEV-023",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Active cochlear implant for sensorineural hearing loss"
+      },
+      "labels" : {
+        "IRI-based" : "DEV-023",
+        "en" : "Tivoli II Cochlear Implant"
       }
     }, {
       "iri" : "http://uoc.edu/knowledgeManagement/mdrco#DEV-002",
@@ -1382,14 +2093,14 @@
     "comment" : {
       "en" : "An active device designed to be totally introduced into the human body."
     },
-    "id" : "78",
-    "superClasses" : [ "79" ]
+    "id" : "110",
+    "superClasses" : [ "67" ]
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "81",
+    "id" : "113",
     "label" : {
-      "IRI-based" : "boolean"
+      "IRI-based" : "string"
     }
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Country",
@@ -1408,25 +2119,11 @@
       "en" : "Country"
     },
     "individuals" : [ {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Sweden",
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Iceland",
       "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
       "labels" : {
-        "IRI-based" : "Sweden",
-        "en" : "Sweden"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Netherlands",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "labels" : {
-        "IRI-based" : "Netherlands",
-        "en" : "Netherlands"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Belgium",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "labels" : {
-        "IRI-based" : "Belgium",
-        "en" : "Belgium"
+        "IRI-based" : "Iceland",
+        "en" : "Iceland"
       }
     }, {
       "iri" : "http://uoc.edu/knowledgeManagement/mdrco#United_Kingdom",
@@ -1436,25 +2133,11 @@
         "en" : "United Kingdom"
       }
     }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#France",
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#UK",
       "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
       "labels" : {
-        "IRI-based" : "France",
-        "en" : "France"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Switzerland",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "labels" : {
-        "IRI-based" : "Switzerland",
-        "en" : "Switzerland"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Germany",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "labels" : {
-        "IRI-based" : "Germany",
-        "en" : "Germany"
+        "IRI-based" : "UK",
+        "en" : "UK"
       }
     }, {
       "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Ireland",
@@ -1464,11 +2147,11 @@
         "en" : "Ireland"
       }
     }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Spain",
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Germany",
       "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
       "labels" : {
-        "IRI-based" : "Spain",
-        "en" : "Spain"
+        "IRI-based" : "Germany",
+        "en" : "Germany"
       }
     }, {
       "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Italy",
@@ -1491,262 +2174,181 @@
         "IRI-based" : "Denmark",
         "en" : "Denmark"
       }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Netherlands",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "labels" : {
+        "IRI-based" : "Netherlands",
+        "en" : "Netherlands"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Sweden",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "labels" : {
+        "IRI-based" : "Sweden",
+        "en" : "Sweden"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#EU",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "labels" : {
+        "IRI-based" : "EU",
+        "en" : "EU"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Belgium",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "labels" : {
+        "IRI-based" : "Belgium",
+        "en" : "Belgium"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#France",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "labels" : {
+        "IRI-based" : "France",
+        "en" : "France"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Switzerland",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "labels" : {
+        "IRI-based" : "Switzerland",
+        "en" : "Switzerland"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Norway",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "labels" : {
+        "IRI-based" : "Norway",
+        "en" : "Norway"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Spain",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "labels" : {
+        "IRI-based" : "Spain",
+        "en" : "Spain"
+      }
     } ],
     "comment" : {
       "en" : "A country where a manufacturer is registered or where an incident has been reported."
     },
-    "id" : "77"
+    "id" : "109"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "82",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "83",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "36",
-    "label" : {
-      "IRI-based" : "boolean"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "85",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "86",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "87",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "88",
+    "id" : "114",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#date",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "89",
+    "id" : "115",
     "label" : {
       "IRI-based" : "date"
     }
   }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#DeviceFailure",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "DeviceFailure",
-      "en" : "Device Failure"
-    },
-    "individuals" : [ {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-009",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Battery end-of-life earlier than specified, risking therapy interruption"
-      },
-      "labels" : {
-        "IRI-based" : "RSK-009",
-        "en" : "Battery depletion - premature"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-010",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Software bug causing incorrect dosing, alarming, or therapy delivery"
-      },
-      "labels" : {
-        "IRI-based" : "RSK-010",
-        "en" : "Software malfunction"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-001",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Complete loss of electrical function leading to device shutdown"
-      },
-      "labels" : {
-        "IRI-based" : "RSK-001",
-        "en" : "Device failure - electrical"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-002",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Structural failure of mechanical components under physiological load"
-      },
-      "labels" : {
-        "IRI-based" : "RSK-002",
-        "en" : "Device failure - mechanical"
-      }
-    } ],
-    "comment" : {
-      "en" : "Risk category related to device failure."
-    },
-    "id" : "98",
-    "superClasses" : [ "4" ]
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#SelfTestDevice",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "SelfTestDevice",
-      "en" : "Self Test Device"
-    },
-    "individuals" : [ {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#DEV-021",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Continuous glucose monitor for patients with diabetes"
-      },
-      "labels" : {
-        "IRI-based" : "DEV-021",
-        "en" : "OPTIGA Glucose Monitoring System"
-      }
-    } ],
-    "comment" : {
-      "en" : "An IVD device intended to be used by lay persons in a home environment."
-    },
-    "id" : "22",
-    "superClasses" : [ "20" ]
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#NearMissIncident",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "NearMissIncident",
-      "en" : "Near Miss Incident"
-    },
-    "individuals" : [ {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#INC-019",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Tivoli II cochlear implant failed to respond to initial activation programming. Sound processor replacement resolved the issue."
-      },
-      "labels" : {
-        "IRI-based" : "INC-019",
-        "en" : "INC-019"
-      }
-    } ],
-    "comment" : {
-      "en" : "An incident that could have led to patient harm but did not due to fortunate circumstances."
-    },
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
     "id" : "54",
-    "superClasses" : [ "11" ]
+    "label" : {
+      "IRI-based" : "string"
+    }
   }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#CompetentAuthority",
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "117",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "118",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "119",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "120",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#ContaminationRisk",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "CompetentAuthority",
-      "en" : "Competent Authority"
+      "IRI-based" : "ContaminationRisk",
+      "en" : "Contamination Risk"
     },
     "individuals" : [ {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Läkemedelsverket_MPA",
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-017",
       "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
       "comment" : {
-        "en" : "Competent authority: Läkemedelsverket (MPA)"
+        "en" : "Reagent lot contamination leading to systematic diagnostic errors"
       },
       "labels" : {
-        "IRI-based" : "Läkemedelsverket_MPA",
-        "en" : "Läkemedelsverket (MPA)"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Rijksinstituut_voor_Volksgezondheid_en_Milieu_RIVM",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Competent authority: Rijksinstituut voor Volksgezondheid en Milieu (RIVM)"
-      },
-      "labels" : {
-        "IRI-based" : "Rijksinstituut_voor_Volksgezondheid_en_Milieu_RIVM",
-        "en" : "Rijksinstituut voor Volksgezondheid en Milieu (RIVM)"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Agence_nationale_de_sécurité_du_médicament_ANSM",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Competent authority: Agence nationale de sécurité du médicament (ANSM)"
-      },
-      "labels" : {
-        "IRI-based" : "Agence_nationale_de_sécurité_du_médicament_ANSM",
-        "en" : "Agence nationale de sécurité du médicament (ANSM)"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Swissmedic",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Competent authority: Swissmedic"
-      },
-      "labels" : {
-        "IRI-based" : "Swissmedic",
-        "en" : "Swissmedic"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Agence_fédérale_des_médicaments_et_des_produits_de_santé_AFMPS",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Competent authority: Agence fédérale des médicaments et des produits de santé (AFMPS)"
-      },
-      "labels" : {
-        "IRI-based" : "Agence_fédérale_des_médicaments_et_des_produits_de_santé_AFMPS",
-        "en" : "Agence fédérale des médicaments et des produits de santé (AFMPS)"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Health_Products_Regulatory_Authority_HPRA",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Competent authority: Health Products Regulatory Authority (HPRA)"
-      },
-      "labels" : {
-        "IRI-based" : "Health_Products_Regulatory_Authority_HPRA",
-        "en" : "Health Products Regulatory Authority (HPRA)"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Bundesinstitut_für_Arzneimittel_und_Medizinprodukte_BfArM",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Competent authority: Bundesinstitut für Arzneimittel und Medizinprodukte (BfArM)"
-      },
-      "labels" : {
-        "IRI-based" : "Bundesinstitut_für_Arzneimittel_und_Medizinprodukte_BfArM",
-        "en" : "Bundesinstitut für Arzneimittel und Medizinprodukte (BfArM)"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Medicines_and_Healthcare_products_Regulatory_Agency_MHRA",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Competent authority: Medicines and Healthcare products Regulatory Agency (MHRA)"
-      },
-      "labels" : {
-        "IRI-based" : "Medicines_and_Healthcare_products_Regulatory_Agency_MHRA",
-        "en" : "Medicines and Healthcare products Regulatory Agency (MHRA)"
+        "IRI-based" : "RSK-017",
+        "en" : "Contamination - reagent"
       }
     } ],
     "comment" : {
-      "en" : "The national authority responsible for supervising medical device manufacturers in a given country."
+      "en" : "Risk type related to reagent or device contamination."
     },
-    "id" : "104"
+    "id" : "127",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#InjuryRisk",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InjuryRisk",
+      "en" : "Injury Risk"
+    },
+    "individuals" : [ {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-003",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Thrombus formation on device surface causing embolic events"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-003",
+        "en" : "Thrombosis - device-related"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-004",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Mechanical destruction of red blood cells by pump mechanism"
+      },
+      "labels" : {
+        "IRI-based" : "RSK-004",
+        "en" : "Hemolysis - pump-induced"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk type related to physical injury to the patient."
+    },
+    "id" : "133",
+    "superClasses" : [ "32" ]
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#DiagnosticError",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
@@ -1789,8 +2391,8 @@
     "comment" : {
       "en" : "Risk category related to incorrect diagnostic results."
     },
-    "id" : "95",
-    "superClasses" : [ "4" ]
+    "id" : "138",
+    "superClasses" : [ "32" ]
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#ImplantableDevice",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
@@ -1810,16 +2412,6 @@
         "en" : "TRITON Total Hip System"
       }
     }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#DEV-025",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Transcatheter mitral valve replacement system"
-      },
-      "labels" : {
-        "IRI-based" : "DEV-025",
-        "en" : "ValveXpert Transcatheter Mitral Valve"
-      }
-    }, {
       "iri" : "http://uoc.edu/knowledgeManagement/mdrco#DEV-003",
       "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
       "comment" : {
@@ -1828,6 +2420,16 @@
       "labels" : {
         "IRI-based" : "DEV-003",
         "en" : "Portico Transcatheter Heart Valve"
+      }
+    }, {
+      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#DEV-025",
+      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+      "comment" : {
+        "en" : "Transcatheter mitral valve replacement system"
+      },
+      "labels" : {
+        "IRI-based" : "DEV-025",
+        "en" : "ValveXpert Transcatheter Mitral Valve"
       }
     }, {
       "iri" : "http://uoc.edu/knowledgeManagement/mdrco#DEV-009",
@@ -1840,25 +2442,12 @@
         "en" : "Persona Knee System"
       }
     } ],
-    "subClasses" : [ "78" ],
+    "subClasses" : [ "110" ],
     "comment" : {
       "en" : "A device intended to be totally or partially introduced into the human body."
     },
-    "id" : "79",
-    "superClasses" : [ "21" ]
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Incident",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Incident",
-      "en" : "Incident"
-    },
-    "subClasses" : [ "55", "91", "54" ],
-    "comment" : {
-      "en" : "Any malfunction or deterioration in the characteristics of a device that has led or could lead to patient harm."
-    },
-    "id" : "11"
+    "id" : "67",
+    "superClasses" : [ "9" ]
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Risk",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
@@ -1867,11 +2456,11 @@
       "IRI-based" : "Risk",
       "en" : "Risk"
     },
-    "subClasses" : [ "95", "122", "3", "98", "123", "124" ],
+    "subClasses" : [ "69", "138", "59", "71", "127", "40", "101", "31", "145", "58", "49", "146", "50", "68", "104", "133" ],
     "comment" : {
       "en" : "A potential hazard associated with a medical device as classified by the IMDRF nomenclature."
     },
-    "id" : "4"
+    "id" : "32"
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#DevicePerformance",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
@@ -1924,50 +2513,22 @@
     "comment" : {
       "en" : "Risk category related to suboptimal device performance."
     },
-    "id" : "123",
-    "superClasses" : [ "4" ]
+    "id" : "146",
+    "superClasses" : [ "32" ]
   }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#ClassIIa",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "instances" : 0,
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "107",
     "label" : {
-      "IRI-based" : "ClassIIa",
-      "en" : "Class IIa"
-    },
-    "individuals" : [ {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIIa",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "labels" : {
-        "IRI-based" : "inst_ClassIIa",
-        "en" : "ClassIIa"
-      }
-    } ],
-    "comment" : {
-      "en" : "MDR risk class IIa - medium risk."
-    },
-    "id" : "43",
-    "superClasses" : [ "9" ]
+      "IRI-based" : "string"
+    }
   }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#ClassIIb",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "instances" : 0,
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "137",
     "label" : {
-      "IRI-based" : "ClassIIb",
-      "en" : "Class IIb"
-    },
-    "individuals" : [ {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#inst_ClassIIb",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "labels" : {
-        "IRI-based" : "inst_ClassIIb",
-        "en" : "ClassIIb"
-      }
-    } ],
-    "comment" : {
-      "en" : "MDR risk class IIb - medium-high risk."
-    },
-    "id" : "44",
-    "superClasses" : [ "9" ]
+      "IRI-based" : "string"
+    }
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#EUAuthorizedManufacturer",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
@@ -1979,57 +2540,24 @@
     "comment" : {
       "en" : "A manufacturer that holds an EU authorization number, inferred by SWRL rule"
     },
-    "id" : "15",
-    "superClasses" : [ "6" ]
+    "id" : "76",
+    "superClasses" : [ "13" ]
   }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#PatientHarm",
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "65",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#InfectionRisk",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "PatientHarm",
-      "en" : "Patient Harm"
+      "IRI-based" : "InfectionRisk",
+      "en" : "Infection Risk"
     },
     "individuals" : [ {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-020",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Metallic ion release from corrosion causing local or systemic toxicity"
-      },
-      "labels" : {
-        "IRI-based" : "RSK-020",
-        "en" : "Corrosion - metallic implant"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-011",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Unintended ionising radiation exposure exceeding therapeutic dose"
-      },
-      "labels" : {
-        "IRI-based" : "RSK-011",
-        "en" : "Radiation overdose"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-003",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Thrombus formation on device surface causing embolic events"
-      },
-      "labels" : {
-        "IRI-based" : "RSK-003",
-        "en" : "Thrombosis - device-related"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-004",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Mechanical destruction of red blood cells by pump mechanism"
-      },
-      "labels" : {
-        "IRI-based" : "RSK-004",
-        "en" : "Hemolysis - pump-induced"
-      }
-    }, {
       "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-007",
       "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
       "comment" : {
@@ -2038,16 +2566,6 @@
       "labels" : {
         "IRI-based" : "RSK-007",
         "en" : "Infection - device-related"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-019",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Particulate debris from bearing surfaces causing adverse tissue reaction"
-      },
-      "labels" : {
-        "IRI-based" : "RSK-019",
-        "en" : "Wear debris - joint implant"
       }
     }, {
       "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-008",
@@ -2061,57 +2579,10 @@
       }
     } ],
     "comment" : {
-      "en" : "Risk category related to direct patient harm."
+      "en" : "Risk type related to device-associated infection or biofilm."
     },
-    "id" : "122",
-    "superClasses" : [ "4" ]
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#ImplantableActiveDevice",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "ImplantableActiveDevice",
-      "en" : "Implantable Active Device"
-    },
-    "individuals" : [ {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#DEV-001",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Ventricular assist device for end-stage heart failure"
-      },
-      "labels" : {
-        "IRI-based" : "DEV-001",
-        "en" : "HeartMate 3 LVAD"
-      }
-    }, {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#DEV-004",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Drug-eluting coronary stent"
-      },
-      "labels" : {
-        "IRI-based" : "DEV-004",
-        "en" : "SYNERGY Stent System"
-      }
-    } ],
-    "comment" : {
-      "en" : "An active device intended to be totally or partially introduced into the human body."
-    },
-    "id" : "135",
-    "superClasses" : [ "21" ]
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#HighRiskIncident",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "HighRiskIncident",
-      "en" : "High Risk Incident"
-    },
-    "comment" : {
-      "en" : "An incident involving a device classified as Class III, inferred by SWRL rule"
-    },
-    "id" : "91",
-    "superClasses" : [ "11" ]
+    "id" : "145",
+    "superClasses" : [ "32" ]
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#ActiveDevice",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
@@ -2194,8 +2665,8 @@
     "comment" : {
       "en" : "A device whose operation depends on a source of energy."
     },
-    "id" : "152",
-    "superClasses" : [ "21" ]
+    "id" : "66",
+    "superClasses" : [ "9" ]
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#SafetyAlert",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
@@ -2238,222 +2709,147 @@
     "comment" : {
       "en" : "A FSCA involving a safety communication to users and patients."
     },
-    "id" : "49",
-    "superClasses" : [ "2" ]
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#Device",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "instances" : 0,
-    "annotations" : {
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "http://dbpedia.org/ontology/MedicalDevice",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Device",
-      "en" : "Device"
-    },
-    "subClasses" : [ "135", "152", "79", "20", "56" ],
-    "comment" : {
-      "en" : "A medical device as defined under MDR (EU 2017/745) or IVDR (EU 2017/746) regulations."
-    },
-    "id" : "21"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#ProductQuality",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "ProductQuality",
-      "en" : "Product Quality"
-    },
-    "individuals" : [ {
-      "iri" : "http://uoc.edu/knowledgeManagement/mdrco#RSK-017",
-      "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-      "comment" : {
-        "en" : "Reagent lot contamination leading to systematic diagnostic errors"
-      },
-      "labels" : {
-        "IRI-based" : "RSK-017",
-        "en" : "Contamination - reagent"
-      }
-    } ],
-    "comment" : {
-      "en" : "Risk category related to product quality issues."
-    },
-    "id" : "124",
-    "superClasses" : [ "4" ]
+    "id" : "33",
+    "superClasses" : [ "1" ]
   } ],
   "property" : [ {
     "id" : "5",
     "type" : "owl:datatypeProperty"
   }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "10",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "28",
-    "type" : "owl:objectProperty"
+    "id" : "12",
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "30",
-    "type" : "owl:objectProperty"
+    "id" : "24",
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "35",
+    "id" : "27",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "29",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "37",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "39",
+    "id" : "38",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "41",
+    "id" : "44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "47",
     "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "46",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "48",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "50",
-    "type" : "owl:disjointWith"
   }, {
     "id" : "51",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "52",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "53",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "57",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "58",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "59",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "60",
-    "type" : "owl:disjointWith"
+    "id" : "53",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "61",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "73",
+    "id" : "62",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "72",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "74",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "75",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "76",
+    "id" : "78",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "80",
+    "id" : "82",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "84",
+    "id" : "83",
     "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "88",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "89",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "90",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "91",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "92",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "93",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "94",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "95",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "96",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "97",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "99",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "100",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "101",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "102",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "103",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "105",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "106",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "107",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "108",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "109",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "110",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "111",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "112",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "113",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "114",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "115",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "116",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "117",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "118",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "119",
+    "id" : "111",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "112",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "120",
+    "id" : "116",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "121",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "122",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "123",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "124",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "125",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "126",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "127",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "128",
     "type" : "rdfs:SubClassOf"
@@ -2470,74 +2866,65 @@
     "id" : "132",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "133",
-    "type" : "owl:datatypeProperty"
-  }, {
     "id" : "134",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "135",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "136",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "137",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "138",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "139",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "140",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "141",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "142",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "143",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "144",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "145",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "146",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "147",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "148",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "149",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "150",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "151",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "152",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "153",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "154",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "155",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "156",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "157",
+    "id" : "156",
     "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "157",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "158",
     "type" : "rdfs:SubClassOf"
@@ -2546,7 +2933,7 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "160",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "161",
     "type" : "owl:datatypeProperty"
@@ -2555,903 +2942,1073 @@
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "163",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "164",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "165",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "166",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "167",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "168",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "169",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "170",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "171",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "172",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "173",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "174",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "175",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "176",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "177",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "178",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "179",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "180",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "181",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "182",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "183",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "184",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "185",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "186",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "187",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "188",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "189",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "190",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "191",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "192",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "193",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "194",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "195",
     "type" : "rdfs:SubClassOf"
   } ],
   "propertyAttribute" : [ {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#manufacturerName",
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#detectionDate",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
     "range" : "7",
     "label" : {
-      "IRI-based" : "manufacturerName",
-      "en" : "manufacturer name"
+      "IRI-based" : "detectionDate",
+      "en" : "detection date"
     },
     "domain" : "6",
     "comment" : {
-      "en" : "The official name of the manufacturer."
+      "en" : "The date on which the incident was first detected."
     },
     "attributes" : [ "functional", "datatype" ],
     "id" : "5"
   }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "12",
-    "label" : {
-      "IRI-based" : "correctiveActionTaken",
-      "en" : "corrective action taken"
-    },
-    "domain" : "11",
-    "comment" : {
-      "en" : "Indicates whether a corrective action was taken in response to the incident."
-    },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "10"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#reportedBy",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "6",
-    "label" : {
-      "IRI-based" : "reportedBy",
-      "en" : "reported by"
-    },
-    "domain" : "11",
-    "comment" : {
-      "en" : "Relates an incident to the manufacturer that reported it."
-    },
-    "attributes" : [ "functional", "object" ],
-    "id" : "28"
-  }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#regulatedBy",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "17",
+    "range" : "2",
     "label" : {
       "IRI-based" : "regulatedBy",
       "en" : "regulated by"
     },
-    "domain" : "21",
+    "domain" : "9",
     "comment" : {
       "en" : "Relates a medical device to its applicable regulatory framework."
     },
     "attributes" : [ "functional", "object" ],
-    "id" : "30"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#isActive",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "36",
-    "label" : {
-      "IRI-based" : "isActive",
-      "en" : "is active"
-    },
-    "domain" : "21",
-    "comment" : {
-      "en" : "Indicates whether the device requires an energy source to operate."
-    },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "35"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#hasRiskClass",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "9",
-    "label" : {
-      "IRI-based" : "hasRiskClass",
-      "en" : "has risk class"
-    },
-    "domain" : "21",
-    "comment" : {
-      "en" : "Relates a medical device to its regulatory risk class."
-    },
-    "attributes" : [ "functional", "object" ],
-    "id" : "37"
+    "id" : "8"
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#isImplantable",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "40",
+    "range" : "11",
     "label" : {
       "IRI-based" : "isImplantable",
       "en" : "is implantable"
     },
-    "domain" : "21",
+    "domain" : "9",
     "comment" : {
       "en" : "Indicates whether the device is implantable."
     },
     "attributes" : [ "functional", "datatype" ],
-    "id" : "39"
+    "id" : "10"
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#contactEmail",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "34",
+    "range" : "14",
     "label" : {
       "IRI-based" : "contactEmail",
       "en" : "contact email"
     },
-    "domain" : "6",
+    "domain" : "13",
     "comment" : {
       "en" : "The regulatory contact email address of the manufacturer."
     },
     "attributes" : [ "functional", "datatype" ],
-    "id" : "41"
+    "id" : "12"
   }, {
-    "range" : "47",
-    "domain" : "24",
+    "range" : "9",
+    "domain" : "25",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "46"
-  }, {
-    "range" : "49",
-    "domain" : "24",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "48"
-  }, {
-    "range" : "47",
-    "domain" : "49",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "50"
-  }, {
-    "range" : "24",
-    "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "51"
-  }, {
-    "range" : "47",
-    "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "52"
-  }, {
-    "range" : "55",
-    "domain" : "54",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "53"
-  }, {
-    "range" : "49",
-    "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "57"
-  }, {
-    "range" : "43",
-    "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "58"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#deviceName",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "26",
-    "label" : {
-      "IRI-based" : "deviceName",
-      "en" : "device name"
-    },
-    "domain" : "21",
-    "comment" : {
-      "en" : "The commercial name of the medical device."
-    },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "59"
-  }, {
-    "range" : "19",
-    "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "60"
-  }, {
-    "range" : "44",
-    "domain" : "43",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "61"
+    "id" : "24"
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#devicesAffected",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "25",
+    "range" : "28",
     "label" : {
       "IRI-based" : "devicesAffected",
       "en" : "devices affected"
     },
-    "domain" : "2",
+    "domain" : "1",
     "comment" : {
       "en" : "The number or description of devices affected by the corrective action."
     },
     "attributes" : [ "functional", "datatype" ],
-    "id" : "73"
+    "id" : "27"
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#patientAge",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "71",
+    "range" : "30",
     "label" : {
       "IRI-based" : "patientAge",
       "en" : "patient age"
     },
-    "domain" : "11",
+    "domain" : "6",
     "comment" : {
       "en" : "The age of the patient involved in the incident."
     },
     "attributes" : [ "functional", "datatype" ],
-    "id" : "74"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#status",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "64",
-    "label" : {
-      "IRI-based" : "status",
-      "en" : "status"
-    },
-    "domain" : "2",
-    "comment" : {
-      "en" : "The current status of the field safety corrective action (Open or Closed)."
-    },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "75"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#affectsCountry",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "77",
-    "label" : {
-      "IRI-based" : "affectsCountry",
-      "en" : "affects country"
-    },
-    "domain" : "2",
-    "comment" : {
-      "en" : "Relates a field safety corrective action to a country where it applies."
-    },
-    "attributes" : [ "object" ],
-    "id" : "76"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "77",
-    "label" : {
-      "IRI-based" : "reportedInCountry",
-      "en" : "reported in country"
-    },
-    "domain" : "11",
-    "comment" : {
-      "en" : "Relates an incident to the country where it was reported."
-    },
-    "attributes" : [ "functional", "object" ],
-    "id" : "80"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#riskId",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "68",
-    "label" : {
-      "IRI-based" : "riskId",
-      "en" : "risk ID"
-    },
-    "domain" : "4",
-    "comment" : {
-      "en" : "The unique identifier of the risk."
-    },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "84"
-  }, {
-    "range" : "11",
-    "domain" : "91",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "90"
+    "id" : "29"
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#hasRisk",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "4",
+    "range" : "32",
     "label" : {
       "IRI-based" : "hasRisk",
       "en" : "has risk"
     },
-    "domain" : "11",
+    "domain" : "6",
     "comment" : {
       "en" : "Relates an incident to the identified risk according to IMDRF nomenclature."
     },
     "attributes" : [ "object" ],
-    "id" : "92"
-  }, {
-    "range" : "11",
-    "domain" : "55",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "93"
-  }, {
-    "range" : "4",
-    "domain" : "95",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "94"
-  }, {
-    "range" : "11",
-    "domain" : "54",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "96"
-  }, {
-    "range" : "79",
-    "domain" : "78",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "97"
+    "id" : "37"
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#patientSex",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "70",
+    "range" : "39",
     "label" : {
       "IRI-based" : "patientSex",
       "en" : "patient sex"
     },
-    "domain" : "11",
+    "domain" : "6",
     "comment" : {
       "en" : "The sex of the patient involved in the incident."
     },
     "attributes" : [ "functional", "datatype" ],
-    "id" : "99"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#riskName",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "67",
-    "label" : {
-      "IRI-based" : "riskName",
-      "en" : "risk name"
-    },
-    "domain" : "4",
-    "comment" : {
-      "en" : "The name of the risk according to IMDRF nomenclature."
-    },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "100"
+    "id" : "38"
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#involvedDevice",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "21",
+    "range" : "9",
     "label" : {
       "IRI-based" : "involvedDevice",
       "en" : "involved device"
     },
-    "domain" : "11",
+    "domain" : "6",
     "comment" : {
       "en" : "Relates an incident to the medical device involved."
     },
     "attributes" : [ "functional", "object" ],
-    "id" : "101"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#authorizationNumber",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "32",
-    "label" : {
-      "IRI-based" : "authorizationNumber",
-      "en" : "authorization number"
-    },
-    "domain" : "6",
-    "comment" : {
-      "en" : "The regulatory authorization number issued to the manufacturer."
-    },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "102"
+    "id" : "44"
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#supervisedBy",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "104",
+    "range" : "46",
     "label" : {
       "IRI-based" : "supervisedBy",
       "en" : "supervised by"
     },
-    "domain" : "6",
+    "domain" : "13",
     "comment" : {
       "en" : "Relates a manufacturer to the competent authority that supervises it."
     },
     "attributes" : [ "functional", "object" ],
-    "id" : "103"
+    "id" : "45"
   }, {
-    "range" : "2",
-    "domain" : "47",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "105"
-  }, {
-    "range" : "2",
-    "domain" : "24",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "106"
-  }, {
-    "range" : "2",
-    "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "107"
-  }, {
-    "range" : "9",
-    "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "108"
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#authorizationNumber",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "authorizationNumber",
+      "en" : "authorization number"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "The regulatory authorization number issued to the manufacturer."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "47"
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#deviceId",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "29",
+    "range" : "52",
     "label" : {
       "IRI-based" : "deviceId",
       "en" : "device ID"
     },
-    "domain" : "21",
+    "domain" : "9",
     "comment" : {
       "en" : "The unique identifier of the medical device."
     },
     "attributes" : [ "functional", "datatype" ],
-    "id" : "109"
-  }, {
-    "range" : "2",
-    "domain" : "45",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "110"
-  }, {
-    "range" : "2",
-    "domain" : "49",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "111"
-  }, {
-    "range" : "9",
-    "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "112"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#severity",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "62",
-    "label" : {
-      "IRI-based" : "severity",
-      "en" : "severity"
-    },
-    "domain" : "4",
-    "comment" : {
-      "en" : "The severity level of the risk (Critical, Serious, Moderate)."
-    },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "113"
-  }, {
-    "range" : "9",
-    "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "114"
-  }, {
-    "range" : "9",
-    "domain" : "44",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "115"
-  }, {
-    "range" : "9",
-    "domain" : "43",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "116"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#imdrfCode",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "83",
-    "label" : {
-      "IRI-based" : "imdrfCode",
-      "en" : "IMDRF code"
-    },
-    "domain" : "4",
-    "comment" : {
-      "en" : "The IMDRF nomenclature code for the risk."
-    },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "117"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#manufacturedBy",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "6",
-    "label" : {
-      "IRI-based" : "manufacturedBy",
-      "en" : "manufactured by"
-    },
-    "cardinality" : "1",
-    "domain" : "21",
-    "comment" : {
-      "en" : "Relates a medical device to its manufacturer."
-    },
-    "attributes" : [ "functional", "object" ],
-    "id" : "118"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#fscaId",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "88",
-    "label" : {
-      "IRI-based" : "fscaId",
-      "en" : "FSCA ID"
-    },
-    "domain" : "2",
-    "comment" : {
-      "en" : "The unique identifier of the field safety corrective action."
-    },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "119"
+    "id" : "51"
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#incidentId",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "82",
+    "range" : "54",
     "label" : {
       "IRI-based" : "incidentId",
       "en" : "incident ID"
     },
-    "domain" : "11",
+    "domain" : "6",
     "comment" : {
       "en" : "The unique identifier of the incident."
     },
     "attributes" : [ "functional", "datatype" ],
-    "id" : "120"
+    "id" : "53"
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#reportDate",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "65",
+    "range" : "57",
     "label" : {
       "IRI-based" : "reportDate",
       "en" : "report date"
     },
-    "domain" : "11",
+    "domain" : "6",
     "comment" : {
       "en" : "The date on which the incident was reported to the competent authority."
     },
     "attributes" : [ "functional", "datatype" ],
-    "id" : "121"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#registeredIn",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "77",
-    "label" : {
-      "IRI-based" : "registeredIn",
-      "en" : "registered in"
-    },
-    "domain" : "6",
-    "comment" : {
-      "en" : "Relates a manufacturer to the country where it is registered."
-    },
-    "attributes" : [ "functional", "object" ],
-    "id" : "125"
-  }, {
-    "range" : "9",
-    "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "126"
-  }, {
-    "range" : "9",
-    "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "127"
-  }, {
-    "range" : "9",
-    "domain" : "13",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "128"
-  }, {
-    "range" : "17",
-    "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "129"
-  }, {
-    "range" : "6",
-    "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "130"
-  }, {
-    "range" : "20",
-    "domain" : "22",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "131"
-  }, {
-    "range" : "17",
-    "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "132"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#eudamedSRN",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "86",
-    "label" : {
-      "IRI-based" : "eudamedSRN",
-      "en" : "EUDAMED SRN"
-    },
-    "domain" : "6",
-    "comment" : {
-      "en" : "The Single Registration Number assigned by EUDAMED to the manufacturer."
-    },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "133"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#eudamedFSCARef",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "0",
-    "label" : {
-      "IRI-based" : "eudamedFSCARef",
-      "en" : "EUDAMED FSCA reference"
-    },
-    "domain" : "2",
-    "comment" : {
-      "en" : "The EUDAMED reference number for the corrective action."
-    },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "134"
+    "id" : "56"
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#addressesIncident",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "11",
+    "range" : "6",
     "label" : {
       "IRI-based" : "addressesIncident",
       "en" : "addresses incident"
     },
     "cardinality" : "1",
-    "domain" : "2",
+    "domain" : "1",
     "comment" : {
       "en" : "Relates a field safety corrective action to the incident that triggered it."
     },
     "attributes" : [ "functional", "object" ],
-    "id" : "136"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#outcome",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "69",
-    "label" : {
-      "IRI-based" : "outcome",
-      "en" : "outcome"
-    },
-    "domain" : "11",
-    "comment" : {
-      "en" : "The clinical outcome of the incident."
-    },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "137"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#countryName",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "27",
-    "label" : {
-      "IRI-based" : "countryName",
-      "en" : "country name"
-    },
-    "domain" : "77",
-    "comment" : {
-      "en" : "The name of the country."
-    },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "138"
-  }, {
-    "range" : "16",
-    "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "139"
-  }, {
-    "range" : "16",
-    "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "140"
-  }, {
-    "range" : "13",
-    "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "141"
-  }, {
-    "range" : "16",
-    "domain" : "13",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "142"
-  }, {
-    "range" : "44",
-    "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "143"
-  }, {
-    "range" : "42",
-    "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "144"
-  }, {
-    "range" : "43",
-    "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "145"
-  }, {
-    "range" : "44",
-    "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "146"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#intendedPurpose",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "85",
-    "label" : {
-      "IRI-based" : "intendedPurpose",
-      "en" : "intended purpose"
-    },
-    "domain" : "21",
-    "comment" : {
-      "en" : "The intended purpose of the medical device as stated by the manufacturer."
-    },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "147"
-  }, {
-    "range" : "14",
-    "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "148"
-  }, {
-    "range" : "13",
-    "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "149"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#description",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "31",
-    "label" : {
-      "IRI-based" : "description",
-      "en" : "description"
-    },
-    "domain" : "4",
-    "comment" : {
-      "en" : "A textual description of the risk."
-    },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "150"
+    "id" : "61"
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#isReusable",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "72",
+    "range" : "63",
     "label" : {
       "IRI-based" : "isReusable",
       "en" : "is reusable"
     },
-    "domain" : "21",
+    "domain" : "9",
     "comment" : {
       "en" : "Indicates whether the device is intended for reuse."
     },
     "attributes" : [ "functional", "datatype" ],
-    "id" : "151"
-  }, {
-    "range" : "21",
-    "domain" : "20",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "153"
+    "id" : "62"
   }, {
     "iri" : "http://uoc.edu/knowledgeManagement/mdrco#udiDI",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "63",
+    "range" : "65",
     "label" : {
       "IRI-based" : "udiDI",
       "en" : "UDI-DI"
     },
-    "domain" : "21",
+    "domain" : "9",
     "comment" : {
       "en" : "The Unique Device Identifier - Device Identifier."
     },
     "attributes" : [ "functional", "datatype" ],
-    "id" : "154"
+    "id" : "64"
   }, {
-    "range" : "21",
-    "domain" : "79",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "155"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#probability",
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#manufacturerName",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "66",
+    "range" : "73",
     "label" : {
-      "IRI-based" : "probability",
-      "en" : "probability"
+      "IRI-based" : "manufacturerName",
+      "en" : "manufacturer name"
     },
-    "domain" : "4",
+    "domain" : "13",
     "comment" : {
-      "en" : "The probability of occurrence of the risk (Low, Medium, High)."
+      "en" : "The official name of the manufacturer."
     },
     "attributes" : [ "functional", "datatype" ],
-    "id" : "156"
+    "id" : "72"
   }, {
-    "range" : "21",
-    "domain" : "56",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "157"
-  }, {
-    "range" : "21",
-    "domain" : "152",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "158"
-  }, {
-    "range" : "21",
-    "domain" : "135",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "159"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#closureDate",
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "38",
+    "range" : "75",
     "label" : {
-      "IRI-based" : "closureDate",
-      "en" : "closure date"
+      "IRI-based" : "correctiveActionTaken",
+      "en" : "corrective action taken"
     },
-    "domain" : "2",
+    "domain" : "6",
     "comment" : {
-      "en" : "The date on which the corrective action was closed."
+      "en" : "Indicates whether a corrective action was taken in response to the incident."
     },
     "attributes" : [ "functional", "datatype" ],
-    "id" : "160"
+    "id" : "74"
   }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#actionDate",
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#reportedBy",
     "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "reportedBy",
+      "en" : "reported by"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "Relates an incident to the manufacturer that reported it."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#hasRiskClass",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "hasRiskClass",
+      "en" : "has risk class"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Relates a medical device to its regulatory risk class."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#isActive",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "84",
+    "label" : {
+      "IRI-based" : "isActive",
+      "en" : "is active"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Indicates whether the device requires an energy source to operate."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "83"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#affectsDeviceType",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "affectsDeviceType",
+      "en" : "affects device type"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "Relates a risk to the type of medical device it affects."
+    },
+    "attributes" : [ "object" ],
+    "id" : "86"
+  }, {
+    "range" : "36",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "87"
+  }, {
     "range" : "33",
-    "label" : {
-      "IRI-based" : "actionDate",
-      "en" : "action date"
-    },
-    "domain" : "2",
-    "comment" : {
-      "en" : "The date on which the corrective action was initiated."
-    },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "161"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "87",
-    "label" : {
-      "IRI-based" : "eudamedIncidentRef",
-      "en" : "EUDAMED incident reference"
-    },
-    "domain" : "11",
-    "comment" : {
-      "en" : "The EUDAMED reference number for the incident."
-    },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "162"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#eventDate",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "89",
-    "label" : {
-      "IRI-based" : "eventDate",
-      "en" : "event date"
-    },
-    "domain" : "11",
-    "comment" : {
-      "en" : "The date on which the incident event occurred."
-    },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "163"
-  }, {
-    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#isIVD",
-    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
-    "range" : "81",
-    "label" : {
-      "IRI-based" : "isIVD",
-      "en" : "is IVD"
-    },
-    "domain" : "21",
-    "comment" : {
-      "en" : "Indicates whether the device is an in vitro diagnostic device."
-    },
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "164"
-  }, {
-    "range" : "4",
-    "domain" : "124",
+    "domain" : "35",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "165"
+    "id" : "88"
+  }, {
+    "range" : "36",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "89"
+  }, {
+    "range" : "35",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "90"
+  }, {
+    "range" : "33",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "91"
+  }, {
+    "range" : "26",
+    "domain" : "43",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "92"
+  }, {
+    "range" : "36",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "93"
+  }, {
+    "range" : "21",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "94"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#deviceName",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "70",
+    "label" : {
+      "IRI-based" : "deviceName",
+      "en" : "device name"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "The commercial name of the medical device."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "95"
   }, {
     "range" : "4",
     "domain" : "3",
     "attributes" : [ "anonymous", "object" ],
+    "id" : "96"
+  }, {
+    "range" : "22",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "97"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#status",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "107",
+    "label" : {
+      "IRI-based" : "status",
+      "en" : "status"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The current status of the field safety corrective action (Open or Closed)."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "106"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#affectsCountry",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "109",
+    "label" : {
+      "IRI-based" : "affectsCountry",
+      "en" : "affects country"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relates a field safety corrective action to a country where it applies."
+    },
+    "attributes" : [ "object" ],
+    "id" : "108"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "109",
+    "label" : {
+      "IRI-based" : "reportedInCountry",
+      "en" : "reported in country"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "Relates an incident to the country where it was reported."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "111"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#scope",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "99",
+    "label" : {
+      "IRI-based" : "scope",
+      "en" : "scope"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The description of devices or lots within the scope of the corrective action."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "112"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#riskId",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "98",
+    "label" : {
+      "IRI-based" : "riskId",
+      "en" : "risk ID"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "The unique identifier of the risk."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "116"
+  }, {
+    "range" : "1",
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "121"
+  }, {
+    "range" : "1",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "122"
+  }, {
+    "range" : "6",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "123"
+  }, {
+    "range" : "67",
+    "domain" : "110",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "124"
+  }, {
+    "range" : "1",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "125"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#riskName",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "100",
+    "label" : {
+      "IRI-based" : "riskName",
+      "en" : "risk name"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "The name of the risk according to IMDRF nomenclature."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "126"
+  }, {
+    "range" : "1",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "128"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "129"
+  }, {
+    "range" : "15",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "130"
+  }, {
+    "range" : "15",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "131"
+  }, {
+    "range" : "15",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "132"
+  }, {
+    "range" : "15",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "134"
+  }, {
+    "range" : "15",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "135"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#severity",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "137",
+    "label" : {
+      "IRI-based" : "severity",
+      "en" : "severity"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "The severity level of the risk (Critical, Serious, Moderate)."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "136"
+  }, {
+    "range" : "15",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "139"
+  }, {
+    "range" : "15",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "140"
+  }, {
+    "range" : "15",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "141"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#imdrfCode",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "117",
+    "label" : {
+      "IRI-based" : "imdrfCode",
+      "en" : "IMDRF code"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "The IMDRF nomenclature code for the risk."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "142"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#manufacturedBy",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "manufacturedBy",
+      "en" : "manufactured by"
+    },
+    "cardinality" : "1",
+    "domain" : "9",
+    "comment" : {
+      "en" : "Relates a medical device to its manufacturer."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "143"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#fscaId",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "114",
+    "label" : {
+      "IRI-based" : "fscaId",
+      "en" : "FSCA ID"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The unique identifier of the field safety corrective action."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "144"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#registeredIn",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "109",
+    "label" : {
+      "IRI-based" : "registeredIn",
+      "en" : "registered in"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Relates a manufacturer to the country where it is registered."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "147"
+  }, {
+    "range" : "2",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "148"
+  }, {
+    "range" : "42",
+    "domain" : "41",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "149"
+  }, {
+    "range" : "2",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "150"
+  }, {
+    "range" : "13",
+    "domain" : "76",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "151"
+  }, {
+    "range" : "9",
+    "domain" : "66",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "152"
+  }, {
+    "range" : "9",
+    "domain" : "60",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "153"
+  }, {
+    "range" : "9",
+    "domain" : "42",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "154"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#eudamedSRN",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "119",
+    "label" : {
+      "IRI-based" : "eudamedSRN",
+      "en" : "EUDAMED SRN"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "The Single Registration Number assigned by EUDAMED to the manufacturer."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "155"
+  }, {
+    "range" : "9",
+    "domain" : "67",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "156"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#eudamedFSCARef",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "118",
+    "label" : {
+      "IRI-based" : "eudamedFSCARef",
+      "en" : "EUDAMED FSCA reference"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The EUDAMED reference number for the corrective action."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "157"
+  }, {
+    "range" : "32",
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "158"
+  }, {
+    "range" : "32",
+    "domain" : "133",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "159"
+  }, {
+    "range" : "32",
+    "domain" : "104",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "160"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#outcome",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "103",
+    "label" : {
+      "IRI-based" : "outcome",
+      "en" : "outcome"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "The clinical outcome of the incident."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "161"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#countryName",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "countryName",
+      "en" : "country name"
+    },
+    "domain" : "109",
+    "comment" : {
+      "en" : "The name of the country."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "162"
+  }, {
+    "range" : "18",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "163"
+  }, {
+    "range" : "20",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "164"
+  }, {
+    "range" : "18",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "165"
+  }, {
+    "range" : "20",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "166"
   }, {
-    "range" : "4",
-    "domain" : "122",
+    "range" : "21",
+    "domain" : "17",
     "attributes" : [ "anonymous", "object" ],
     "id" : "167"
   }, {
-    "range" : "4",
-    "domain" : "123",
+    "range" : "16",
+    "domain" : "17",
     "attributes" : [ "anonymous", "object" ],
     "id" : "168"
   }, {
-    "range" : "4",
-    "domain" : "98",
+    "range" : "22",
+    "domain" : "17",
     "attributes" : [ "anonymous", "object" ],
     "id" : "169"
+  }, {
+    "range" : "22",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "170"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#intendedPurpose",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "113",
+    "label" : {
+      "IRI-based" : "intendedPurpose",
+      "en" : "intended purpose"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "The intended purpose of the medical device as stated by the manufacturer."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "171"
+  }, {
+    "range" : "20",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "172"
+  }, {
+    "range" : "19",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "173"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#description",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "description",
+      "en" : "description"
+    },
+    "domain" : "80",
+    "comment" : {
+      "en" : "A textual description of the resource (risk, incident or corrective action)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "174"
+  }, {
+    "range" : "32",
+    "domain" : "49",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "175"
+  }, {
+    "range" : "32",
+    "domain" : "58",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "176"
+  }, {
+    "range" : "32",
+    "domain" : "50",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "177"
+  }, {
+    "range" : "32",
+    "domain" : "146",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "178"
+  }, {
+    "range" : "32",
+    "domain" : "101",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "179"
+  }, {
+    "range" : "32",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "180"
+  }, {
+    "range" : "32",
+    "domain" : "145",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "181"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#probability",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "102",
+    "label" : {
+      "IRI-based" : "probability",
+      "en" : "probability"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "The probability of occurrence of the risk (Low, Medium, High)."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "182"
+  }, {
+    "range" : "32",
+    "domain" : "31",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "183"
+  }, {
+    "range" : "32",
+    "domain" : "127",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "184"
+  }, {
+    "range" : "32",
+    "domain" : "71",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "185"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#closureDate",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "85",
+    "label" : {
+      "IRI-based" : "closureDate",
+      "en" : "closure date"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The date on which the corrective action was closed."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "186"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#actionDate",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "81",
+    "label" : {
+      "IRI-based" : "actionDate",
+      "en" : "action date"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The date on which the corrective action was initiated."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "187"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "120",
+    "label" : {
+      "IRI-based" : "eudamedIncidentRef",
+      "en" : "EUDAMED incident reference"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "The EUDAMED reference number for the incident."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "188"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#eventDate",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "115",
+    "label" : {
+      "IRI-based" : "eventDate",
+      "en" : "event date"
+    },
+    "domain" : "6",
+    "comment" : {
+      "en" : "The date on which the incident event occurred."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "189"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/mdrco#isIVD",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/mdrco",
+    "range" : "105",
+    "label" : {
+      "IRI-based" : "isIVD",
+      "en" : "is IVD"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Indicates whether the device is an in vitro diagnostic device."
+    },
+    "attributes" : [ "functional", "datatype" ],
+    "id" : "190"
+  }, {
+    "range" : "32",
+    "domain" : "59",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "191"
+  }, {
+    "range" : "6",
+    "domain" : "43",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "192"
+  }, {
+    "range" : "6",
+    "domain" : "55",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "193"
+  }, {
+    "range" : "32",
+    "domain" : "138",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "194"
+  }, {
+    "range" : "32",
+    "domain" : "69",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "195"
   } ]
 }

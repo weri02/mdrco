@@ -82,6 +82,14 @@ xsd:date rdf:type rdfs:Datatype .
                 rdfs:label "affects country"@en .
 
 
+###  http://uoc.edu/knowledgeManagement/mdrco#affectsDeviceType
+:affectsDeviceType rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Risk ;
+                   rdfs:range :Device ;
+                   rdfs:comment "Relates a risk to the type of medical device it affects."@en ;
+                   rdfs:label "affects device type"@en .
+
+
 ###  http://uoc.edu/knowledgeManagement/mdrco#hasRisk
 :hasRisk rdf:type owl:ObjectProperty ;
          rdfs:domain :Incident ;
@@ -221,12 +229,25 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#description
-:description rdf:type owl:DatatypeProperty ,
-                      owl:FunctionalProperty ;
-             rdfs:domain :Risk ;
+:description rdf:type owl:DatatypeProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :FieldSafetyCorrectiveAction
+                                         :Incident
+                                         :Risk
+                                       )
+                         ] ;
              rdfs:range xsd:string ;
-             rdfs:comment "A textual description of the risk."@en ;
+             rdfs:comment "A textual description of the resource (risk, incident or corrective action)."@en ;
              rdfs:label "description"@en .
+
+
+###  http://uoc.edu/knowledgeManagement/mdrco#detectionDate
+:detectionDate rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :Incident ;
+               rdfs:range xsd:date ;
+               rdfs:comment "The date on which the incident was first detected."@en ;
+               rdfs:label "detection date"@en .
 
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#deviceId
@@ -436,6 +457,15 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:label "risk name"@en .
 
 
+###  http://uoc.edu/knowledgeManagement/mdrco#scope
+:scope rdf:type owl:DatatypeProperty ,
+                owl:FunctionalProperty ;
+       rdfs:domain :FieldSafetyCorrectiveAction ;
+       rdfs:range xsd:string ;
+       rdfs:comment "The description of devices or lots within the scope of the corrective action."@en ;
+       rdfs:label "scope"@en .
+
+
 ###  http://uoc.edu/knowledgeManagement/mdrco#severity
 :severity rdf:type owl:DatatypeProperty ,
                    owl:FunctionalProperty ;
@@ -469,16 +499,12 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#ActiveDevice
 :ActiveDevice rdf:type owl:Class ;
-              rdfs:subClassOf :Device ;
-              rdfs:comment "A device whose operation depends on a source of energy."@en ;
-              rdfs:label "Active Device"@en .
+              rdfs:subClassOf :Device .
 
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#ActiveImplant
 :ActiveImplant rdf:type owl:Class ;
-               rdfs:subClassOf :ImplantableDevice ;
-               rdfs:comment "An active device designed to be totally introduced into the human body."@en ;
-               rdfs:label "Active Implant"@en .
+               rdfs:subClassOf :ImplantableDevice .
 
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#ClassA
@@ -562,11 +588,25 @@ xsd:date rdf:type rdfs:Datatype .
                     rdfs:label "Competent Authority"@en .
 
 
+###  http://uoc.edu/knowledgeManagement/mdrco#ContaminationRisk
+:ContaminationRisk rdf:type owl:Class ;
+                   rdfs:subClassOf :Risk ;
+                   rdfs:comment "Risk type related to reagent or device contamination."@en ;
+                   rdfs:label "Contamination Risk"@en .
+
+
 ###  http://uoc.edu/knowledgeManagement/mdrco#Country
 :Country rdf:type owl:Class ;
          rdfs:comment "A country where a manufacturer is registered or where an incident has been reported."@en ;
          rdfs:label "Country"@en ;
          rdfs:seeAlso <http://schema.org/Country> .
+
+
+###  http://uoc.edu/knowledgeManagement/mdrco#CybersecurityRisk
+:CybersecurityRisk rdf:type owl:Class ;
+                   rdfs:subClassOf :Risk ;
+                   rdfs:comment "Risk type related to cybersecurity vulnerabilities in active devices."@en ;
+                   rdfs:label "Cybersecurity Risk"@en .
 
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#Device
@@ -608,6 +648,13 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:label "Diagnostic Error"@en .
 
 
+###  http://uoc.edu/knowledgeManagement/mdrco#DiagnosticRisk
+:DiagnosticRisk rdf:type owl:Class ;
+                rdfs:subClassOf :Risk ;
+                rdfs:comment "Risk type related to incorrect or misleading diagnostic results."@en ;
+                rdfs:label "Diagnostic Risk"@en .
+
+
 ###  http://uoc.edu/knowledgeManagement/mdrco#EUAuthorizedManufacturer
 :EUAuthorizedManufacturer rdf:type owl:Class ;
                           rdfs:subClassOf :Manufacturer ;
@@ -642,16 +689,12 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#ImplantableActiveDevice
 :ImplantableActiveDevice rdf:type owl:Class ;
-                         rdfs:subClassOf :Device ;
-                         rdfs:comment "An active device intended to be totally or partially introduced into the human body."@en ;
-                         rdfs:label "Implantable Active Device"@en .
+                         rdfs:subClassOf :Device .
 
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#ImplantableDevice
 :ImplantableDevice rdf:type owl:Class ;
-                   rdfs:subClassOf :Device ;
-                   rdfs:comment "A device intended to be totally or partially introduced into the human body."@en ;
-                   rdfs:label "Implantable Device"@en .
+                   rdfs:subClassOf :Device .
 
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#InSituCorrection
@@ -666,15 +709,34 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#InVitroDiagnosticDevice
 :InVitroDiagnosticDevice rdf:type owl:Class ;
-                         rdfs:subClassOf :Device ;
-                         rdfs:comment "A device used for examination of specimens derived from the human body."@en ;
-                         rdfs:label "In Vitro Diagnostic Device"@en .
+                         rdfs:subClassOf :Device .
 
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#Incident
 :Incident rdf:type owl:Class ;
           rdfs:comment "Any malfunction or deterioration in the characteristics of a device that has led or could lead to patient harm."@en ;
           rdfs:label "Incident"@en .
+
+
+###  http://uoc.edu/knowledgeManagement/mdrco#InfectionRisk
+:InfectionRisk rdf:type owl:Class ;
+               rdfs:subClassOf :Risk ;
+               rdfs:comment "Risk type related to device-associated infection or biofilm."@en ;
+               rdfs:label "Infection Risk"@en .
+
+
+###  http://uoc.edu/knowledgeManagement/mdrco#InjuryRisk
+:InjuryRisk rdf:type owl:Class ;
+            rdfs:subClassOf :Risk ;
+            rdfs:comment "Risk type related to physical injury to the patient."@en ;
+            rdfs:label "Injury Risk"@en .
+
+
+###  http://uoc.edu/knowledgeManagement/mdrco#InterferenceRisk
+:InterferenceRisk rdf:type owl:Class ;
+                  rdfs:subClassOf :Risk ;
+                  rdfs:comment "Risk type related to electromagnetic or device interference."@en ;
+                  rdfs:label "Interference Risk"@en .
 
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#MDR
@@ -684,11 +746,25 @@ xsd:date rdf:type rdfs:Datatype .
      rdfs:label "MDR"@en .
 
 
+###  http://uoc.edu/knowledgeManagement/mdrco#MalfunctionRisk
+:MalfunctionRisk rdf:type owl:Class ;
+                 rdfs:subClassOf :Risk ;
+                 rdfs:comment "Risk type related to device malfunction or functional failure."@en ;
+                 rdfs:label "Malfunction Risk"@en .
+
+
 ###  http://uoc.edu/knowledgeManagement/mdrco#Manufacturer
 :Manufacturer rdf:type owl:Class ;
               rdfs:comment "A natural or legal person responsible for the design and manufacture of a medical device."@en ;
               rdfs:label "Manufacturer"@en ;
               rdfs:seeAlso <http://xmlns.com/foaf/0.1/Organization> .
+
+
+###  http://uoc.edu/knowledgeManagement/mdrco#MaterialRisk
+:MaterialRisk rdf:type owl:Class ;
+              rdfs:subClassOf :Risk ;
+              rdfs:comment "Risk type related to material degradation, wear debris or toxicity."@en ;
+              rdfs:label "Material Risk"@en .
 
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#NearMissIncident
@@ -711,6 +787,13 @@ xsd:date rdf:type rdfs:Datatype .
                 rdfs:subClassOf :Risk ;
                 rdfs:comment "Risk category related to product quality issues."@en ;
                 rdfs:label "Product Quality"@en .
+
+
+###  http://uoc.edu/knowledgeManagement/mdrco#RadiationRisk
+:RadiationRisk rdf:type owl:Class ;
+               rdfs:subClassOf :Risk ;
+               rdfs:comment "Risk type related to unintended ionising radiation exposure."@en ;
+               rdfs:label "Radiation Risk"@en .
 
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#Recall
@@ -769,6 +852,13 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:label "Single Use Device"@en .
 
 
+###  http://uoc.edu/knowledgeManagement/mdrco#SoftwareRisk
+:SoftwareRisk rdf:type owl:Class ;
+              rdfs:subClassOf :Risk ;
+              rdfs:comment "Risk type related to software malfunction or erroneous output."@en ;
+              rdfs:label "Software Risk"@en .
+
+
 ###  http://uoc.edu/knowledgeManagement/mdrco#UserNotice
 :UserNotice rdf:type owl:Class ;
             rdfs:subClassOf :FieldSafetyCorrectiveAction ;
@@ -779,6 +869,14 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://uoc.edu/knowledgeManagement/mdrco#ActiveDevice
+:ActiveDevice rdf:type owl:NamedIndividual .
+
+
+###  http://uoc.edu/knowledgeManagement/mdrco#ActiveImplant
+:ActiveImplant rdf:type owl:NamedIndividual .
+
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#Agence_fédérale_des_médicaments_et_des_produits_de_santé_AFMPS
 :Agence_fédérale_des_médicaments_et_des_produits_de_santé_AFMPS rdf:type owl:NamedIndividual ,
@@ -1265,14 +1363,24 @@ xsd:date rdf:type rdfs:Datatype .
          rdfs:label "Denmark"@en .
 
 
+###  http://uoc.edu/knowledgeManagement/mdrco#EU
+:EU rdf:type owl:NamedIndividual ,
+             :Country ;
+    :countryName "EU" ;
+    rdfs:label "EU"@en .
+
+
 ###  http://uoc.edu/knowledgeManagement/mdrco#FSCA-001
 :FSCA-001 rdf:type owl:NamedIndividual ,
                    :SafetyAlert ;
           :addressesIncident :INC-001 ;
+          :affectsCountry :EU ;
           :actionDate "2024-02-01"^^xsd:date ;
+          :description "Safety alert issued to all implanting centres regarding anticoagulation protocol update for HeartMate 3 to reduce device thrombosis risk. INR target range revised to 2.0–3.0." ;
           :devicesAffected "850" ;
           :eudamedFSCARef "EU-FSCA-2024-000001" ;
           :fscaId "FSCA-001" ;
+          :scope "All HeartMate 3 LVAD units implanted since 2020" ;
           :status "Open" ;
           rdfs:comment "Safety alert issued to all implanting centres regarding anticoagulation protocol update for HeartMate 3 to reduce device thrombosis risk. INR target range revised to 2.0–3.0."@en ;
           rdfs:label "FSCA-001"@en .
@@ -1282,11 +1390,15 @@ xsd:date rdf:type rdfs:Datatype .
 :FSCA-002 rdf:type owl:NamedIndividual ,
                    :Recall ;
           :addressesIncident :INC-002 ;
+          :affectsCountry :EU ,
+                          :UK ;
           :actionDate "2024-02-28"^^xsd:date ;
           :closureDate "2024-05-31"^^xsd:date ;
+          :description "Voluntary recall of affected Micra AV lots due to premature battery depletion. Replacement units provided. 97% of affected devices successfully replaced." ;
           :devicesAffected "1240" ;
           :eudamedFSCARef "EU-FSCA-2024-000002" ;
           :fscaId "FSCA-002" ;
+          :scope "Micra AV lots manufactured between 2022-09 and 2023-03" ;
           :status "Closed" ;
           rdfs:comment "Voluntary recall of affected Micra AV lots due to premature battery depletion. Replacement units provided. 97% of affected devices successfully replaced."@en ;
           rdfs:label "FSCA-002"@en .
@@ -1296,11 +1408,14 @@ xsd:date rdf:type rdfs:Datatype .
 :FSCA-003 rdf:type owl:NamedIndividual ,
                    :InSituCorrection ;
           :addressesIncident :INC-003 ;
+          :affectsCountry :EU ;
           :actionDate "2024-03-15"^^xsd:date ;
           :closureDate "2024-06-30"^^xsd:date ;
+          :description "Enhanced deployment training and updated IFU for Portico valve implantation technique. New implantation checklist mandatory for all TAVI centres." ;
           :devicesAffected "320" ;
           :eudamedFSCARef "EU-FSCA-2024-000003" ;
           :fscaId "FSCA-003" ;
+          :scope "Portico THV sizes 23mm and 25mm from lots before 2023-11" ;
           :status "Closed" ;
           rdfs:comment "Enhanced deployment training and updated IFU for Portico valve implantation technique. New implantation checklist mandatory for all TAVI centres."@en ;
           rdfs:label "FSCA-003"@en .
@@ -1310,10 +1425,13 @@ xsd:date rdf:type rdfs:Datatype .
 :FSCA-004 rdf:type owl:NamedIndividual ,
                    :SafetyAlert ;
           :addressesIncident :INC-005 ;
+          :affectsCountry :EU ;
           :actionDate "2024-04-10"^^xsd:date ;
+          :description "Safety communication to implanting cardiologists regarding optimal fixation technique for ACUITY X4 lead. Enhanced fluoroscopy verification protocol at implantation." ;
           :devicesAffected "2100" ;
           :eudamedFSCARef "EU-FSCA-2024-000004" ;
           :fscaId "FSCA-004" ;
+          :scope "All ACUITY X4 quadripolar LV leads" ;
           :status "Open" ;
           rdfs:comment "Safety communication to implanting cardiologists regarding optimal fixation technique for ACUITY X4 lead. Enhanced fluoroscopy verification protocol at implantation."@en ;
           rdfs:label "FSCA-004"@en .
@@ -1323,11 +1441,15 @@ xsd:date rdf:type rdfs:Datatype .
 :FSCA-005 rdf:type owl:NamedIndividual ,
                    :InSituCorrection ;
           :addressesIncident :INC-007 ;
+          :affectsCountry :EU ,
+                          :Switzerland ;
           :actionDate "2024-05-20"^^xsd:date ;
           :closureDate "2024-09-30"^^xsd:date ;
+          :description "Enhanced surveillance programme: annual DEXA scan and serum particle monitoring for patients with affected tibial inserts. Patients contacted individually." ;
           :devicesAffected "780" ;
           :eudamedFSCARef "EU-FSCA-2024-000005" ;
           :fscaId "FSCA-005" ;
+          :scope "Persona Knee tibial inserts with lot numbers PN-2019-* to PN-2021-*" ;
           :status "Closed" ;
           rdfs:comment "Enhanced surveillance programme: annual DEXA scan and serum particle monitoring for patients with affected tibial inserts. Patients contacted individually."@en ;
           rdfs:label "FSCA-005"@en .
@@ -1337,10 +1459,13 @@ xsd:date rdf:type rdfs:Datatype .
 :FSCA-006 rdf:type owl:NamedIndividual ,
                    :Recall ;
           :addressesIncident :INC-008 ;
+          :affectsCountry :EU ;
           :actionDate "2024-05-30"^^xsd:date ;
+          :description "Urgent safety recall due to elevated metal ion levels. Revision surgery recommended for patients with serum cobalt >7 ppb or symptomatic ALTR. Replacement implants provided." ;
           :devicesAffected "540" ;
           :eudamedFSCARef "EU-FSCA-2024-000006" ;
           :fscaId "FSCA-006" ;
+          :scope "TRITON Total Hip ceramic-on-ceramic 28mm heads from lots TH-2020-* and TH-2021-*" ;
           :status "Open" ;
           rdfs:comment "Urgent safety recall due to elevated metal ion levels. Revision surgery recommended for patients with serum cobalt >7 ppb or symptomatic ALTR. Replacement implants provided."@en ;
           rdfs:label "FSCA-006"@en .
@@ -1350,11 +1475,15 @@ xsd:date rdf:type rdfs:Datatype .
 :FSCA-007 rdf:type owl:NamedIndividual ,
                    :UserNotice ;
           :addressesIncident :INC-009 ;
+          :affectsCountry :EU ,
+                          :UK ;
           :actionDate "2024-05-25"^^xsd:date ;
           :closureDate "2024-07-31"^^xsd:date ;
+          :description "Urgent safety notice regarding MRI scanning protocol. Updated MRI-conditional guidelines issued. Mandatory reprogramming required before any MRI scan. Programmer software update v3.2 released." ;
           :devicesAffected "4300" ;
           :eudamedFSCARef "EU-FSCA-2024-000007" ;
           :fscaId "FSCA-007" ;
+          :scope "All Viva CRT-D devices" ;
           :status "Closed" ;
           rdfs:comment "Urgent safety notice regarding MRI scanning protocol. Updated MRI-conditional guidelines issued. Mandatory reprogramming required before any MRI scan. Programmer software update v3.2 released."@en ;
           rdfs:label "FSCA-007"@en .
@@ -1364,11 +1493,14 @@ xsd:date rdf:type rdfs:Datatype .
 :FSCA-008 rdf:type owl:NamedIndividual ,
                    :Recall ;
           :addressesIncident :INC-010 ;
+          :affectsCountry :EU ;
           :actionDate "2024-06-05"^^xsd:date ;
           :closureDate "2024-08-15"^^xsd:date ;
+          :description "Software recall: mandatory update to version 2.2.0 resolving FiO2 calibration error. Biomedical engineers visited all affected units within 14 days. Field service documentation required." ;
           :devicesAffected "180" ;
           :eudamedFSCARef "EU-FSCA-2024-000008" ;
           :fscaId "FSCA-008" ;
+          :scope "ATERA ventilators with software version 2.1.3" ;
           :status "Closed" ;
           rdfs:comment "Software recall: mandatory update to version 2.2.0 resolving FiO2 calibration error. Biomedical engineers visited all affected units within 14 days. Field service documentation required."@en ;
           rdfs:label "FSCA-008"@en .
@@ -1378,11 +1510,14 @@ xsd:date rdf:type rdfs:Datatype .
 :FSCA-009 rdf:type owl:NamedIndividual ,
                    :UserNotice ;
           :addressesIncident :INC-011 ;
+          :affectsCountry :EU ;
           :actionDate "2024-06-20"^^xsd:date ;
           :closureDate "2024-09-30"^^xsd:date ;
+          :description "Customer field notification regarding biotin interference in TSH assay. Updated sample preparation protocol and interference screening algorithm released via software update 4.1.2." ;
           :devicesAffected "620" ;
           :eudamedFSCARef "EU-FSCA-2024-000009" ;
           :fscaId "FSCA-009" ;
+          :scope "All cobas e 801 immunoassay analysers" ;
           :status "Closed" ;
           rdfs:comment "Customer field notification regarding biotin interference in TSH assay. Updated sample preparation protocol and interference screening algorithm released via software update 4.1.2."@en ;
           rdfs:label "FSCA-009"@en .
@@ -1392,11 +1527,16 @@ xsd:date rdf:type rdfs:Datatype .
 :FSCA-010 rdf:type owl:NamedIndividual ,
                    :Recall ;
           :addressesIncident :INC-012 ;
+          :affectsCountry :EU ,
+                          :Iceland ,
+                          :Norway ;
           :actionDate "2024-06-30"^^xsd:date ;
           :closureDate "2024-08-31"^^xsd:date ;
+          :description "Immediate quarantine and replacement of affected reagent lots. Reflex testing protocol issued. All positive results from affected lots to be re-confirmed. New primer design covering BA.2.86 released." ;
           :devicesAffected "12500 tests" ;
           :eudamedFSCARef "EU-FSCA-2024-000010" ;
           :fscaId "FSCA-010" ;
+          :scope "cobas SARS-CoV-2 RT-PCR reagent lot numbers CV-2024-0312 to CV-2024-0318" ;
           :status "Closed" ;
           rdfs:comment "Immediate quarantine and replacement of affected reagent lots. Reflex testing protocol issued. All positive results from affected lots to be re-confirmed. New primer design covering BA.2.86 released."@en ;
           rdfs:label "FSCA-010"@en .
@@ -1406,10 +1546,13 @@ xsd:date rdf:type rdfs:Datatype .
 :FSCA-011 rdf:type owl:NamedIndividual ,
                    :InSituCorrection ;
           :addressesIncident :INC-014 ;
+          :affectsCountry :EU ;
           :actionDate "2024-08-01"^^xsd:date ;
+          :description "Enhanced calibration protocol issued. Firmware update v1.8.5 mandatory improving temperature compensation algorithm. Patients instructed to perform confirmatory finger-stick at glucose readings <4.5 or >13.9 mmol/L." ;
           :devicesAffected "3200" ;
           :eudamedFSCARef "EU-FSCA-2024-000011" ;
           :fscaId "FSCA-011" ;
+          :scope "All OPTIGA CGM sensors from manufacturing site GE-SGP-2" ;
           :status "Open" ;
           rdfs:comment "Enhanced calibration protocol issued. Firmware update v1.8.5 mandatory improving temperature compensation algorithm. Patients instructed to perform confirmatory finger-stick at glucose readings <4.5 or >13.9 mmol/L."@en ;
           rdfs:label "FSCA-011"@en .
@@ -1419,11 +1562,16 @@ xsd:date rdf:type rdfs:Datatype .
 :FSCA-012 rdf:type owl:NamedIndividual ,
                    :Recall ;
           :addressesIncident :INC-015 ;
+          :affectsCountry :EU ,
+                          :Norway ,
+                          :UK ;
           :actionDate "2024-08-20"^^xsd:date ;
           :closureDate "2024-10-31"^^xsd:date ;
+          :description "Urgent recall and remote software update. Drug library version 4.3.0 deployed correcting decimal point error. All units verified by biomedical engineering before return to clinical use." ;
           :devicesAffected "2870" ;
           :eudamedFSCARef "EU-FSCA-2024-000012" ;
           :fscaId "FSCA-012" ;
+          :scope "Plum 360 infusion pumps with drug library version 4.2.1" ;
           :status "Closed" ;
           rdfs:comment "Urgent recall and remote software update. Drug library version 4.3.0 deployed correcting decimal point error. All units verified by biomedical engineering before return to clinical use."@en ;
           rdfs:label "FSCA-012"@en .
@@ -1433,10 +1581,13 @@ xsd:date rdf:type rdfs:Datatype .
 :FSCA-013 rdf:type owl:NamedIndividual ,
                    :SafetyAlert ;
           :addressesIncident :INC-016 ;
+          :affectsCountry :EU ;
           :actionDate "2024-09-10"^^xsd:date ;
+          :description "Safety communication regarding outflow graft kinking risk. Updated surgical technique for graft routing issued. Mandatory follow-up CT at 6 months for patients with affected lot numbers." ;
           :devicesAffected "420" ;
           :eudamedFSCARef "EU-FSCA-2024-000013" ;
           :fscaId "FSCA-013" ;
+          :scope "All HeartMate 3 LVAD units with outflow graft lot OG-2022-*" ;
           :status "Open" ;
           rdfs:comment "Safety communication regarding outflow graft kinking risk. Updated surgical technique for graft routing issued. Mandatory follow-up CT at 6 months for patients with affected lot numbers."@en ;
           rdfs:label "FSCA-013"@en .
@@ -1446,11 +1597,14 @@ xsd:date rdf:type rdfs:Datatype .
 :FSCA-014 rdf:type owl:NamedIndividual ,
                    :UserNotice ;
           :addressesIncident :INC-017 ;
+          :affectsCountry :EU ;
           :actionDate "2024-09-25"^^xsd:date ;
           :closureDate "2024-12-31"^^xsd:date ;
+          :description "Updated IFU regarding post-operative infection prophylaxis protocol. Extended topical antibiotic course (14 days) mandatory post-insertion. Healthcare professionals notified via direct mail and implanting centre visits." ;
           :devicesAffected "1100" ;
           :eudamedFSCARef "EU-FSCA-2024-000014" ;
           :fscaId "FSCA-014" ;
+          :scope "All Iluvien intravitreal implants" ;
           :status "Closed" ;
           rdfs:comment "Updated IFU regarding post-operative infection prophylaxis protocol. Extended topical antibiotic course (14 days) mandatory post-insertion. Healthcare professionals notified via direct mail and implanting centre visits."@en ;
           rdfs:label "FSCA-014"@en .
@@ -1460,10 +1614,13 @@ xsd:date rdf:type rdfs:Datatype .
 :FSCA-015 rdf:type owl:NamedIndividual ,
                    :InSituCorrection ;
           :addressesIncident :INC-018 ;
+          :affectsCountry :EU ;
           :actionDate "2024-10-01"^^xsd:date ;
+          :description "Security patch 3.0.1 mandatory deployment disabling unrestricted web interface access. Network segmentation guidance issued to hospital IT departments. Penetration test report provided to competent authorities." ;
           :devicesAffected "890" ;
           :eudamedFSCARef "EU-FSCA-2024-000015" ;
           :fscaId "FSCA-015" ;
+          :scope "All 5008S hemodialysis machines with network connectivity module v2.x" ;
           :status "Open" ;
           rdfs:comment "Security patch 3.0.1 mandatory deployment disabling unrestricted web interface access. Network segmentation guidance issued to hospital IT departments. Penetration test report provided to competent authorities."@en ;
           rdfs:label "FSCA-015"@en .
@@ -1498,6 +1655,8 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-001 ;
          :reportedInCountry :Germany ;
          :correctiveActionTaken "true"^^xsd:boolean ;
+         :description "Patient implanted with HeartMate 3 LVAD developed ischemic stroke 6 months post-implant. Device thrombus confirmed by echocardiography." ;
+         :detectionDate "2024-01-10"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000001" ;
          :eventDate "2024-01-08"^^xsd:date ;
          :incidentId "INC-001" ;
@@ -1517,6 +1676,8 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-001 ;
          :reportedInCountry :France ;
          :correctiveActionTaken "true"^^xsd:boolean ;
+         :description "Micra AV pacemaker reached elective replacement indicator 14 months earlier than expected longevity specification." ;
+         :detectionDate "2024-02-01"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000002" ;
          :eventDate "2024-01-29"^^xsd:date ;
          :incidentId "INC-002" ;
@@ -1536,6 +1697,8 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-002 ;
          :reportedInCountry :Italy ;
          :correctiveActionTaken "true"^^xsd:boolean ;
+         :description "Portico valve showed paravalvular leak grade III due to partial migration 2 weeks post-TAVI procedure." ;
+         :detectionDate "2024-02-18"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000003" ;
          :eventDate "2024-02-15"^^xsd:date ;
          :incidentId "INC-003" ;
@@ -1555,6 +1718,8 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-006 ;
          :reportedInCountry :Spain ;
          :correctiveActionTaken "false"^^xsd:boolean ;
+         :description "SYNERGY stent fracture detected on angiography 18 months post-implant causing in-stent restenosis." ;
+         :detectionDate "2024-03-03"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000004" ;
          :eventDate "2024-02-28"^^xsd:date ;
          :incidentId "INC-004" ;
@@ -1574,6 +1739,8 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-006 ;
          :reportedInCountry :Netherlands ;
          :correctiveActionTaken "true"^^xsd:boolean ;
+         :description "ACUITY X4 lead dislodgement to right ventricle requiring fluoroscopy-guided repositioning." ;
+         :detectionDate "2024-03-16"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000005" ;
          :eventDate "2024-03-12"^^xsd:date ;
          :incidentId "INC-005" ;
@@ -1593,6 +1760,8 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-003 ;
          :reportedInCountry :Belgium ;
          :correctiveActionTaken "false"^^xsd:boolean ;
+         :description "ACUSON Sequoia ultrasound system froze mid-examination. Emergency shutdown required; patient examination incomplete." ;
+         :detectionDate "2024-04-01"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000006" ;
          :eventDate "2024-04-01"^^xsd:date ;
          :incidentId "INC-006" ;
@@ -1610,6 +1779,8 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-010 ;
          :reportedInCountry :Sweden ;
          :correctiveActionTaken "true"^^xsd:boolean ;
+         :description "Persona knee tibial insert showing accelerated polyethylene wear with metallosis confirmed at 3-year revision surgery." ;
+         :detectionDate "2024-04-10"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000007" ;
          :eventDate "2024-03-01"^^xsd:date ;
          :incidentId "INC-007" ;
@@ -1629,6 +1800,8 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-007 ;
          :reportedInCountry :Denmark ;
          :correctiveActionTaken "true"^^xsd:boolean ;
+         :description "TRITON hip patient presented with elevated serum cobalt (18 ppb). Adverse local tissue reaction (ALTR) confirmed by MRI." ;
+         :detectionDate "2024-04-25"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000008" ;
          :eventDate "2024-04-20"^^xsd:date ;
          :incidentId "INC-008" ;
@@ -1648,6 +1821,8 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-008 ;
          :reportedInCountry :Poland ;
          :correctiveActionTaken "true"^^xsd:boolean ;
+         :description "Viva CRT-D delivered inappropriate ICD therapy during MRI scan despite MRI-conditional programming. Patient experienced pain and syncope." ;
+         :detectionDate "2024-05-04"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000009" ;
          :eventDate "2024-05-03"^^xsd:date ;
          :incidentId "INC-009" ;
@@ -1667,6 +1842,8 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-012 ;
          :reportedInCountry :Germany ;
          :correctiveActionTaken "true"^^xsd:boolean ;
+         :description "ATERA ventilator software version 2.1.3 delivered FiO2 6% lower than set value for patients in ARDS protocol. 3 patients affected." ;
+         :detectionDate "2024-05-19"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000010" ;
          :eventDate "2024-05-19"^^xsd:date ;
          :incidentId "INC-010" ;
@@ -1684,6 +1861,8 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-005 ;
          :reportedInCountry :France ;
          :correctiveActionTaken "true"^^xsd:boolean ;
+         :description "cobas e 801 thyroid-stimulating hormone (TSH) assay reported false positive results (>10 mIU/L) in 12 euthyroid patients due to biotin interference." ;
+         :detectionDate "2024-06-01"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000011" ;
          :eventDate "2024-05-28"^^xsd:date ;
          :incidentId "INC-011" ;
@@ -1701,6 +1880,8 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-005 ;
          :reportedInCountry :Spain ;
          :correctiveActionTaken "true"^^xsd:boolean ;
+         :description "cobas SARS-CoV-2 assay failed to detect Omicron BA.2.86 subvariant in 7 samples confirmed positive by sequencing. Lot-specific issue." ;
+         :detectionDate "2024-06-13"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000012" ;
          :eventDate "2024-06-10"^^xsd:date ;
          :incidentId "INC-012" ;
@@ -1718,6 +1899,8 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-015 ;
          :reportedInCountry :Germany ;
          :correctiveActionTaken "false"^^xsd:boolean ;
+         :description "VIDAS HIV DUO Ultra failed to detect HIV-1 group O infection in seroconversion panel. Patient missed early treatment window." ;
+         :detectionDate "2024-06-29"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000013" ;
          :eventDate "2024-06-25"^^xsd:date ;
          :incidentId "INC-013" ;
@@ -1735,6 +1918,8 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-009 ;
          :reportedInCountry :Netherlands ;
          :correctiveActionTaken "true"^^xsd:boolean ;
+         :description "OPTIGA CGM sensor reported glucose 3.8 mmol/L while laboratory reference showed 14.2 mmol/L. Patient delayed insulin administration." ;
+         :detectionDate "2024-07-15"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000014" ;
          :eventDate "2024-07-10"^^xsd:date ;
          :incidentId "INC-014" ;
@@ -1754,6 +1939,8 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-002 ;
          :reportedInCountry :Italy ;
          :correctiveActionTaken "true"^^xsd:boolean ;
+         :description "Plum 360 infusion pump delivered 10x heparin dose due to software decimal point error in drug library version 4.2.1." ;
+         :detectionDate "2024-08-04"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000015" ;
          :eventDate "2024-08-04"^^xsd:date ;
          :incidentId "INC-015" ;
@@ -1773,6 +1960,8 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-001 ;
          :reportedInCountry :United_Kingdom ;
          :correctiveActionTaken "true"^^xsd:boolean ;
+         :description "HeartMate 3 patient developed severe haemolysis (LDH >2000 U/L) associated with outflow graft kinking confirmed by CT." ;
+         :detectionDate "2024-08-18"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000016" ;
          :eventDate "2024-08-15"^^xsd:date ;
          :incidentId "INC-016" ;
@@ -1792,6 +1981,8 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-011 ;
          :reportedInCountry :France ;
          :correctiveActionTaken "true"^^xsd:boolean ;
+         :description "Iluvien implant required surgical removal due to device-related endophthalmitis confirmed by vitreous culture." ;
+         :detectionDate "2024-08-30"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000017" ;
          :eventDate "2024-08-25"^^xsd:date ;
          :incidentId "INC-017" ;
@@ -1811,6 +2002,8 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-013 ;
          :reportedInCountry :Germany ;
          :correctiveActionTaken "true"^^xsd:boolean ;
+         :description "5008S hemodialysis machine web interface exposed to hospital internal network. Unauthorised session accessed alarm configuration." ;
+         :detectionDate "2024-09-14"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000018" ;
          :eventDate "2024-09-12"^^xsd:date ;
          :incidentId "INC-018" ;
@@ -1828,6 +2021,8 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-008 ;
          :reportedInCountry :Sweden ;
          :correctiveActionTaken "false"^^xsd:boolean ;
+         :description "Tivoli II cochlear implant failed to respond to initial activation programming. Sound processor replacement resolved the issue." ;
+         :detectionDate "2024-09-30"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000019" ;
          :eventDate "2024-09-28"^^xsd:date ;
          :incidentId "INC-019" ;
@@ -1847,6 +2042,8 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-003 ;
          :reportedInCountry :Belgium ;
          :correctiveActionTaken "false"^^xsd:boolean ;
+         :description "MAGNETOM Vida MRI caused localised skin burn (1st degree) at anterior electrode lead in patient with DBS system not declared prior to scan." ;
+         :detectionDate "2024-10-12"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000020" ;
          :eventDate "2024-10-10"^^xsd:date ;
          :incidentId "INC-020" ;
@@ -1856,6 +2053,25 @@ xsd:date rdf:type rdfs:Datatype .
          :reportDate "2024-10-14"^^xsd:date ;
          rdfs:comment "MAGNETOM Vida MRI caused localised skin burn (1st degree) at anterior electrode lead in patient with DBS system not declared prior to scan."@en ;
          rdfs:label "INC-020"@en .
+
+
+###  http://uoc.edu/knowledgeManagement/mdrco#Iceland
+:Iceland rdf:type owl:NamedIndividual ,
+                  :Country ;
+         :countryName "Iceland" ;
+         rdfs:label "Iceland"@en .
+
+
+###  http://uoc.edu/knowledgeManagement/mdrco#ImplantableActiveDevice
+:ImplantableActiveDevice rdf:type owl:NamedIndividual .
+
+
+###  http://uoc.edu/knowledgeManagement/mdrco#ImplantableDevice
+:ImplantableDevice rdf:type owl:NamedIndividual .
+
+
+###  http://uoc.edu/knowledgeManagement/mdrco#InVitroDiagnosticDevice
+:InVitroDiagnosticDevice rdf:type owl:NamedIndividual .
 
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#Ireland
@@ -2088,6 +2304,13 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:label "Netherlands"@en .
 
 
+###  http://uoc.edu/knowledgeManagement/mdrco#Norway
+:Norway rdf:type owl:NamedIndividual ,
+                 :Country ;
+        :countryName "Norway" ;
+        rdfs:label "Norway"@en .
+
+
 ###  http://uoc.edu/knowledgeManagement/mdrco#Poland
 :Poland rdf:type owl:NamedIndividual ,
                  :Country ;
@@ -2097,7 +2320,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#RSK-001
 :RSK-001 rdf:type owl:NamedIndividual ,
-                  :DeviceFailure ;
+                  :DeviceFailure ,
+                  :MalfunctionRisk ;
+         :affectsDeviceType :ActiveDevice ;
          :description "Complete loss of electrical function leading to device shutdown" ;
          :imdrfCode "A0101" ;
          :probability "Low" ;
@@ -2110,7 +2335,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#RSK-002
 :RSK-002 rdf:type owl:NamedIndividual ,
-                  :DeviceFailure ;
+                  :DeviceFailure ,
+                  :MalfunctionRisk ;
+         :affectsDeviceType :ImplantableDevice ;
          :description "Structural failure of mechanical components under physiological load" ;
          :imdrfCode "A0102" ;
          :probability "Medium" ;
@@ -2123,7 +2350,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#RSK-003
 :RSK-003 rdf:type owl:NamedIndividual ,
+                  :InjuryRisk ,
                   :PatientHarm ;
+         :affectsDeviceType :ImplantableActiveDevice ;
          :description "Thrombus formation on device surface causing embolic events" ;
          :imdrfCode "A0201" ;
          :probability "Low" ;
@@ -2136,7 +2365,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#RSK-004
 :RSK-004 rdf:type owl:NamedIndividual ,
+                  :InjuryRisk ,
                   :PatientHarm ;
+         :affectsDeviceType :ActiveImplant ;
          :description "Mechanical destruction of red blood cells by pump mechanism" ;
          :imdrfCode "A0202" ;
          :probability "Low" ;
@@ -2149,7 +2380,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#RSK-005
 :RSK-005 rdf:type owl:NamedIndividual ,
-                  :DevicePerformance ;
+                  :DevicePerformance ,
+                  :MalfunctionRisk ;
+         :affectsDeviceType :ImplantableDevice ;
          :description "Unintended displacement of implant from intended anatomical position" ;
          :imdrfCode "A0301" ;
          :probability "Low" ;
@@ -2162,7 +2395,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#RSK-006
 :RSK-006 rdf:type owl:NamedIndividual ,
-                  :DevicePerformance ;
+                  :DevicePerformance ,
+                  :MalfunctionRisk ;
+         :affectsDeviceType :ActiveImplant ;
          :description "Cardiac lead displacement requiring repositioning or replacement" ;
          :imdrfCode "A0302" ;
          :probability "Medium" ;
@@ -2175,7 +2410,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#RSK-007
 :RSK-007 rdf:type owl:NamedIndividual ,
+                  :InfectionRisk ,
                   :PatientHarm ;
+         :affectsDeviceType :ImplantableDevice ;
          :description "Device-related infection at implantation site or systemic sepsis" ;
          :imdrfCode "A0401" ;
          :probability "Medium" ;
@@ -2188,7 +2425,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#RSK-008
 :RSK-008 rdf:type owl:NamedIndividual ,
+                  :InfectionRisk ,
                   :PatientHarm ;
+         :affectsDeviceType :ImplantableDevice ;
          :description "Bacterial biofilm accumulation on implant surface resistant to antibiotics" ;
          :imdrfCode "A0402" ;
          :probability "High" ;
@@ -2201,7 +2440,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#RSK-009
 :RSK-009 rdf:type owl:NamedIndividual ,
-                  :DeviceFailure ;
+                  :DeviceFailure ,
+                  :MalfunctionRisk ;
+         :affectsDeviceType :ActiveImplant ;
          :description "Battery end-of-life earlier than specified, risking therapy interruption" ;
          :imdrfCode "A0501" ;
          :probability "Low" ;
@@ -2214,7 +2455,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#RSK-010
 :RSK-010 rdf:type owl:NamedIndividual ,
-                  :DeviceFailure ;
+                  :DeviceFailure ,
+                  :SoftwareRisk ;
+         :affectsDeviceType :ActiveDevice ;
          :description "Software bug causing incorrect dosing, alarming, or therapy delivery" ;
          :imdrfCode "A0502" ;
          :probability "Low" ;
@@ -2227,7 +2470,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#RSK-011
 :RSK-011 rdf:type owl:NamedIndividual ,
-                  :PatientHarm ;
+                  :PatientHarm ,
+                  :RadiationRisk ;
+         :affectsDeviceType :ActiveDevice ;
          :description "Unintended ionising radiation exposure exceeding therapeutic dose" ;
          :imdrfCode "A0601" ;
          :probability "Low" ;
@@ -2240,7 +2485,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#RSK-012
 :RSK-012 rdf:type owl:NamedIndividual ,
-                  :DevicePerformance ;
+                  :DevicePerformance ,
+                  :InterferenceRisk ;
+         :affectsDeviceType :ImplantableDevice ;
          :description "Metallic implant causing MRI image artifacts compromising diagnostics" ;
          :imdrfCode "A0701" ;
          :probability "High" ;
@@ -2253,7 +2500,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#RSK-013
 :RSK-013 rdf:type owl:NamedIndividual ,
-                  :DevicePerformance ;
+                  :DevicePerformance ,
+                  :InterferenceRisk ;
+         :affectsDeviceType :ActiveImplant ;
          :description "External EMI affecting pacemaker/ICD sensing and pacing functions" ;
          :imdrfCode "A0702" ;
          :probability "Low" ;
@@ -2266,7 +2515,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#RSK-014
 :RSK-014 rdf:type owl:NamedIndividual ,
-                  :DiagnosticError ;
+                  :DiagnosticError ,
+                  :DiagnosticRisk ;
+         :affectsDeviceType :InVitroDiagnosticDevice ;
          :description "IVD test returns positive result in absence of target condition" ;
          :imdrfCode "B0101" ;
          :probability "Medium" ;
@@ -2279,7 +2530,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#RSK-015
 :RSK-015 rdf:type owl:NamedIndividual ,
-                  :DiagnosticError ;
+                  :DiagnosticError ,
+                  :DiagnosticRisk ;
+         :affectsDeviceType :InVitroDiagnosticDevice ;
          :description "IVD test fails to detect target condition in affected individual" ;
          :imdrfCode "B0102" ;
          :probability "Low" ;
@@ -2292,7 +2545,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#RSK-016
 :RSK-016 rdf:type owl:NamedIndividual ,
-                  :DiagnosticError ;
+                  :DiagnosticError ,
+                  :DiagnosticRisk ;
+         :affectsDeviceType :InVitroDiagnosticDevice ;
          :description "Reagent reacts with non-target analyte producing incorrect result" ;
          :imdrfCode "B0201" ;
          :probability "Medium" ;
@@ -2305,7 +2560,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#RSK-017
 :RSK-017 rdf:type owl:NamedIndividual ,
+                  :ContaminationRisk ,
                   :ProductQuality ;
+         :affectsDeviceType :InVitroDiagnosticDevice ;
          :description "Reagent lot contamination leading to systematic diagnostic errors" ;
          :imdrfCode "B0301" ;
          :probability "Low" ;
@@ -2318,7 +2575,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#RSK-018
 :RSK-018 rdf:type owl:NamedIndividual ,
+                  :CybersecurityRisk ,
                   :DeviceSafety ;
+         :affectsDeviceType :ActiveDevice ;
          :description "Exploitable software vulnerability enabling unauthorized device access" ;
          :imdrfCode "B0401" ;
          :probability "Low" ;
@@ -2331,7 +2590,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#RSK-019
 :RSK-019 rdf:type owl:NamedIndividual ,
+                  :MaterialRisk ,
                   :PatientHarm ;
+         :affectsDeviceType :ImplantableDevice ;
          :description "Particulate debris from bearing surfaces causing adverse tissue reaction" ;
          :imdrfCode "C0101" ;
          :probability "Medium" ;
@@ -2344,7 +2605,9 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#RSK-020
 :RSK-020 rdf:type owl:NamedIndividual ,
+                  :MaterialRisk ,
                   :PatientHarm ;
+         :affectsDeviceType :ImplantableDevice ;
          :description "Metallic ion release from corrosion causing local or systemic toxicity" ;
          :imdrfCode "C0201" ;
          :probability "Low" ;
@@ -2388,6 +2651,13 @@ xsd:date rdf:type rdfs:Datatype .
                       :Country ;
              :countryName "Switzerland" ;
              rdfs:label "Switzerland"@en .
+
+
+###  http://uoc.edu/knowledgeManagement/mdrco#UK
+:UK rdf:type owl:NamedIndividual ,
+             :Country ;
+    :countryName "UK" ;
+    rdfs:label "UK"@en .
 
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#United_Kingdom
@@ -2455,6 +2725,30 @@ xsd:date rdf:type rdfs:Datatype .
 :inst_MDR rdf:type owl:NamedIndividual ,
                    :MDR ;
           rdfs:label "MDR"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:ActiveDevice rdfs:comment "A device whose operation depends on a source of energy."@en ;
+              rdfs:label "Active Device"@en .
+
+
+:ActiveImplant rdfs:comment "An active device designed to be totally introduced into the human body."@en ;
+               rdfs:label "Active Implant"@en .
+
+
+:ImplantableActiveDevice rdfs:comment "An active device intended to be totally or partially introduced into the human body."@en ;
+                         rdfs:label "Implantable Active Device"@en .
+
+
+:ImplantableDevice rdfs:comment "A device intended to be totally or partially introduced into the human body."@en ;
+                   rdfs:label "Implantable Device"@en .
+
+
+:InVitroDiagnosticDevice rdfs:comment "A device used for examination of specimens derived from the human body."@en ;
+                         rdfs:label "In Vitro Diagnostic Device"@en .
 
 
 #################################################################
