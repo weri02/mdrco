@@ -214,18 +214,7 @@
 # 
 # http://uoc.edu/knowledgeManagement/mdrco#description
 <http://uoc.edu/knowledgeManagement/mdrco#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://uoc.edu/knowledgeManagement/mdrco#description> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
-_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid4 .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://uoc.edu/knowledgeManagement/mdrco#Risk> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://uoc.edu/knowledgeManagement/mdrco#Incident> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeManagement/mdrco#description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://uoc.edu/knowledgeManagement/mdrco#Risk> .
 <http://uoc.edu/knowledgeManagement/mdrco#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://uoc.edu/knowledgeManagement/mdrco#description> <http://www.w3.org/2000/01/rdf-schema#comment> "A textual description of the resource (risk, incident or corrective action)."@en .
 <http://uoc.edu/knowledgeManagement/mdrco#description> <http://www.w3.org/2000/01/rdf-schema#label> "description"@en .
@@ -562,10 +551,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://uoc.edu/knowledgeManagement/mdrco#Device
 <http://uoc.edu/knowledgeManagement/mdrco#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://uoc.edu/knowledgeManagement/mdrco#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
-_:genid5 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://uoc.edu/knowledgeManagement/mdrco#manufacturedBy> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://uoc.edu/knowledgeManagement/mdrco#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://uoc.edu/knowledgeManagement/mdrco#manufacturedBy> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://uoc.edu/knowledgeManagement/mdrco#Device> <http://www.w3.org/2000/01/rdf-schema#comment> "A medical device as defined under MDR (EU 2017/745) or IVDR (EU 2017/746) regulations."@en .
 <http://uoc.edu/knowledgeManagement/mdrco#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device"@en .
 <http://uoc.edu/knowledgeManagement/mdrco#Device> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/ontology/MedicalDevice> .
@@ -608,10 +597,10 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction
 <http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
-_:genid6 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://uoc.edu/knowledgeManagement/mdrco#addressesIncident> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://uoc.edu/knowledgeManagement/mdrco#addressesIncident> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#comment> "An action taken to reduce a risk of death or serious deterioration in health associated with a device in use."@en .
 <http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#label> "Field Safety Corrective Action"@en .
 # 
@@ -1263,7 +1252,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-001> <http://uoc.edu/knowledgeManagement/mdrco#addressesIncident> <http://uoc.edu/knowledgeManagement/mdrco#INC-001> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-001> <http://uoc.edu/knowledgeManagement/mdrco#affectsCountry> <http://uoc.edu/knowledgeManagement/mdrco#EU> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-001> <http://uoc.edu/knowledgeManagement/mdrco#actionDate> "2024-02-01"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://uoc.edu/knowledgeManagement/mdrco#FSCA-001> <http://uoc.edu/knowledgeManagement/mdrco#description> "Safety alert issued to all implanting centres regarding anticoagulation protocol update for HeartMate 3 to reduce device thrombosis risk. INR target range revised to 2.0–3.0." .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-001> <http://uoc.edu/knowledgeManagement/mdrco#devicesAffected> "850" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-001> <http://uoc.edu/knowledgeManagement/mdrco#eudamedFSCARef> "EU-FSCA-2024-000001" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-001> <http://uoc.edu/knowledgeManagement/mdrco#fscaId> "FSCA-001" .
@@ -1280,7 +1268,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-002> <http://uoc.edu/knowledgeManagement/mdrco#affectsCountry> <http://uoc.edu/knowledgeManagement/mdrco#UK> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-002> <http://uoc.edu/knowledgeManagement/mdrco#actionDate> "2024-02-28"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-002> <http://uoc.edu/knowledgeManagement/mdrco#closureDate> "2024-05-31"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://uoc.edu/knowledgeManagement/mdrco#FSCA-002> <http://uoc.edu/knowledgeManagement/mdrco#description> "Voluntary recall of affected Micra AV lots due to premature battery depletion. Replacement units provided. 97% of affected devices successfully replaced." .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-002> <http://uoc.edu/knowledgeManagement/mdrco#devicesAffected> "1240" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-002> <http://uoc.edu/knowledgeManagement/mdrco#eudamedFSCARef> "EU-FSCA-2024-000002" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-002> <http://uoc.edu/knowledgeManagement/mdrco#fscaId> "FSCA-002" .
@@ -1296,7 +1283,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-003> <http://uoc.edu/knowledgeManagement/mdrco#affectsCountry> <http://uoc.edu/knowledgeManagement/mdrco#EU> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-003> <http://uoc.edu/knowledgeManagement/mdrco#actionDate> "2024-03-15"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-003> <http://uoc.edu/knowledgeManagement/mdrco#closureDate> "2024-06-30"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://uoc.edu/knowledgeManagement/mdrco#FSCA-003> <http://uoc.edu/knowledgeManagement/mdrco#description> "Enhanced deployment training and updated IFU for Portico valve implantation technique. New implantation checklist mandatory for all TAVI centres." .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-003> <http://uoc.edu/knowledgeManagement/mdrco#devicesAffected> "320" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-003> <http://uoc.edu/knowledgeManagement/mdrco#eudamedFSCARef> "EU-FSCA-2024-000003" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-003> <http://uoc.edu/knowledgeManagement/mdrco#fscaId> "FSCA-003" .
@@ -1311,7 +1297,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-004> <http://uoc.edu/knowledgeManagement/mdrco#addressesIncident> <http://uoc.edu/knowledgeManagement/mdrco#INC-005> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-004> <http://uoc.edu/knowledgeManagement/mdrco#affectsCountry> <http://uoc.edu/knowledgeManagement/mdrco#EU> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-004> <http://uoc.edu/knowledgeManagement/mdrco#actionDate> "2024-04-10"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://uoc.edu/knowledgeManagement/mdrco#FSCA-004> <http://uoc.edu/knowledgeManagement/mdrco#description> "Safety communication to implanting cardiologists regarding optimal fixation technique for ACUITY X4 lead. Enhanced fluoroscopy verification protocol at implantation." .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-004> <http://uoc.edu/knowledgeManagement/mdrco#devicesAffected> "2100" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-004> <http://uoc.edu/knowledgeManagement/mdrco#eudamedFSCARef> "EU-FSCA-2024-000004" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-004> <http://uoc.edu/knowledgeManagement/mdrco#fscaId> "FSCA-004" .
@@ -1328,7 +1313,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-005> <http://uoc.edu/knowledgeManagement/mdrco#affectsCountry> <http://uoc.edu/knowledgeManagement/mdrco#Switzerland> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-005> <http://uoc.edu/knowledgeManagement/mdrco#actionDate> "2024-05-20"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-005> <http://uoc.edu/knowledgeManagement/mdrco#closureDate> "2024-09-30"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://uoc.edu/knowledgeManagement/mdrco#FSCA-005> <http://uoc.edu/knowledgeManagement/mdrco#description> "Enhanced surveillance programme: annual DEXA scan and serum particle monitoring for patients with affected tibial inserts. Patients contacted individually." .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-005> <http://uoc.edu/knowledgeManagement/mdrco#devicesAffected> "780" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-005> <http://uoc.edu/knowledgeManagement/mdrco#eudamedFSCARef> "EU-FSCA-2024-000005" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-005> <http://uoc.edu/knowledgeManagement/mdrco#fscaId> "FSCA-005" .
@@ -1343,7 +1327,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-006> <http://uoc.edu/knowledgeManagement/mdrco#addressesIncident> <http://uoc.edu/knowledgeManagement/mdrco#INC-008> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-006> <http://uoc.edu/knowledgeManagement/mdrco#affectsCountry> <http://uoc.edu/knowledgeManagement/mdrco#EU> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-006> <http://uoc.edu/knowledgeManagement/mdrco#actionDate> "2024-05-30"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://uoc.edu/knowledgeManagement/mdrco#FSCA-006> <http://uoc.edu/knowledgeManagement/mdrco#description> "Urgent safety recall due to elevated metal ion levels. Revision surgery recommended for patients with serum cobalt >7 ppb or symptomatic ALTR. Replacement implants provided." .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-006> <http://uoc.edu/knowledgeManagement/mdrco#devicesAffected> "540" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-006> <http://uoc.edu/knowledgeManagement/mdrco#eudamedFSCARef> "EU-FSCA-2024-000006" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-006> <http://uoc.edu/knowledgeManagement/mdrco#fscaId> "FSCA-006" .
@@ -1360,7 +1343,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-007> <http://uoc.edu/knowledgeManagement/mdrco#affectsCountry> <http://uoc.edu/knowledgeManagement/mdrco#UK> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-007> <http://uoc.edu/knowledgeManagement/mdrco#actionDate> "2024-05-25"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-007> <http://uoc.edu/knowledgeManagement/mdrco#closureDate> "2024-07-31"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://uoc.edu/knowledgeManagement/mdrco#FSCA-007> <http://uoc.edu/knowledgeManagement/mdrco#description> "Urgent safety notice regarding MRI scanning protocol. Updated MRI-conditional guidelines issued. Mandatory reprogramming required before any MRI scan. Programmer software update v3.2 released." .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-007> <http://uoc.edu/knowledgeManagement/mdrco#devicesAffected> "4300" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-007> <http://uoc.edu/knowledgeManagement/mdrco#eudamedFSCARef> "EU-FSCA-2024-000007" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-007> <http://uoc.edu/knowledgeManagement/mdrco#fscaId> "FSCA-007" .
@@ -1376,7 +1358,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-008> <http://uoc.edu/knowledgeManagement/mdrco#affectsCountry> <http://uoc.edu/knowledgeManagement/mdrco#EU> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-008> <http://uoc.edu/knowledgeManagement/mdrco#actionDate> "2024-06-05"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-008> <http://uoc.edu/knowledgeManagement/mdrco#closureDate> "2024-08-15"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://uoc.edu/knowledgeManagement/mdrco#FSCA-008> <http://uoc.edu/knowledgeManagement/mdrco#description> "Software recall: mandatory update to version 2.2.0 resolving FiO2 calibration error. Biomedical engineers visited all affected units within 14 days. Field service documentation required." .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-008> <http://uoc.edu/knowledgeManagement/mdrco#devicesAffected> "180" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-008> <http://uoc.edu/knowledgeManagement/mdrco#eudamedFSCARef> "EU-FSCA-2024-000008" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-008> <http://uoc.edu/knowledgeManagement/mdrco#fscaId> "FSCA-008" .
@@ -1392,7 +1373,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-009> <http://uoc.edu/knowledgeManagement/mdrco#affectsCountry> <http://uoc.edu/knowledgeManagement/mdrco#EU> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-009> <http://uoc.edu/knowledgeManagement/mdrco#actionDate> "2024-06-20"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-009> <http://uoc.edu/knowledgeManagement/mdrco#closureDate> "2024-09-30"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://uoc.edu/knowledgeManagement/mdrco#FSCA-009> <http://uoc.edu/knowledgeManagement/mdrco#description> "Customer field notification regarding biotin interference in TSH assay. Updated sample preparation protocol and interference screening algorithm released via software update 4.1.2." .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-009> <http://uoc.edu/knowledgeManagement/mdrco#devicesAffected> "620" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-009> <http://uoc.edu/knowledgeManagement/mdrco#eudamedFSCARef> "EU-FSCA-2024-000009" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-009> <http://uoc.edu/knowledgeManagement/mdrco#fscaId> "FSCA-009" .
@@ -1410,7 +1390,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-010> <http://uoc.edu/knowledgeManagement/mdrco#affectsCountry> <http://uoc.edu/knowledgeManagement/mdrco#Norway> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-010> <http://uoc.edu/knowledgeManagement/mdrco#actionDate> "2024-06-30"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-010> <http://uoc.edu/knowledgeManagement/mdrco#closureDate> "2024-08-31"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://uoc.edu/knowledgeManagement/mdrco#FSCA-010> <http://uoc.edu/knowledgeManagement/mdrco#description> "Immediate quarantine and replacement of affected reagent lots. Reflex testing protocol issued. All positive results from affected lots to be re-confirmed. New primer design covering BA.2.86 released." .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-010> <http://uoc.edu/knowledgeManagement/mdrco#devicesAffected> "12500 tests" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-010> <http://uoc.edu/knowledgeManagement/mdrco#eudamedFSCARef> "EU-FSCA-2024-000010" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-010> <http://uoc.edu/knowledgeManagement/mdrco#fscaId> "FSCA-010" .
@@ -1425,7 +1404,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-011> <http://uoc.edu/knowledgeManagement/mdrco#addressesIncident> <http://uoc.edu/knowledgeManagement/mdrco#INC-014> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-011> <http://uoc.edu/knowledgeManagement/mdrco#affectsCountry> <http://uoc.edu/knowledgeManagement/mdrco#EU> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-011> <http://uoc.edu/knowledgeManagement/mdrco#actionDate> "2024-08-01"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://uoc.edu/knowledgeManagement/mdrco#FSCA-011> <http://uoc.edu/knowledgeManagement/mdrco#description> "Enhanced calibration protocol issued. Firmware update v1.8.5 mandatory improving temperature compensation algorithm. Patients instructed to perform confirmatory finger-stick at glucose readings <4.5 or >13.9 mmol/L." .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-011> <http://uoc.edu/knowledgeManagement/mdrco#devicesAffected> "3200" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-011> <http://uoc.edu/knowledgeManagement/mdrco#eudamedFSCARef> "EU-FSCA-2024-000011" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-011> <http://uoc.edu/knowledgeManagement/mdrco#fscaId> "FSCA-011" .
@@ -1443,7 +1421,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-012> <http://uoc.edu/knowledgeManagement/mdrco#affectsCountry> <http://uoc.edu/knowledgeManagement/mdrco#UK> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-012> <http://uoc.edu/knowledgeManagement/mdrco#actionDate> "2024-08-20"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-012> <http://uoc.edu/knowledgeManagement/mdrco#closureDate> "2024-10-31"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://uoc.edu/knowledgeManagement/mdrco#FSCA-012> <http://uoc.edu/knowledgeManagement/mdrco#description> "Urgent recall and remote software update. Drug library version 4.3.0 deployed correcting decimal point error. All units verified by biomedical engineering before return to clinical use." .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-012> <http://uoc.edu/knowledgeManagement/mdrco#devicesAffected> "2870" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-012> <http://uoc.edu/knowledgeManagement/mdrco#eudamedFSCARef> "EU-FSCA-2024-000012" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-012> <http://uoc.edu/knowledgeManagement/mdrco#fscaId> "FSCA-012" .
@@ -1458,7 +1435,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-013> <http://uoc.edu/knowledgeManagement/mdrco#addressesIncident> <http://uoc.edu/knowledgeManagement/mdrco#INC-016> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-013> <http://uoc.edu/knowledgeManagement/mdrco#affectsCountry> <http://uoc.edu/knowledgeManagement/mdrco#EU> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-013> <http://uoc.edu/knowledgeManagement/mdrco#actionDate> "2024-09-10"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://uoc.edu/knowledgeManagement/mdrco#FSCA-013> <http://uoc.edu/knowledgeManagement/mdrco#description> "Safety communication regarding outflow graft kinking risk. Updated surgical technique for graft routing issued. Mandatory follow-up CT at 6 months for patients with affected lot numbers." .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-013> <http://uoc.edu/knowledgeManagement/mdrco#devicesAffected> "420" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-013> <http://uoc.edu/knowledgeManagement/mdrco#eudamedFSCARef> "EU-FSCA-2024-000013" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-013> <http://uoc.edu/knowledgeManagement/mdrco#fscaId> "FSCA-013" .
@@ -1474,7 +1450,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-014> <http://uoc.edu/knowledgeManagement/mdrco#affectsCountry> <http://uoc.edu/knowledgeManagement/mdrco#EU> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-014> <http://uoc.edu/knowledgeManagement/mdrco#actionDate> "2024-09-25"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-014> <http://uoc.edu/knowledgeManagement/mdrco#closureDate> "2024-12-31"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://uoc.edu/knowledgeManagement/mdrco#FSCA-014> <http://uoc.edu/knowledgeManagement/mdrco#description> "Updated IFU regarding post-operative infection prophylaxis protocol. Extended topical antibiotic course (14 days) mandatory post-insertion. Healthcare professionals notified via direct mail and implanting centre visits." .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-014> <http://uoc.edu/knowledgeManagement/mdrco#devicesAffected> "1100" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-014> <http://uoc.edu/knowledgeManagement/mdrco#eudamedFSCARef> "EU-FSCA-2024-000014" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-014> <http://uoc.edu/knowledgeManagement/mdrco#fscaId> "FSCA-014" .
@@ -1489,7 +1464,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-015> <http://uoc.edu/knowledgeManagement/mdrco#addressesIncident> <http://uoc.edu/knowledgeManagement/mdrco#INC-018> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-015> <http://uoc.edu/knowledgeManagement/mdrco#affectsCountry> <http://uoc.edu/knowledgeManagement/mdrco#EU> .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-015> <http://uoc.edu/knowledgeManagement/mdrco#actionDate> "2024-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://uoc.edu/knowledgeManagement/mdrco#FSCA-015> <http://uoc.edu/knowledgeManagement/mdrco#description> "Security patch 3.0.1 mandatory deployment disabling unrestricted web interface access. Network segmentation guidance issued to hospital IT departments. Penetration test report provided to competent authorities." .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-015> <http://uoc.edu/knowledgeManagement/mdrco#devicesAffected> "890" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-015> <http://uoc.edu/knowledgeManagement/mdrco#eudamedFSCARef> "EU-FSCA-2024-000015" .
 <http://uoc.edu/knowledgeManagement/mdrco#FSCA-015> <http://uoc.edu/knowledgeManagement/mdrco#fscaId> "FSCA-015" .
@@ -1524,7 +1498,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#INC-001> <http://uoc.edu/knowledgeManagement/mdrco#reportedBy> <http://uoc.edu/knowledgeManagement/mdrco#MAN-001> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-001> <http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry> <http://uoc.edu/knowledgeManagement/mdrco#Germany> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-001> <http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://uoc.edu/knowledgeManagement/mdrco#INC-001> <http://uoc.edu/knowledgeManagement/mdrco#description> "Patient implanted with HeartMate 3 LVAD developed ischemic stroke 6 months post-implant. Device thrombus confirmed by echocardiography." .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-001> <http://uoc.edu/knowledgeManagement/mdrco#detectionDate> "2024-01-10"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-001> <http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef> "EU-INC-2024-000001" .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-001> <http://uoc.edu/knowledgeManagement/mdrco#eventDate> "2024-01-08"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -1544,7 +1517,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#INC-002> <http://uoc.edu/knowledgeManagement/mdrco#reportedBy> <http://uoc.edu/knowledgeManagement/mdrco#MAN-001> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-002> <http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry> <http://uoc.edu/knowledgeManagement/mdrco#France> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-002> <http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://uoc.edu/knowledgeManagement/mdrco#INC-002> <http://uoc.edu/knowledgeManagement/mdrco#description> "Micra AV pacemaker reached elective replacement indicator 14 months earlier than expected longevity specification." .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-002> <http://uoc.edu/knowledgeManagement/mdrco#detectionDate> "2024-02-01"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-002> <http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef> "EU-INC-2024-000002" .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-002> <http://uoc.edu/knowledgeManagement/mdrco#eventDate> "2024-01-29"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -1564,7 +1536,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#INC-003> <http://uoc.edu/knowledgeManagement/mdrco#reportedBy> <http://uoc.edu/knowledgeManagement/mdrco#MAN-002> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-003> <http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry> <http://uoc.edu/knowledgeManagement/mdrco#Italy> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-003> <http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://uoc.edu/knowledgeManagement/mdrco#INC-003> <http://uoc.edu/knowledgeManagement/mdrco#description> "Portico valve showed paravalvular leak grade III due to partial migration 2 weeks post-TAVI procedure." .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-003> <http://uoc.edu/knowledgeManagement/mdrco#detectionDate> "2024-02-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-003> <http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef> "EU-INC-2024-000003" .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-003> <http://uoc.edu/knowledgeManagement/mdrco#eventDate> "2024-02-15"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -1584,7 +1555,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#INC-004> <http://uoc.edu/knowledgeManagement/mdrco#reportedBy> <http://uoc.edu/knowledgeManagement/mdrco#MAN-006> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-004> <http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry> <http://uoc.edu/knowledgeManagement/mdrco#Spain> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-004> <http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://uoc.edu/knowledgeManagement/mdrco#INC-004> <http://uoc.edu/knowledgeManagement/mdrco#description> "SYNERGY stent fracture detected on angiography 18 months post-implant causing in-stent restenosis." .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-004> <http://uoc.edu/knowledgeManagement/mdrco#detectionDate> "2024-03-03"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-004> <http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef> "EU-INC-2024-000004" .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-004> <http://uoc.edu/knowledgeManagement/mdrco#eventDate> "2024-02-28"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -1604,7 +1574,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#INC-005> <http://uoc.edu/knowledgeManagement/mdrco#reportedBy> <http://uoc.edu/knowledgeManagement/mdrco#MAN-006> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-005> <http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry> <http://uoc.edu/knowledgeManagement/mdrco#Netherlands> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-005> <http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://uoc.edu/knowledgeManagement/mdrco#INC-005> <http://uoc.edu/knowledgeManagement/mdrco#description> "ACUITY X4 lead dislodgement to right ventricle requiring fluoroscopy-guided repositioning." .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-005> <http://uoc.edu/knowledgeManagement/mdrco#detectionDate> "2024-03-16"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-005> <http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef> "EU-INC-2024-000005" .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-005> <http://uoc.edu/knowledgeManagement/mdrco#eventDate> "2024-03-12"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -1624,7 +1593,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#INC-006> <http://uoc.edu/knowledgeManagement/mdrco#reportedBy> <http://uoc.edu/knowledgeManagement/mdrco#MAN-003> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-006> <http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry> <http://uoc.edu/knowledgeManagement/mdrco#Belgium> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-006> <http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://uoc.edu/knowledgeManagement/mdrco#INC-006> <http://uoc.edu/knowledgeManagement/mdrco#description> "ACUSON Sequoia ultrasound system froze mid-examination. Emergency shutdown required; patient examination incomplete." .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-006> <http://uoc.edu/knowledgeManagement/mdrco#detectionDate> "2024-04-01"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-006> <http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef> "EU-INC-2024-000006" .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-006> <http://uoc.edu/knowledgeManagement/mdrco#eventDate> "2024-04-01"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -1642,7 +1610,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#INC-007> <http://uoc.edu/knowledgeManagement/mdrco#reportedBy> <http://uoc.edu/knowledgeManagement/mdrco#MAN-010> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-007> <http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry> <http://uoc.edu/knowledgeManagement/mdrco#Sweden> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-007> <http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://uoc.edu/knowledgeManagement/mdrco#INC-007> <http://uoc.edu/knowledgeManagement/mdrco#description> "Persona knee tibial insert showing accelerated polyethylene wear with metallosis confirmed at 3-year revision surgery." .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-007> <http://uoc.edu/knowledgeManagement/mdrco#detectionDate> "2024-04-10"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-007> <http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef> "EU-INC-2024-000007" .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-007> <http://uoc.edu/knowledgeManagement/mdrco#eventDate> "2024-03-01"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -1662,7 +1629,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#INC-008> <http://uoc.edu/knowledgeManagement/mdrco#reportedBy> <http://uoc.edu/knowledgeManagement/mdrco#MAN-007> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-008> <http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry> <http://uoc.edu/knowledgeManagement/mdrco#Denmark> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-008> <http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://uoc.edu/knowledgeManagement/mdrco#INC-008> <http://uoc.edu/knowledgeManagement/mdrco#description> "TRITON hip patient presented with elevated serum cobalt (18 ppb). Adverse local tissue reaction (ALTR) confirmed by MRI." .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-008> <http://uoc.edu/knowledgeManagement/mdrco#detectionDate> "2024-04-25"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-008> <http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef> "EU-INC-2024-000008" .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-008> <http://uoc.edu/knowledgeManagement/mdrco#eventDate> "2024-04-20"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -1682,7 +1648,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#INC-009> <http://uoc.edu/knowledgeManagement/mdrco#reportedBy> <http://uoc.edu/knowledgeManagement/mdrco#MAN-008> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-009> <http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry> <http://uoc.edu/knowledgeManagement/mdrco#Poland> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-009> <http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://uoc.edu/knowledgeManagement/mdrco#INC-009> <http://uoc.edu/knowledgeManagement/mdrco#description> "Viva CRT-D delivered inappropriate ICD therapy during MRI scan despite MRI-conditional programming. Patient experienced pain and syncope." .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-009> <http://uoc.edu/knowledgeManagement/mdrco#detectionDate> "2024-05-04"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-009> <http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef> "EU-INC-2024-000009" .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-009> <http://uoc.edu/knowledgeManagement/mdrco#eventDate> "2024-05-03"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -1702,7 +1667,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#INC-010> <http://uoc.edu/knowledgeManagement/mdrco#reportedBy> <http://uoc.edu/knowledgeManagement/mdrco#MAN-012> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-010> <http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry> <http://uoc.edu/knowledgeManagement/mdrco#Germany> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-010> <http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://uoc.edu/knowledgeManagement/mdrco#INC-010> <http://uoc.edu/knowledgeManagement/mdrco#description> "ATERA ventilator software version 2.1.3 delivered FiO2 6% lower than set value for patients in ARDS protocol. 3 patients affected." .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-010> <http://uoc.edu/knowledgeManagement/mdrco#detectionDate> "2024-05-19"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-010> <http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef> "EU-INC-2024-000010" .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-010> <http://uoc.edu/knowledgeManagement/mdrco#eventDate> "2024-05-19"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -1720,7 +1684,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#INC-011> <http://uoc.edu/knowledgeManagement/mdrco#reportedBy> <http://uoc.edu/knowledgeManagement/mdrco#MAN-005> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-011> <http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry> <http://uoc.edu/knowledgeManagement/mdrco#France> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-011> <http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://uoc.edu/knowledgeManagement/mdrco#INC-011> <http://uoc.edu/knowledgeManagement/mdrco#description> "cobas e 801 thyroid-stimulating hormone (TSH) assay reported false positive results (>10 mIU/L) in 12 euthyroid patients due to biotin interference." .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-011> <http://uoc.edu/knowledgeManagement/mdrco#detectionDate> "2024-06-01"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-011> <http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef> "EU-INC-2024-000011" .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-011> <http://uoc.edu/knowledgeManagement/mdrco#eventDate> "2024-05-28"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -1738,7 +1701,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#INC-012> <http://uoc.edu/knowledgeManagement/mdrco#reportedBy> <http://uoc.edu/knowledgeManagement/mdrco#MAN-005> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-012> <http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry> <http://uoc.edu/knowledgeManagement/mdrco#Spain> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-012> <http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://uoc.edu/knowledgeManagement/mdrco#INC-012> <http://uoc.edu/knowledgeManagement/mdrco#description> "cobas SARS-CoV-2 assay failed to detect Omicron BA.2.86 subvariant in 7 samples confirmed positive by sequencing. Lot-specific issue." .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-012> <http://uoc.edu/knowledgeManagement/mdrco#detectionDate> "2024-06-13"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-012> <http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef> "EU-INC-2024-000012" .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-012> <http://uoc.edu/knowledgeManagement/mdrco#eventDate> "2024-06-10"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -1756,7 +1718,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#INC-013> <http://uoc.edu/knowledgeManagement/mdrco#reportedBy> <http://uoc.edu/knowledgeManagement/mdrco#MAN-015> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-013> <http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry> <http://uoc.edu/knowledgeManagement/mdrco#Germany> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-013> <http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://uoc.edu/knowledgeManagement/mdrco#INC-013> <http://uoc.edu/knowledgeManagement/mdrco#description> "VIDAS HIV DUO Ultra failed to detect HIV-1 group O infection in seroconversion panel. Patient missed early treatment window." .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-013> <http://uoc.edu/knowledgeManagement/mdrco#detectionDate> "2024-06-29"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-013> <http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef> "EU-INC-2024-000013" .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-013> <http://uoc.edu/knowledgeManagement/mdrco#eventDate> "2024-06-25"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -1774,7 +1735,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#INC-014> <http://uoc.edu/knowledgeManagement/mdrco#reportedBy> <http://uoc.edu/knowledgeManagement/mdrco#MAN-009> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-014> <http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry> <http://uoc.edu/knowledgeManagement/mdrco#Netherlands> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-014> <http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://uoc.edu/knowledgeManagement/mdrco#INC-014> <http://uoc.edu/knowledgeManagement/mdrco#description> "OPTIGA CGM sensor reported glucose 3.8 mmol/L while laboratory reference showed 14.2 mmol/L. Patient delayed insulin administration." .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-014> <http://uoc.edu/knowledgeManagement/mdrco#detectionDate> "2024-07-15"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-014> <http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef> "EU-INC-2024-000014" .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-014> <http://uoc.edu/knowledgeManagement/mdrco#eventDate> "2024-07-10"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -1794,7 +1754,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#INC-015> <http://uoc.edu/knowledgeManagement/mdrco#reportedBy> <http://uoc.edu/knowledgeManagement/mdrco#MAN-002> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-015> <http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry> <http://uoc.edu/knowledgeManagement/mdrco#Italy> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-015> <http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://uoc.edu/knowledgeManagement/mdrco#INC-015> <http://uoc.edu/knowledgeManagement/mdrco#description> "Plum 360 infusion pump delivered 10x heparin dose due to software decimal point error in drug library version 4.2.1." .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-015> <http://uoc.edu/knowledgeManagement/mdrco#detectionDate> "2024-08-04"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-015> <http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef> "EU-INC-2024-000015" .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-015> <http://uoc.edu/knowledgeManagement/mdrco#eventDate> "2024-08-04"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -1814,7 +1773,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#INC-016> <http://uoc.edu/knowledgeManagement/mdrco#reportedBy> <http://uoc.edu/knowledgeManagement/mdrco#MAN-001> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-016> <http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry> <http://uoc.edu/knowledgeManagement/mdrco#United_Kingdom> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-016> <http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://uoc.edu/knowledgeManagement/mdrco#INC-016> <http://uoc.edu/knowledgeManagement/mdrco#description> "HeartMate 3 patient developed severe haemolysis (LDH >2000 U/L) associated with outflow graft kinking confirmed by CT." .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-016> <http://uoc.edu/knowledgeManagement/mdrco#detectionDate> "2024-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-016> <http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef> "EU-INC-2024-000016" .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-016> <http://uoc.edu/knowledgeManagement/mdrco#eventDate> "2024-08-15"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -1834,7 +1792,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#INC-017> <http://uoc.edu/knowledgeManagement/mdrco#reportedBy> <http://uoc.edu/knowledgeManagement/mdrco#MAN-011> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-017> <http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry> <http://uoc.edu/knowledgeManagement/mdrco#France> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-017> <http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://uoc.edu/knowledgeManagement/mdrco#INC-017> <http://uoc.edu/knowledgeManagement/mdrco#description> "Iluvien implant required surgical removal due to device-related endophthalmitis confirmed by vitreous culture." .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-017> <http://uoc.edu/knowledgeManagement/mdrco#detectionDate> "2024-08-30"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-017> <http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef> "EU-INC-2024-000017" .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-017> <http://uoc.edu/knowledgeManagement/mdrco#eventDate> "2024-08-25"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -1854,7 +1811,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#INC-018> <http://uoc.edu/knowledgeManagement/mdrco#reportedBy> <http://uoc.edu/knowledgeManagement/mdrco#MAN-013> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-018> <http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry> <http://uoc.edu/knowledgeManagement/mdrco#Germany> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-018> <http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://uoc.edu/knowledgeManagement/mdrco#INC-018> <http://uoc.edu/knowledgeManagement/mdrco#description> "5008S hemodialysis machine web interface exposed to hospital internal network. Unauthorised session accessed alarm configuration." .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-018> <http://uoc.edu/knowledgeManagement/mdrco#detectionDate> "2024-09-14"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-018> <http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef> "EU-INC-2024-000018" .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-018> <http://uoc.edu/knowledgeManagement/mdrco#eventDate> "2024-09-12"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -1872,7 +1828,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#INC-019> <http://uoc.edu/knowledgeManagement/mdrco#reportedBy> <http://uoc.edu/knowledgeManagement/mdrco#MAN-008> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-019> <http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry> <http://uoc.edu/knowledgeManagement/mdrco#Sweden> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-019> <http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://uoc.edu/knowledgeManagement/mdrco#INC-019> <http://uoc.edu/knowledgeManagement/mdrco#description> "Tivoli II cochlear implant failed to respond to initial activation programming. Sound processor replacement resolved the issue." .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-019> <http://uoc.edu/knowledgeManagement/mdrco#detectionDate> "2024-09-30"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-019> <http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef> "EU-INC-2024-000019" .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-019> <http://uoc.edu/knowledgeManagement/mdrco#eventDate> "2024-09-28"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -1892,7 +1847,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/mdrco#INC-020> <http://uoc.edu/knowledgeManagement/mdrco#reportedBy> <http://uoc.edu/knowledgeManagement/mdrco#MAN-003> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-020> <http://uoc.edu/knowledgeManagement/mdrco#reportedInCountry> <http://uoc.edu/knowledgeManagement/mdrco#Belgium> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-020> <http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://uoc.edu/knowledgeManagement/mdrco#INC-020> <http://uoc.edu/knowledgeManagement/mdrco#description> "MAGNETOM Vida MRI caused localised skin burn (1st degree) at anterior electrode lead in patient with DBS system not declared prior to scan." .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-020> <http://uoc.edu/knowledgeManagement/mdrco#detectionDate> "2024-10-12"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-020> <http://uoc.edu/knowledgeManagement/mdrco#eudamedIncidentRef> "EU-INC-2024-000020" .
 <http://uoc.edu/knowledgeManagement/mdrco#INC-020> <http://uoc.edu/knowledgeManagement/mdrco#eventDate> "2024-10-10"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -2552,98 +2506,98 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://uoc.edu/knowledgeManagement/rc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
 <http://uoc.edu/knowledgeManagement/m> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
 <http://uoc.edu/knowledgeManagement/n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
-_:genid14 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-_:genid14 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
-_:genid14 <http://www.w3.org/2000/01/rdf-schema#label> "S1" .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
-_:genid14 <http://www.w3.org/2003/11/swrl#body> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid10 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid10 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+_:genid10 <http://www.w3.org/2000/01/rdf-schema#label> "S1" .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid10 <http://www.w3.org/2003/11/swrl#body> _:genid19 .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid12 .
+_:genid12 <http://www.w3.org/2003/11/swrl#argument1> <http://uoc.edu/knowledgeManagement/rc> .
+_:genid12 <http://www.w3.org/2003/11/swrl#classPredicate> <http://uoc.edu/knowledgeManagement/mdrco#ClassIII> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid14 .
+_:genid14 <http://www.w3.org/2003/11/swrl#argument2> <http://uoc.edu/knowledgeManagement/rc> .
+_:genid14 <http://www.w3.org/2003/11/swrl#argument1> <http://uoc.edu/knowledgeManagement/d> .
+_:genid14 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://uoc.edu/knowledgeManagement/mdrco#hasRiskClass> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid16 .
-_:genid16 <http://www.w3.org/2003/11/swrl#argument1> <http://uoc.edu/knowledgeManagement/rc> .
-_:genid16 <http://www.w3.org/2003/11/swrl#classPredicate> <http://uoc.edu/knowledgeManagement/mdrco#ClassIII> .
+_:genid16 <http://www.w3.org/2003/11/swrl#argument1> <http://uoc.edu/knowledgeManagement/d> .
+_:genid16 <http://www.w3.org/2003/11/swrl#classPredicate> <http://uoc.edu/knowledgeManagement/mdrco#Device> .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid18 .
-_:genid18 <http://www.w3.org/2003/11/swrl#argument2> <http://uoc.edu/knowledgeManagement/rc> .
-_:genid18 <http://www.w3.org/2003/11/swrl#argument1> <http://uoc.edu/knowledgeManagement/d> .
-_:genid18 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://uoc.edu/knowledgeManagement/mdrco#hasRiskClass> .
+_:genid18 <http://www.w3.org/2003/11/swrl#argument2> <http://uoc.edu/knowledgeManagement/d> .
+_:genid18 <http://www.w3.org/2003/11/swrl#argument1> <http://uoc.edu/knowledgeManagement/i> .
+_:genid18 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://uoc.edu/knowledgeManagement/mdrco#involvedDevice> .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid20 .
-_:genid20 <http://www.w3.org/2003/11/swrl#argument1> <http://uoc.edu/knowledgeManagement/d> .
-_:genid20 <http://www.w3.org/2003/11/swrl#classPredicate> <http://uoc.edu/knowledgeManagement/mdrco#Device> .
+_:genid20 <http://www.w3.org/2003/11/swrl#argument1> <http://uoc.edu/knowledgeManagement/i> .
+_:genid20 <http://www.w3.org/2003/11/swrl#classPredicate> <http://uoc.edu/knowledgeManagement/mdrco#Incident> .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid10 <http://www.w3.org/2003/11/swrl#head> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
-_:genid22 <http://www.w3.org/2003/11/swrl#argument2> <http://uoc.edu/knowledgeManagement/d> .
 _:genid22 <http://www.w3.org/2003/11/swrl#argument1> <http://uoc.edu/knowledgeManagement/i> .
-_:genid22 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://uoc.edu/knowledgeManagement/mdrco#involvedDevice> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid22 <http://www.w3.org/2003/11/swrl#classPredicate> <http://uoc.edu/knowledgeManagement/mdrco#HighRiskIncident> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
-_:genid24 <http://www.w3.org/2003/11/swrl#argument1> <http://uoc.edu/knowledgeManagement/i> .
-_:genid24 <http://www.w3.org/2003/11/swrl#classPredicate> <http://uoc.edu/knowledgeManagement/mdrco#Incident> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid14 <http://www.w3.org/2003/11/swrl#head> _:genid25 .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
-_:genid26 <http://www.w3.org/2003/11/swrl#argument1> <http://uoc.edu/knowledgeManagement/i> .
-_:genid26 <http://www.w3.org/2003/11/swrl#classPredicate> <http://uoc.edu/knowledgeManagement/mdrco#HighRiskIncident> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid27 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-_:genid27 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
-_:genid27 <http://www.w3.org/2000/01/rdf-schema#label> "S2" .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
-_:genid27 <http://www.w3.org/2003/11/swrl#body> _:genid30 .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid23 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid23 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+_:genid23 <http://www.w3.org/2000/01/rdf-schema#label> "S2" .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid23 <http://www.w3.org/2003/11/swrl#body> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid25 .
+_:genid25 <http://www.w3.org/2003/11/swrl#argument2> <http://uoc.edu/knowledgeManagement/n> .
+_:genid25 <http://www.w3.org/2003/11/swrl#argument1> <http://uoc.edu/knowledgeManagement/m> .
+_:genid25 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://uoc.edu/knowledgeManagement/mdrco#authorizationNumber> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid27 .
+_:genid27 <http://www.w3.org/2003/11/swrl#argument1> <http://uoc.edu/knowledgeManagement/m> .
+_:genid27 <http://www.w3.org/2003/11/swrl#classPredicate> <http://uoc.edu/knowledgeManagement/mdrco#Manufacturer> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid23 <http://www.w3.org/2003/11/swrl#head> _:genid28 .
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid29 .
-_:genid29 <http://www.w3.org/2003/11/swrl#argument2> <http://uoc.edu/knowledgeManagement/n> .
 _:genid29 <http://www.w3.org/2003/11/swrl#argument1> <http://uoc.edu/knowledgeManagement/m> .
-_:genid29 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://uoc.edu/knowledgeManagement/mdrco#authorizationNumber> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid29 <http://www.w3.org/2003/11/swrl#classPredicate> <http://uoc.edu/knowledgeManagement/mdrco#EUAuthorizedManufacturer> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid31 .
-_:genid31 <http://www.w3.org/2003/11/swrl#argument1> <http://uoc.edu/knowledgeManagement/m> .
-_:genid31 <http://www.w3.org/2003/11/swrl#classPredicate> <http://uoc.edu/knowledgeManagement/mdrco#Manufacturer> .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid27 <http://www.w3.org/2003/11/swrl#head> _:genid32 .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid33 .
-_:genid33 <http://www.w3.org/2003/11/swrl#argument1> <http://uoc.edu/knowledgeManagement/m> .
-_:genid33 <http://www.w3.org/2003/11/swrl#classPredicate> <http://uoc.edu/knowledgeManagement/mdrco#EUAuthorizedManufacturer> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid7 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-_:genid7 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
-_:genid7 <http://www.w3.org/2000/01/rdf-schema#label> "S3" .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
-_:genid7 <http://www.w3.org/2003/11/swrl#body> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid3 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid3 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+_:genid3 <http://www.w3.org/2000/01/rdf-schema#label> "S3" .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid3 <http://www.w3.org/2003/11/swrl#body> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid5 .
+_:genid5 <http://www.w3.org/2003/11/swrl#argument2> <http://uoc.edu/knowledgeManagement/d> .
+_:genid5 <http://www.w3.org/2003/11/swrl#argument1> <http://uoc.edu/knowledgeManagement/f> .
+_:genid5 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://uoc.edu/knowledgeManagement/mdrco#closureDate> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
+_:genid7 <http://www.w3.org/2003/11/swrl#argument1> <http://uoc.edu/knowledgeManagement/f> .
+_:genid7 <http://www.w3.org/2003/11/swrl#classPredicate> <http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid3 <http://www.w3.org/2003/11/swrl#head> _:genid8 .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid9 .
-_:genid9 <http://www.w3.org/2003/11/swrl#argument2> <http://uoc.edu/knowledgeManagement/d> .
 _:genid9 <http://www.w3.org/2003/11/swrl#argument1> <http://uoc.edu/knowledgeManagement/f> .
-_:genid9 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://uoc.edu/knowledgeManagement/mdrco#closureDate> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid9 <http://www.w3.org/2003/11/swrl#classPredicate> <http://uoc.edu/knowledgeManagement/mdrco#ClosedFSCA> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid11 .
-_:genid11 <http://www.w3.org/2003/11/swrl#argument1> <http://uoc.edu/knowledgeManagement/f> .
-_:genid11 <http://www.w3.org/2003/11/swrl#classPredicate> <http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid7 <http://www.w3.org/2003/11/swrl#head> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid13 .
-_:genid13 <http://www.w3.org/2003/11/swrl#argument1> <http://uoc.edu/knowledgeManagement/f> .
-_:genid13 <http://www.w3.org/2003/11/swrl#classPredicate> <http://uoc.edu/knowledgeManagement/mdrco#ClosedFSCA> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

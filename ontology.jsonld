@@ -1,35 +1,15 @@
 [ {
   "@id" : "_:genid1",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction"
-    }, {
-      "@id" : "http://uoc.edu/knowledgeManagement/mdrco#Incident"
-    }, {
-      "@id" : "http://uoc.edu/knowledgeManagement/mdrco#Risk"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid11",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
-  "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "http://uoc.edu/knowledgeManagement/f"
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ],
-  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://uoc.edu/knowledgeManagement/mdrco#manufacturedBy"
   } ]
 }, {
-  "@id" : "_:genid13",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
-  "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "http://uoc.edu/knowledgeManagement/f"
-  } ],
-  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://uoc.edu/knowledgeManagement/mdrco#ClosedFSCA"
-  } ]
-}, {
-  "@id" : "_:genid14",
+  "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -43,24 +23,24 @@
   } ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
-      "@id" : "_:genid24"
-    }, {
-      "@id" : "_:genid22"
-    }, {
       "@id" : "_:genid20"
     }, {
       "@id" : "_:genid18"
     }, {
       "@id" : "_:genid16"
+    }, {
+      "@id" : "_:genid14"
+    }, {
+      "@id" : "_:genid12"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid26"
+      "@id" : "_:genid22"
     } ]
   } ]
 }, {
-  "@id" : "_:genid16",
+  "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://uoc.edu/knowledgeManagement/rc"
@@ -69,7 +49,7 @@
     "@id" : "http://uoc.edu/knowledgeManagement/mdrco#ClassIII"
   } ]
 }, {
-  "@id" : "_:genid18",
+  "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://uoc.edu/knowledgeManagement/d"
@@ -81,7 +61,7 @@
     "@id" : "http://uoc.edu/knowledgeManagement/mdrco#hasRiskClass"
   } ]
 }, {
-  "@id" : "_:genid20",
+  "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://uoc.edu/knowledgeManagement/d"
@@ -90,7 +70,7 @@
     "@id" : "http://uoc.edu/knowledgeManagement/mdrco#Device"
   } ]
 }, {
-  "@id" : "_:genid22",
+  "@id" : "_:genid18",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://uoc.edu/knowledgeManagement/i"
@@ -102,7 +82,17 @@
     "@id" : "http://uoc.edu/knowledgeManagement/mdrco#involvedDevice"
   } ]
 }, {
-  "@id" : "_:genid24",
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://uoc.edu/knowledgeManagement/mdrco#addressesIncident"
+  } ]
+}, {
+  "@id" : "_:genid20",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://uoc.edu/knowledgeManagement/i"
@@ -111,7 +101,7 @@
     "@id" : "http://uoc.edu/knowledgeManagement/mdrco#Incident"
   } ]
 }, {
-  "@id" : "_:genid26",
+  "@id" : "_:genid22",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://uoc.edu/knowledgeManagement/i"
@@ -120,7 +110,7 @@
     "@id" : "http://uoc.edu/knowledgeManagement/mdrco#HighRiskIncident"
   } ]
 }, {
-  "@id" : "_:genid27",
+  "@id" : "_:genid23",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -134,18 +124,18 @@
   } ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
-      "@id" : "_:genid31"
+      "@id" : "_:genid27"
     }, {
-      "@id" : "_:genid29"
+      "@id" : "_:genid25"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid33"
+      "@id" : "_:genid29"
     } ]
   } ]
 }, {
-  "@id" : "_:genid29",
+  "@id" : "_:genid25",
   "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://uoc.edu/knowledgeManagement/m"
@@ -157,7 +147,7 @@
     "@id" : "http://uoc.edu/knowledgeManagement/mdrco#authorizationNumber"
   } ]
 }, {
-  "@id" : "_:genid31",
+  "@id" : "_:genid27",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://uoc.edu/knowledgeManagement/m"
@@ -166,7 +156,7 @@
     "@id" : "http://uoc.edu/knowledgeManagement/mdrco#Manufacturer"
   } ]
 }, {
-  "@id" : "_:genid33",
+  "@id" : "_:genid29",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://uoc.edu/knowledgeManagement/m"
@@ -175,27 +165,7 @@
     "@id" : "http://uoc.edu/knowledgeManagement/mdrco#EUAuthorizedManufacturer"
   } ]
 }, {
-  "@id" : "_:genid5",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://uoc.edu/knowledgeManagement/mdrco#manufacturedBy"
-  } ]
-}, {
-  "@id" : "_:genid6",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://uoc.edu/knowledgeManagement/mdrco#addressesIncident"
-  } ]
-}, {
-  "@id" : "_:genid7",
+  "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -209,18 +179,18 @@
   } ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
-      "@id" : "_:genid11"
+      "@id" : "_:genid7"
     }, {
-      "@id" : "_:genid9"
+      "@id" : "_:genid5"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid13"
+      "@id" : "_:genid9"
     } ]
   } ]
 }, {
-  "@id" : "_:genid9",
+  "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "http://uoc.edu/knowledgeManagement/f"
@@ -230,6 +200,24 @@
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
     "@id" : "http://uoc.edu/knowledgeManagement/mdrco#closureDate"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://uoc.edu/knowledgeManagement/f"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://uoc.edu/knowledgeManagement/mdrco#FieldSafetyCorrectiveAction"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://uoc.edu/knowledgeManagement/f"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://uoc.edu/knowledgeManagement/mdrco#ClosedFSCA"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/created",
@@ -1895,7 +1883,7 @@
     "@id" : "http://dbpedia.org/ontology/MedicalDevice"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid5"
+    "@id" : "_:genid1"
   } ]
 }, {
   "@id" : "http://uoc.edu/knowledgeManagement/mdrco#DeviceFailure",
@@ -2007,9 +1995,6 @@
   "http://uoc.edu/knowledgeManagement/mdrco#affectsCountry" : [ {
     "@id" : "http://uoc.edu/knowledgeManagement/mdrco#EU"
   } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Safety alert issued to all implanting centres regarding anticoagulation protocol update for HeartMate 3 to reduce device thrombosis risk. INR target range revised to 2.0–3.0."
-  } ],
   "http://uoc.edu/knowledgeManagement/mdrco#devicesAffected" : [ {
     "@value" : "850"
   } ],
@@ -2055,9 +2040,6 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-05-31"
   } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Voluntary recall of affected Micra AV lots due to premature battery depletion. Replacement units provided. 97% of affected devices successfully replaced."
-  } ],
   "http://uoc.edu/knowledgeManagement/mdrco#devicesAffected" : [ {
     "@value" : "1240"
   } ],
@@ -2101,9 +2083,6 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-06-30"
   } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Enhanced deployment training and updated IFU for Portico valve implantation technique. New implantation checklist mandatory for all TAVI centres."
-  } ],
   "http://uoc.edu/knowledgeManagement/mdrco#devicesAffected" : [ {
     "@value" : "320"
   } ],
@@ -2142,9 +2121,6 @@
   } ],
   "http://uoc.edu/knowledgeManagement/mdrco#affectsCountry" : [ {
     "@id" : "http://uoc.edu/knowledgeManagement/mdrco#EU"
-  } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Safety communication to implanting cardiologists regarding optimal fixation technique for ACUITY X4 lead. Enhanced fluoroscopy verification protocol at implantation."
   } ],
   "http://uoc.edu/knowledgeManagement/mdrco#devicesAffected" : [ {
     "@value" : "2100"
@@ -2191,9 +2167,6 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-09-30"
   } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Enhanced surveillance programme: annual DEXA scan and serum particle monitoring for patients with affected tibial inserts. Patients contacted individually."
-  } ],
   "http://uoc.edu/knowledgeManagement/mdrco#devicesAffected" : [ {
     "@value" : "780"
   } ],
@@ -2232,9 +2205,6 @@
   } ],
   "http://uoc.edu/knowledgeManagement/mdrco#affectsCountry" : [ {
     "@id" : "http://uoc.edu/knowledgeManagement/mdrco#EU"
-  } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Urgent safety recall due to elevated metal ion levels. Revision surgery recommended for patients with serum cobalt >7 ppb or symptomatic ALTR. Replacement implants provided."
   } ],
   "http://uoc.edu/knowledgeManagement/mdrco#devicesAffected" : [ {
     "@value" : "540"
@@ -2281,9 +2251,6 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-07-31"
   } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Urgent safety notice regarding MRI scanning protocol. Updated MRI-conditional guidelines issued. Mandatory reprogramming required before any MRI scan. Programmer software update v3.2 released."
-  } ],
   "http://uoc.edu/knowledgeManagement/mdrco#devicesAffected" : [ {
     "@value" : "4300"
   } ],
@@ -2327,9 +2294,6 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-08-15"
   } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Software recall: mandatory update to version 2.2.0 resolving FiO2 calibration error. Biomedical engineers visited all affected units within 14 days. Field service documentation required."
-  } ],
   "http://uoc.edu/knowledgeManagement/mdrco#devicesAffected" : [ {
     "@value" : "180"
   } ],
@@ -2372,9 +2336,6 @@
   "http://uoc.edu/knowledgeManagement/mdrco#closureDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-09-30"
-  } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Customer field notification regarding biotin interference in TSH assay. Updated sample preparation protocol and interference screening algorithm released via software update 4.1.2."
   } ],
   "http://uoc.edu/knowledgeManagement/mdrco#devicesAffected" : [ {
     "@value" : "620"
@@ -2423,9 +2384,6 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-08-31"
   } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Immediate quarantine and replacement of affected reagent lots. Reflex testing protocol issued. All positive results from affected lots to be re-confirmed. New primer design covering BA.2.86 released."
-  } ],
   "http://uoc.edu/knowledgeManagement/mdrco#devicesAffected" : [ {
     "@value" : "12500 tests"
   } ],
@@ -2464,9 +2422,6 @@
   } ],
   "http://uoc.edu/knowledgeManagement/mdrco#affectsCountry" : [ {
     "@id" : "http://uoc.edu/knowledgeManagement/mdrco#EU"
-  } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Enhanced calibration protocol issued. Firmware update v1.8.5 mandatory improving temperature compensation algorithm. Patients instructed to perform confirmatory finger-stick at glucose readings <4.5 or >13.9 mmol/L."
   } ],
   "http://uoc.edu/knowledgeManagement/mdrco#devicesAffected" : [ {
     "@value" : "3200"
@@ -2515,9 +2470,6 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-10-31"
   } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Urgent recall and remote software update. Drug library version 4.3.0 deployed correcting decimal point error. All units verified by biomedical engineering before return to clinical use."
-  } ],
   "http://uoc.edu/knowledgeManagement/mdrco#devicesAffected" : [ {
     "@value" : "2870"
   } ],
@@ -2556,9 +2508,6 @@
   } ],
   "http://uoc.edu/knowledgeManagement/mdrco#affectsCountry" : [ {
     "@id" : "http://uoc.edu/knowledgeManagement/mdrco#EU"
-  } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Safety communication regarding outflow graft kinking risk. Updated surgical technique for graft routing issued. Mandatory follow-up CT at 6 months for patients with affected lot numbers."
   } ],
   "http://uoc.edu/knowledgeManagement/mdrco#devicesAffected" : [ {
     "@value" : "420"
@@ -2603,9 +2552,6 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-12-31"
   } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Updated IFU regarding post-operative infection prophylaxis protocol. Extended topical antibiotic course (14 days) mandatory post-insertion. Healthcare professionals notified via direct mail and implanting centre visits."
-  } ],
   "http://uoc.edu/knowledgeManagement/mdrco#devicesAffected" : [ {
     "@value" : "1100"
   } ],
@@ -2645,9 +2591,6 @@
   "http://uoc.edu/knowledgeManagement/mdrco#affectsCountry" : [ {
     "@id" : "http://uoc.edu/knowledgeManagement/mdrco#EU"
   } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Security patch 3.0.1 mandatory deployment disabling unrestricted web interface access. Network segmentation guidance issued to hospital IT departments. Penetration test report provided to competent authorities."
-  } ],
   "http://uoc.edu/knowledgeManagement/mdrco#devicesAffected" : [ {
     "@value" : "890"
   } ],
@@ -2686,7 +2629,7 @@
     "@value" : "Field Safety Corrective Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid6"
+    "@id" : "_:genid2"
   } ]
 }, {
   "@id" : "http://uoc.edu/knowledgeManagement/mdrco#France",
@@ -2749,9 +2692,6 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Patient implanted with HeartMate 3 LVAD developed ischemic stroke 6 months post-implant. Device thrombus confirmed by echocardiography."
-  } ],
   "http://uoc.edu/knowledgeManagement/mdrco#detectionDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-01-10"
@@ -2809,9 +2749,6 @@
   "http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
-  } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Micra AV pacemaker reached elective replacement indicator 14 months earlier than expected longevity specification."
   } ],
   "http://uoc.edu/knowledgeManagement/mdrco#detectionDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -2871,9 +2808,6 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Portico valve showed paravalvular leak grade III due to partial migration 2 weeks post-TAVI procedure."
-  } ],
   "http://uoc.edu/knowledgeManagement/mdrco#detectionDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-02-18"
@@ -2931,9 +2865,6 @@
   "http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
-  } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "SYNERGY stent fracture detected on angiography 18 months post-implant causing in-stent restenosis."
   } ],
   "http://uoc.edu/knowledgeManagement/mdrco#detectionDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -2993,9 +2924,6 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "ACUITY X4 lead dislodgement to right ventricle requiring fluoroscopy-guided repositioning."
-  } ],
   "http://uoc.edu/knowledgeManagement/mdrco#detectionDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-16"
@@ -3054,9 +2982,6 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
   } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "ACUSON Sequoia ultrasound system froze mid-examination. Emergency shutdown required; patient examination incomplete."
-  } ],
   "http://uoc.edu/knowledgeManagement/mdrco#detectionDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-04-01"
@@ -3107,9 +3032,6 @@
   "http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
-  } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Persona knee tibial insert showing accelerated polyethylene wear with metallosis confirmed at 3-year revision surgery."
   } ],
   "http://uoc.edu/knowledgeManagement/mdrco#detectionDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -3169,9 +3091,6 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "TRITON hip patient presented with elevated serum cobalt (18 ppb). Adverse local tissue reaction (ALTR) confirmed by MRI."
-  } ],
   "http://uoc.edu/knowledgeManagement/mdrco#detectionDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-04-25"
@@ -3229,9 +3148,6 @@
   "http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
-  } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Viva CRT-D delivered inappropriate ICD therapy during MRI scan despite MRI-conditional programming. Patient experienced pain and syncope."
   } ],
   "http://uoc.edu/knowledgeManagement/mdrco#detectionDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -3291,9 +3207,6 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "ATERA ventilator software version 2.1.3 delivered FiO2 6% lower than set value for patients in ARDS protocol. 3 patients affected."
-  } ],
   "http://uoc.edu/knowledgeManagement/mdrco#detectionDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-05-19"
@@ -3344,9 +3257,6 @@
   "http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
-  } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "cobas e 801 thyroid-stimulating hormone (TSH) assay reported false positive results (>10 mIU/L) in 12 euthyroid patients due to biotin interference."
   } ],
   "http://uoc.edu/knowledgeManagement/mdrco#detectionDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -3399,9 +3309,6 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "cobas SARS-CoV-2 assay failed to detect Omicron BA.2.86 subvariant in 7 samples confirmed positive by sequencing. Lot-specific issue."
-  } ],
   "http://uoc.edu/knowledgeManagement/mdrco#detectionDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-06-13"
@@ -3453,9 +3360,6 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
   } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "VIDAS HIV DUO Ultra failed to detect HIV-1 group O infection in seroconversion panel. Patient missed early treatment window."
-  } ],
   "http://uoc.edu/knowledgeManagement/mdrco#detectionDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-06-29"
@@ -3506,9 +3410,6 @@
   "http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
-  } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "OPTIGA CGM sensor reported glucose 3.8 mmol/L while laboratory reference showed 14.2 mmol/L. Patient delayed insulin administration."
   } ],
   "http://uoc.edu/knowledgeManagement/mdrco#detectionDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -3568,9 +3469,6 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Plum 360 infusion pump delivered 10x heparin dose due to software decimal point error in drug library version 4.2.1."
-  } ],
   "http://uoc.edu/knowledgeManagement/mdrco#detectionDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-08-04"
@@ -3628,9 +3526,6 @@
   "http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
-  } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "HeartMate 3 patient developed severe haemolysis (LDH >2000 U/L) associated with outflow graft kinking confirmed by CT."
   } ],
   "http://uoc.edu/knowledgeManagement/mdrco#detectionDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -3690,9 +3585,6 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Iluvien implant required surgical removal due to device-related endophthalmitis confirmed by vitreous culture."
-  } ],
   "http://uoc.edu/knowledgeManagement/mdrco#detectionDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-08-30"
@@ -3751,9 +3643,6 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
   } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "5008S hemodialysis machine web interface exposed to hospital internal network. Unauthorised session accessed alarm configuration."
-  } ],
   "http://uoc.edu/knowledgeManagement/mdrco#detectionDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-09-14"
@@ -3804,9 +3693,6 @@
   "http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
-  } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "Tivoli II cochlear implant failed to respond to initial activation programming. Sound processor replacement resolved the issue."
   } ],
   "http://uoc.edu/knowledgeManagement/mdrco#detectionDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -3865,9 +3751,6 @@
   "http://uoc.edu/knowledgeManagement/mdrco#correctiveActionTaken" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "false"
-  } ],
-  "http://uoc.edu/knowledgeManagement/mdrco#description" : [ {
-    "@value" : "MAGNETOM Vida MRI caused localised skin burn (1st degree) at anterior electrode lead in patient with DBS system not declared prior to scan."
   } ],
   "http://uoc.edu/knowledgeManagement/mdrco#detectionDate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -5887,7 +5770,7 @@
     "@value" : "A textual description of the resource (risk, incident or corrective action)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid1"
+    "@id" : "http://uoc.edu/knowledgeManagement/mdrco#Risk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",

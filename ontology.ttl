@@ -230,12 +230,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://uoc.edu/knowledgeManagement/mdrco#description
 :description rdf:type owl:DatatypeProperty ;
-             rdfs:domain [ rdf:type owl:Class ;
-                           owl:unionOf ( :FieldSafetyCorrectiveAction
-                                         :Incident
-                                         :Risk
-                                       )
-                         ] ;
+             rdfs:domain :Risk ;
              rdfs:range xsd:string ;
              rdfs:comment "A textual description of the resource (risk, incident or corrective action)."@en ;
              rdfs:label "description"@en .
@@ -1376,7 +1371,6 @@ xsd:date rdf:type rdfs:Datatype .
           :addressesIncident :INC-001 ;
           :affectsCountry :EU ;
           :actionDate "2024-02-01"^^xsd:date ;
-          :description "Safety alert issued to all implanting centres regarding anticoagulation protocol update for HeartMate 3 to reduce device thrombosis risk. INR target range revised to 2.0–3.0." ;
           :devicesAffected "850" ;
           :eudamedFSCARef "EU-FSCA-2024-000001" ;
           :fscaId "FSCA-001" ;
@@ -1394,7 +1388,6 @@ xsd:date rdf:type rdfs:Datatype .
                           :UK ;
           :actionDate "2024-02-28"^^xsd:date ;
           :closureDate "2024-05-31"^^xsd:date ;
-          :description "Voluntary recall of affected Micra AV lots due to premature battery depletion. Replacement units provided. 97% of affected devices successfully replaced." ;
           :devicesAffected "1240" ;
           :eudamedFSCARef "EU-FSCA-2024-000002" ;
           :fscaId "FSCA-002" ;
@@ -1411,7 +1404,6 @@ xsd:date rdf:type rdfs:Datatype .
           :affectsCountry :EU ;
           :actionDate "2024-03-15"^^xsd:date ;
           :closureDate "2024-06-30"^^xsd:date ;
-          :description "Enhanced deployment training and updated IFU for Portico valve implantation technique. New implantation checklist mandatory for all TAVI centres." ;
           :devicesAffected "320" ;
           :eudamedFSCARef "EU-FSCA-2024-000003" ;
           :fscaId "FSCA-003" ;
@@ -1427,7 +1419,6 @@ xsd:date rdf:type rdfs:Datatype .
           :addressesIncident :INC-005 ;
           :affectsCountry :EU ;
           :actionDate "2024-04-10"^^xsd:date ;
-          :description "Safety communication to implanting cardiologists regarding optimal fixation technique for ACUITY X4 lead. Enhanced fluoroscopy verification protocol at implantation." ;
           :devicesAffected "2100" ;
           :eudamedFSCARef "EU-FSCA-2024-000004" ;
           :fscaId "FSCA-004" ;
@@ -1445,7 +1436,6 @@ xsd:date rdf:type rdfs:Datatype .
                           :Switzerland ;
           :actionDate "2024-05-20"^^xsd:date ;
           :closureDate "2024-09-30"^^xsd:date ;
-          :description "Enhanced surveillance programme: annual DEXA scan and serum particle monitoring for patients with affected tibial inserts. Patients contacted individually." ;
           :devicesAffected "780" ;
           :eudamedFSCARef "EU-FSCA-2024-000005" ;
           :fscaId "FSCA-005" ;
@@ -1461,7 +1451,6 @@ xsd:date rdf:type rdfs:Datatype .
           :addressesIncident :INC-008 ;
           :affectsCountry :EU ;
           :actionDate "2024-05-30"^^xsd:date ;
-          :description "Urgent safety recall due to elevated metal ion levels. Revision surgery recommended for patients with serum cobalt >7 ppb or symptomatic ALTR. Replacement implants provided." ;
           :devicesAffected "540" ;
           :eudamedFSCARef "EU-FSCA-2024-000006" ;
           :fscaId "FSCA-006" ;
@@ -1479,7 +1468,6 @@ xsd:date rdf:type rdfs:Datatype .
                           :UK ;
           :actionDate "2024-05-25"^^xsd:date ;
           :closureDate "2024-07-31"^^xsd:date ;
-          :description "Urgent safety notice regarding MRI scanning protocol. Updated MRI-conditional guidelines issued. Mandatory reprogramming required before any MRI scan. Programmer software update v3.2 released." ;
           :devicesAffected "4300" ;
           :eudamedFSCARef "EU-FSCA-2024-000007" ;
           :fscaId "FSCA-007" ;
@@ -1496,7 +1484,6 @@ xsd:date rdf:type rdfs:Datatype .
           :affectsCountry :EU ;
           :actionDate "2024-06-05"^^xsd:date ;
           :closureDate "2024-08-15"^^xsd:date ;
-          :description "Software recall: mandatory update to version 2.2.0 resolving FiO2 calibration error. Biomedical engineers visited all affected units within 14 days. Field service documentation required." ;
           :devicesAffected "180" ;
           :eudamedFSCARef "EU-FSCA-2024-000008" ;
           :fscaId "FSCA-008" ;
@@ -1513,7 +1500,6 @@ xsd:date rdf:type rdfs:Datatype .
           :affectsCountry :EU ;
           :actionDate "2024-06-20"^^xsd:date ;
           :closureDate "2024-09-30"^^xsd:date ;
-          :description "Customer field notification regarding biotin interference in TSH assay. Updated sample preparation protocol and interference screening algorithm released via software update 4.1.2." ;
           :devicesAffected "620" ;
           :eudamedFSCARef "EU-FSCA-2024-000009" ;
           :fscaId "FSCA-009" ;
@@ -1532,7 +1518,6 @@ xsd:date rdf:type rdfs:Datatype .
                           :Norway ;
           :actionDate "2024-06-30"^^xsd:date ;
           :closureDate "2024-08-31"^^xsd:date ;
-          :description "Immediate quarantine and replacement of affected reagent lots. Reflex testing protocol issued. All positive results from affected lots to be re-confirmed. New primer design covering BA.2.86 released." ;
           :devicesAffected "12500 tests" ;
           :eudamedFSCARef "EU-FSCA-2024-000010" ;
           :fscaId "FSCA-010" ;
@@ -1548,7 +1533,6 @@ xsd:date rdf:type rdfs:Datatype .
           :addressesIncident :INC-014 ;
           :affectsCountry :EU ;
           :actionDate "2024-08-01"^^xsd:date ;
-          :description "Enhanced calibration protocol issued. Firmware update v1.8.5 mandatory improving temperature compensation algorithm. Patients instructed to perform confirmatory finger-stick at glucose readings <4.5 or >13.9 mmol/L." ;
           :devicesAffected "3200" ;
           :eudamedFSCARef "EU-FSCA-2024-000011" ;
           :fscaId "FSCA-011" ;
@@ -1567,7 +1551,6 @@ xsd:date rdf:type rdfs:Datatype .
                           :UK ;
           :actionDate "2024-08-20"^^xsd:date ;
           :closureDate "2024-10-31"^^xsd:date ;
-          :description "Urgent recall and remote software update. Drug library version 4.3.0 deployed correcting decimal point error. All units verified by biomedical engineering before return to clinical use." ;
           :devicesAffected "2870" ;
           :eudamedFSCARef "EU-FSCA-2024-000012" ;
           :fscaId "FSCA-012" ;
@@ -1583,7 +1566,6 @@ xsd:date rdf:type rdfs:Datatype .
           :addressesIncident :INC-016 ;
           :affectsCountry :EU ;
           :actionDate "2024-09-10"^^xsd:date ;
-          :description "Safety communication regarding outflow graft kinking risk. Updated surgical technique for graft routing issued. Mandatory follow-up CT at 6 months for patients with affected lot numbers." ;
           :devicesAffected "420" ;
           :eudamedFSCARef "EU-FSCA-2024-000013" ;
           :fscaId "FSCA-013" ;
@@ -1600,7 +1582,6 @@ xsd:date rdf:type rdfs:Datatype .
           :affectsCountry :EU ;
           :actionDate "2024-09-25"^^xsd:date ;
           :closureDate "2024-12-31"^^xsd:date ;
-          :description "Updated IFU regarding post-operative infection prophylaxis protocol. Extended topical antibiotic course (14 days) mandatory post-insertion. Healthcare professionals notified via direct mail and implanting centre visits." ;
           :devicesAffected "1100" ;
           :eudamedFSCARef "EU-FSCA-2024-000014" ;
           :fscaId "FSCA-014" ;
@@ -1616,7 +1597,6 @@ xsd:date rdf:type rdfs:Datatype .
           :addressesIncident :INC-018 ;
           :affectsCountry :EU ;
           :actionDate "2024-10-01"^^xsd:date ;
-          :description "Security patch 3.0.1 mandatory deployment disabling unrestricted web interface access. Network segmentation guidance issued to hospital IT departments. Penetration test report provided to competent authorities." ;
           :devicesAffected "890" ;
           :eudamedFSCARef "EU-FSCA-2024-000015" ;
           :fscaId "FSCA-015" ;
@@ -1655,7 +1635,6 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-001 ;
          :reportedInCountry :Germany ;
          :correctiveActionTaken "true"^^xsd:boolean ;
-         :description "Patient implanted with HeartMate 3 LVAD developed ischemic stroke 6 months post-implant. Device thrombus confirmed by echocardiography." ;
          :detectionDate "2024-01-10"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000001" ;
          :eventDate "2024-01-08"^^xsd:date ;
@@ -1676,7 +1655,6 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-001 ;
          :reportedInCountry :France ;
          :correctiveActionTaken "true"^^xsd:boolean ;
-         :description "Micra AV pacemaker reached elective replacement indicator 14 months earlier than expected longevity specification." ;
          :detectionDate "2024-02-01"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000002" ;
          :eventDate "2024-01-29"^^xsd:date ;
@@ -1697,7 +1675,6 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-002 ;
          :reportedInCountry :Italy ;
          :correctiveActionTaken "true"^^xsd:boolean ;
-         :description "Portico valve showed paravalvular leak grade III due to partial migration 2 weeks post-TAVI procedure." ;
          :detectionDate "2024-02-18"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000003" ;
          :eventDate "2024-02-15"^^xsd:date ;
@@ -1718,7 +1695,6 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-006 ;
          :reportedInCountry :Spain ;
          :correctiveActionTaken "false"^^xsd:boolean ;
-         :description "SYNERGY stent fracture detected on angiography 18 months post-implant causing in-stent restenosis." ;
          :detectionDate "2024-03-03"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000004" ;
          :eventDate "2024-02-28"^^xsd:date ;
@@ -1739,7 +1715,6 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-006 ;
          :reportedInCountry :Netherlands ;
          :correctiveActionTaken "true"^^xsd:boolean ;
-         :description "ACUITY X4 lead dislodgement to right ventricle requiring fluoroscopy-guided repositioning." ;
          :detectionDate "2024-03-16"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000005" ;
          :eventDate "2024-03-12"^^xsd:date ;
@@ -1760,7 +1735,6 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-003 ;
          :reportedInCountry :Belgium ;
          :correctiveActionTaken "false"^^xsd:boolean ;
-         :description "ACUSON Sequoia ultrasound system froze mid-examination. Emergency shutdown required; patient examination incomplete." ;
          :detectionDate "2024-04-01"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000006" ;
          :eventDate "2024-04-01"^^xsd:date ;
@@ -1779,7 +1753,6 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-010 ;
          :reportedInCountry :Sweden ;
          :correctiveActionTaken "true"^^xsd:boolean ;
-         :description "Persona knee tibial insert showing accelerated polyethylene wear with metallosis confirmed at 3-year revision surgery." ;
          :detectionDate "2024-04-10"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000007" ;
          :eventDate "2024-03-01"^^xsd:date ;
@@ -1800,7 +1773,6 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-007 ;
          :reportedInCountry :Denmark ;
          :correctiveActionTaken "true"^^xsd:boolean ;
-         :description "TRITON hip patient presented with elevated serum cobalt (18 ppb). Adverse local tissue reaction (ALTR) confirmed by MRI." ;
          :detectionDate "2024-04-25"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000008" ;
          :eventDate "2024-04-20"^^xsd:date ;
@@ -1821,7 +1793,6 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-008 ;
          :reportedInCountry :Poland ;
          :correctiveActionTaken "true"^^xsd:boolean ;
-         :description "Viva CRT-D delivered inappropriate ICD therapy during MRI scan despite MRI-conditional programming. Patient experienced pain and syncope." ;
          :detectionDate "2024-05-04"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000009" ;
          :eventDate "2024-05-03"^^xsd:date ;
@@ -1842,7 +1813,6 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-012 ;
          :reportedInCountry :Germany ;
          :correctiveActionTaken "true"^^xsd:boolean ;
-         :description "ATERA ventilator software version 2.1.3 delivered FiO2 6% lower than set value for patients in ARDS protocol. 3 patients affected." ;
          :detectionDate "2024-05-19"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000010" ;
          :eventDate "2024-05-19"^^xsd:date ;
@@ -1861,7 +1831,6 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-005 ;
          :reportedInCountry :France ;
          :correctiveActionTaken "true"^^xsd:boolean ;
-         :description "cobas e 801 thyroid-stimulating hormone (TSH) assay reported false positive results (>10 mIU/L) in 12 euthyroid patients due to biotin interference." ;
          :detectionDate "2024-06-01"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000011" ;
          :eventDate "2024-05-28"^^xsd:date ;
@@ -1880,7 +1849,6 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-005 ;
          :reportedInCountry :Spain ;
          :correctiveActionTaken "true"^^xsd:boolean ;
-         :description "cobas SARS-CoV-2 assay failed to detect Omicron BA.2.86 subvariant in 7 samples confirmed positive by sequencing. Lot-specific issue." ;
          :detectionDate "2024-06-13"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000012" ;
          :eventDate "2024-06-10"^^xsd:date ;
@@ -1899,7 +1867,6 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-015 ;
          :reportedInCountry :Germany ;
          :correctiveActionTaken "false"^^xsd:boolean ;
-         :description "VIDAS HIV DUO Ultra failed to detect HIV-1 group O infection in seroconversion panel. Patient missed early treatment window." ;
          :detectionDate "2024-06-29"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000013" ;
          :eventDate "2024-06-25"^^xsd:date ;
@@ -1918,7 +1885,6 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-009 ;
          :reportedInCountry :Netherlands ;
          :correctiveActionTaken "true"^^xsd:boolean ;
-         :description "OPTIGA CGM sensor reported glucose 3.8 mmol/L while laboratory reference showed 14.2 mmol/L. Patient delayed insulin administration." ;
          :detectionDate "2024-07-15"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000014" ;
          :eventDate "2024-07-10"^^xsd:date ;
@@ -1939,7 +1905,6 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-002 ;
          :reportedInCountry :Italy ;
          :correctiveActionTaken "true"^^xsd:boolean ;
-         :description "Plum 360 infusion pump delivered 10x heparin dose due to software decimal point error in drug library version 4.2.1." ;
          :detectionDate "2024-08-04"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000015" ;
          :eventDate "2024-08-04"^^xsd:date ;
@@ -1960,7 +1925,6 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-001 ;
          :reportedInCountry :United_Kingdom ;
          :correctiveActionTaken "true"^^xsd:boolean ;
-         :description "HeartMate 3 patient developed severe haemolysis (LDH >2000 U/L) associated with outflow graft kinking confirmed by CT." ;
          :detectionDate "2024-08-18"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000016" ;
          :eventDate "2024-08-15"^^xsd:date ;
@@ -1981,7 +1945,6 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-011 ;
          :reportedInCountry :France ;
          :correctiveActionTaken "true"^^xsd:boolean ;
-         :description "Iluvien implant required surgical removal due to device-related endophthalmitis confirmed by vitreous culture." ;
          :detectionDate "2024-08-30"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000017" ;
          :eventDate "2024-08-25"^^xsd:date ;
@@ -2002,7 +1965,6 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-013 ;
          :reportedInCountry :Germany ;
          :correctiveActionTaken "true"^^xsd:boolean ;
-         :description "5008S hemodialysis machine web interface exposed to hospital internal network. Unauthorised session accessed alarm configuration." ;
          :detectionDate "2024-09-14"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000018" ;
          :eventDate "2024-09-12"^^xsd:date ;
@@ -2021,7 +1983,6 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-008 ;
          :reportedInCountry :Sweden ;
          :correctiveActionTaken "false"^^xsd:boolean ;
-         :description "Tivoli II cochlear implant failed to respond to initial activation programming. Sound processor replacement resolved the issue." ;
          :detectionDate "2024-09-30"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000019" ;
          :eventDate "2024-09-28"^^xsd:date ;
@@ -2042,7 +2003,6 @@ xsd:date rdf:type rdfs:Datatype .
          :reportedBy :MAN-003 ;
          :reportedInCountry :Belgium ;
          :correctiveActionTaken "false"^^xsd:boolean ;
-         :description "MAGNETOM Vida MRI caused localised skin burn (1st degree) at anterior electrode lead in patient with DBS system not declared prior to scan." ;
          :detectionDate "2024-10-12"^^xsd:date ;
          :eudamedIncidentRef "EU-INC-2024-000020" ;
          :eventDate "2024-10-10"^^xsd:date ;
